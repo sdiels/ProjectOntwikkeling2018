@@ -1,0 +1,18 @@
+@media (max-width:700px) {
+  .storyForum {
+    min-width: 47%;
+    max-width: 47%;
+
+  }
+  .storyForum:nth-child(2n) {
+    margin-left: 0;
+  }
+}
+
+@media (max-width:550px) {
+  .storyForum {
+    min-width: 95%;
+    max-width: 95%;
+
+  }
+}

@@ -11,10 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/', 'PagesController@home')->name('home');
+Route::get('/home', 'PagesController@home')->name('home');
+Route::get('/forum', 'PagesController@forum')->name('forum');
+Route::get('/game', 'PagesController@game')->name('game');
+Route::get('/addStory', 'PagesController@addStory')->name('addStory');
+Route::get('/forum/{id}', 'PagesController@show')->name('forumShowOne');
+
+Route::post('/storeStory', 'StoryController@store')->name('storeStory');
+Route::post('/storeComment/{id}', 'StoryController@storeComment')->name('storeComment');

@@ -12,26 +12,24 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
+      <header>
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav mr-auto">
-
-                    </ul>
-
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                      <li><a class="nav-link" href="#">Zoeken</a></li>
+                      <li><a class="nav-link" href="#">Overzicht</a></li>
                         <!-- Authentication Links -->
                         @guest
                             <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
@@ -58,7 +56,19 @@
                 </div>
             </div>
         </nav>
+        <div class="FotoHeader">
+          <img src="{{ asset('images/aLogo.png') }}" alt="">
+          <h1>Seksuele intimidatie bij scholieren</h1>
+        </div>
 
+        <div class="SubNav">
+          <ul>
+            <li><a class="nav-link" href="{{ url('home') }}">Home</a></li>
+            <li><a class="nav-link" href="{{ url('forum') }}">Forum</a></li>
+            <li><a class="nav-link" href="{{ url('game') }}">Speel he spel</a></li>
+          </ul>
+        </div>
+      </header>
         <main class="py-4">
             @yield('content')
         </main>

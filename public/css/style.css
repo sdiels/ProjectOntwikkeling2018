@@ -1,0 +1,148 @@
+* {
+  font-family: "Antwerpen Regular";
+}
+header {
+  border-bottom: 1px solid #aaa;
+}
+.FotoHeader {
+  width: 100%;
+  height: 300px;
+  background-color: aqua;
+}
+.FotoHeader img {
+  width: 7%;
+}
+.FotoHeader h1 {
+  margin-left: 10%;
+  margin-top: 30px;
+}
+.SubNav {
+  width: 100%;
+  height: 84.4px;
+}
+.SubNav ul {
+  display: flex;
+  justify-content: center;
+}
+.SubNav ul li {
+  list-style: none;
+  padding: 15px;
+}
+.SubNav ul li a {
+  color: #000;
+}
+.SubNav ul li:hover {
+  border-bottom: 3px solid #0049bf;
+}
+main {
+  margin: 0.5% 5% 0 5%;
+}
+main h1 {
+  color: #CF0039;
+}
+/*
+FORUM-------------------------------------------------------
+*/
+.forumPage button {
+  margin-bottom: 1%;
+  width: 20%;
+  margin-left: 80%;
+  padding: 1%;
+  background-color: #0064B4;
+  color: #fff;
+  border: none;
+}
+.forumPage button:hover {
+  background-color: #003f72;
+}
+.AllStories {
+  display: flex;
+  flex-wrap: wrap;
+}
+.storyForum {
+  border: 1px solid #aaa;
+  border-radius: 20px;
+  padding: 2%;
+  min-width: 30%;
+  max-width: 30%;
+  margin-right: 3%;
+  margin-bottom: 3%;
+  height: 200px;
+  overflow: hidden;
+}
+.commentAndTitle {
+  display: flex;
+}
+.forumPage .AllStories .storyForum .commentAndTitle a {
+  width: 50%;
+}
+.forumPage .AllStories .storyForum .commentAndTitle a .commentCount {
+  margin-left: 30%;
+}
+/*
+FORUM------ADD----------------------------------------------
+*/
+form label {
+  min-width: 10%;
+  margin-bottom: 2%;
+}
+.storyField * {
+  vertical-align: top;
+}
+form input,
+form textarea {
+  min-width: 50%;
+}
+form input[type=submit] {
+  margin-bottom: 1%;
+  max-width: 20%;
+  min-width: 20%;
+  padding: 1%;
+  background-color: #0064B4;
+  color: #fff;
+  border: none;
+}
+form input[type=submit]:hover {
+  background-color: #003f72;
+}
+/*
+FORUM------DETAIL-------------------------------------------
+*/
+.StoryBody {
+  display: flex;
+  flex-wrap: wrap;
+}
+.StoryBody p,
+.StoryBody div {
+  width: 45%;
+}
+.StoryBody > p {
+  border-right: 1px solid #aaa;
+  margin-right: 5%;
+  padding-right: 5%;
+}
+.StoryBody .comments p {
+  margin-bottom: 5%;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #ddd;
+}
+.StoryBody .comments p:last-child {
+  border-bottom: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/
