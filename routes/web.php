@@ -16,6 +16,7 @@ Auth::routes();
 
 Route::get('/', 'PagesController@home')->name('home');
 Route::get('/home', 'PagesController@home')->name('home');
+Route::get('/info', 'PagesController@info')->name('infoPage');
 Route::get('/forum', 'PagesController@forum')->name('forum');
 Route::get('/game', 'PagesController@game')->name('game');
 Route::get('/addStory', 'PagesController@addStory')->name('addStory');

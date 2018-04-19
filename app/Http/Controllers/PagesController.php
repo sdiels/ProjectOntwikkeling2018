@@ -16,6 +16,9 @@ class PagesController extends Controller
     public function home() {
       return view('home');
     }
+    public function info() {
+      return view('infoPage');
+    }
 
     public function forum() {
       $stories = Getuigenis::get();
