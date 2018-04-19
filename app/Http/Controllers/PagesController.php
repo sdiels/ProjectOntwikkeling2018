@@ -19,6 +19,9 @@ class PagesController extends Controller
     public function info() {
       return view('info');
     }
+    public function contact() {
+      return view('contact');
+    }
 
     public function forum() {
       $stories = Getuigenis::orderby('id', 'desc')->get();

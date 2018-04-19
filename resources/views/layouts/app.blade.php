@@ -67,6 +67,7 @@
             <li><a class="nav-link" href="{{ route('info') }}">Info</a></li>
             <li><a class="nav-link" href="{{ route('forum') }}">Forum</a></li>
             <li><a class="nav-link" href="{{ route('game') }}">Speel het spel</a></li>
+            <li><a class="nav-link" href="{{ route('contact') }}">contact</a></li>
           </ul>
         </div>
       </header>

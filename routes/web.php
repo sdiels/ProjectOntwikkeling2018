@@ -19,8 +19,10 @@ Route::get('/home', 'PagesController@home')->name('home');
 Route::get('/info', 'PagesController@info')->name('info');
 Route::get('/forum', 'PagesController@forum')->name('forum');
 Route::get('/game', 'PagesController@game')->name('game');
+Route::get('/contact', 'PagesController@contact')->name('contact');
 Route::get('/addStory', 'PagesController@addStory')->name('addStory');
 Route::get('/forum/{id}', 'PagesController@show')->name('forumShowOne');
+
 
 Route::post('/storeStory', 'StoryController@store')->name('storeStory');
 Route::post('/storeComment/{id}', 'StoryController@storeComment')->name('storeComment');
