@@ -23,3 +23,6 @@ Route::get('/forum/{id}', 'PagesController@show')->name('forumShowOne');
 
 Route::post('/storeStory', 'StoryController@store')->name('storeStory');
 Route::post('/storeComment/{id}', 'StoryController@storeComment')->name('storeComment');
+
+Route::get('/deleteStory/{id}', 'StoryController@delete')->name('deleteStory');
+Route::get('/deleteStory/{id}/sure', 'StoryController@deleteSure')->name('deleteStorySure');

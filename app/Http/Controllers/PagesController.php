@@ -45,13 +45,15 @@ class PagesController extends Controller
       return view('addStory');
     }
 
-    public function show ($id){
+    public function show (Request $request, $id){
 
         $story = Getuigenis::where('id', $id)->get();
 
         $comments = Comment::where('storyId', $id)->join('getuigenis', 'comments.storyId', '=', 'getuigenis.id')->select('getuigenis.*', 'comments.*')->orderby('comments.id', 'desc')->get();
 
         $id=$id;
+
+        $request->session()->forget('askSureDeleteStory');
 
         return view('showOne', compact('story', 'comments', 'id'));
     }

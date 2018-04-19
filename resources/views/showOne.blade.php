@@ -3,13 +3,25 @@
 @section('content')
 <div class="forumPage">
   <h1>FORUM</h1>
+  <div class="deleteDiv">
+    @if (session()->has('askSureDeleteStory'))
+      <div class="deleteSure">
+        <p>Bent u zeker dat u dit wilt verwijderen?</p>
+        <a href="{{ route('deleteStorySure', $id) }}"><button type="button" name="button" class="deleteButton">Ja</button></a>
+
+        <a href="{{ route('forum', $id) }}"><button type="button" name="button" class="addButton">Nee</button></a>
+      </div>
+    @else
+      <a href="{{ url('deleteStory', $id) }}"><button type="button" name="button" class="deleteButton">Verwijder deze getuigenis</button></a>
+    @endif
+  </div>
     <div class="oneStoryForum">
       @foreach ($story as $story)
         <h4>{{$story->title}}</h4>
         <div class="StoryBody">
           <p>{{$story->story}}</p>
           <div class="comments">
-            @if (count($comments) > 0)
+            @if (count($comments) >  0)
               @foreach ($comments as $comment)
                 <p>{{$comment->body}}</p>
               @endforeach
