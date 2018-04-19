@@ -133,6 +133,8 @@ FORUM------DETAIL-------------------------------------------
 .StoryBody .comments p {
   margin-bottom: 5%;
   padding-bottom: 5%;
+}
+.storyBody .comments a {
   border-bottom: 1px solid #ddd;
 }
 .StoryBody .comments p:last-child {
@@ -153,6 +155,11 @@ FORUM------DETAIL-------------------------------------------
   width: 30%;
   padding: 10px;
   margin-left: 0;
+}
+.comments .deleteButton {
+  margin-left: 0;
+  width: 15%;
+  font-size: 0.7em;
 }
 
 

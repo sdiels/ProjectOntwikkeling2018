@@ -70,12 +70,8 @@ class StoryController extends Controller
 
   public function deleteSure ($id) {
 
-
-
-
-
-
-
+    $comments = Comment::where('storyId', $id)->delete();
+    $story = Getuigenis::where('id', $id)->delete();
 
     return redirect()->action('PagesController@forum');
   }

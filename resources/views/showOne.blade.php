@@ -9,7 +9,7 @@
         <p>Bent u zeker dat u dit wilt verwijderen?</p>
         <a href="{{ route('deleteStorySure', $id) }}"><button type="button" name="button" class="deleteButton">Ja</button></a>
 
-        <a href="{{ route('forum', $id) }}"><button type="button" name="button" class="addButton">Nee</button></a>
+        <a href="{{ route('forumShowOne', $id) }}"><button type="button" name="button" class="addButton">Nee</button></a>
       </div>
     @else
       <a href="{{ url('deleteStory', $id) }}"><button type="button" name="button" class="deleteButton">Verwijder deze getuigenis</button></a>
@@ -24,6 +24,7 @@
             @if (count($comments) >  0)
               @foreach ($comments as $comment)
                 <p>{{$comment->body}}</p>
+                <a href="{{ route('deleteStorySure', $id) }}"><button type="button" name="button" class="deleteButton">verwijderen</button></a>
               @endforeach
             @else
               <p>Er zijn geen reacties op dit verhaal</p>
