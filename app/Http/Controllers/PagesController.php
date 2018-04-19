@@ -60,6 +60,7 @@ class PagesController extends Controller
         $id=$id;
 
         $request->session()->forget('askSureDeleteStory');
+        $request->session()->forget('askSureDeleteComment');
 
         return view('showOne', compact('story', 'comments', 'id'));
     }

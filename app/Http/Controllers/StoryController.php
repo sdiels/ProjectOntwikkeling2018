@@ -75,4 +75,23 @@ class StoryController extends Controller
 
     return redirect()->action('PagesController@forum');
   }
+
+  public function deleteComment (Request $request, $id, $comid) {
+    $request->session()->put('askSureDeleteComment', true);
+
+    $story = Getuigenis::where('id', $id)->get();
+
+    $comments = Comment::where('storyId', $id)->join('getuigenis', 'comments.storyId', '=', 'getuigenis.id')->select('getuigenis.*', 'comments.*')->orderby('comments.id', 'desc')->get();
+
+    $id = $id;
+    $comid = $comid;
+
+    return view('showOne', compact('story', 'comments', 'id', 'comid'));
+  }
+
+  public function deleteCommentSure ($id, $comid) {
+    $comments = Comment::where('id', $comid)->delete();
+
+    return redirect()->action('PagesController@show', [$id]);
+  }
 }
