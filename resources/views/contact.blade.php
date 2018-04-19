@@ -3,6 +3,7 @@
 @section('content')
 <div class="contact">
     <h1>het lukte lukte</h1>
-    
+    <img src="{{ asset('images/dora_explorer_wallpaper_61.jpg') }}" alt="">
+
 </div>
 @endsection
