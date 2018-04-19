@@ -21,7 +21,7 @@ class PagesController extends Controller
     }
 
     public function forum() {
-      $stories = Getuigenis::get();
+      $stories = Getuigenis::orderby('id', 'desc')->get();
 
       $storyHighestId = Getuigenis::orderby('id', 'desc')->select('getuigenis.id')->first();
       $number = $storyHighestId->id;
