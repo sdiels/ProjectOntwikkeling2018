@@ -122,7 +122,7 @@ FORUM------DETAIL-------------------------------------------
   flex-wrap: wrap;
 }
 .StoryBody p,
-.StoryBody div {
+.StoryBody > div {
   width: 45%;
 }
 .StoryBody > p {
@@ -130,12 +130,15 @@ FORUM------DETAIL-------------------------------------------
   margin-right: 5%;
   padding-right: 5%;
 }
-.StoryBody .comments p {
-  margin-bottom: 5%;
-  padding-bottom: 5%;
-}
-.storyBody .comments a {
+.oneComment {
   border-bottom: 1px solid #ddd;
+  padding-bottom: 5%;
+  width: 100%;
+  margin: 0;
+}
+.oneComment p {
+  margin-right: 0;
+  width: 100%;
 }
 .StoryBody .comments p:last-child {
   border-bottom: none;

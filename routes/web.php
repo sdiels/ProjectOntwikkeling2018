@@ -27,3 +27,6 @@ Route::post('/storeComment/{id}', 'StoryController@storeComment')->name('storeCo
 
 Route::get('/deleteStory/{id}', 'StoryController@delete')->name('deleteStory');
 Route::get('/deleteStory/{id}/sure', 'StoryController@deleteSure')->name('deleteStorySure');
+
+Route::get('/forum/{id}/deleteComment/{comId}', 'StoryController@deleteComment')->name('deleteComment');
+Route::get('/forum/{id}/deleteComment/{comId}/sure', 'StoryController@deleteCommentSure')->name('deleteCommentSure');
