@@ -84,7 +84,7 @@ FORUM------ADD----------------------------------------------
 */
 form label {
   min-width: 10%;
-  margin-bottom: 2%;
+  margin-bottom: 0%;
 }
 .storyField * {
   vertical-align: top;
@@ -104,6 +104,12 @@ form input[type=submit] {
 }
 form input[type=submit]:hover {
   background-color: #003f72;
+}
+.smallTextInput {
+  font-size: 0.7em;
+  color: #999;
+  margin-left: 10.5%;
+
 }
 /*
 FORUM------DETAIL-------------------------------------------
