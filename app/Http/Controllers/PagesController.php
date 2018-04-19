@@ -17,7 +17,7 @@ class PagesController extends Controller
       return view('home');
     }
     public function info() {
-      return view('infoPage');
+      return view('info');
     }
 
     public function forum() {
