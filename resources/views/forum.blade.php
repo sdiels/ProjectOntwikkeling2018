@@ -10,7 +10,7 @@
         <div class="storyForum">
           <div class="commentAndTitle">
             <h4>{{$story->title}}</h4>
-            <a href="{{ url('forum', [$story->id]) }}"><p class="commentCount">... Comments</p></a>
+            <a href="{{ url('forum', [$story->id]) }}"><p class="commentCount">{{ $countComArray[$story->id] }} Comments</p></a>
           </div>
           <p>{{$story->story}}</p>
         </div>

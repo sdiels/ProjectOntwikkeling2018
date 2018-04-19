@@ -20,7 +20,20 @@ class PagesController extends Controller
     public function forum() {
       $stories = Getuigenis::get();
 
-      return view('forum', compact('stories'));
+      $storyHighestId = Getuigenis::orderby('id', 'desc')->select('getuigenis.id')->first();
+      $number = $storyHighestId->id;
+
+      $countComArray = array();
+      for ($a=1; $a <= $number ; $a++) {
+        if (Getuigenis::where('id', $a)->exists()) {
+          $c = Comment::where('comments.storyId', $a)->get();
+          $count = count($c);
+
+          $countComArray[$a] = $count;
+        }
+      }
+
+      return view('forum', compact('stories', 'countComArray'));
     }
 
     public function game() {
