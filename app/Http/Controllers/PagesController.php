@@ -41,6 +41,7 @@ class PagesController extends Controller
     }
 
     public function addStory() {
+
       return view('addStory');
     }
 

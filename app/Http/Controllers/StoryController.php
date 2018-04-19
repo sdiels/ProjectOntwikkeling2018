@@ -11,16 +11,33 @@ class StoryController extends Controller
 {
   public function store(Request $request) {
 
-      $story = new Getuigenis;
+      $title = $request->title;
+      $storyBody = $request->story;
 
-      $story->title = $request->title;
-      $story->story = $request->story;
 
-      $story->save();
+      if ($title != null && $storyBody != null) {
+        $story = new Getuigenis;
 
-      $stories = Getuigenis::all();
+        $story->title = $title;
+        $story->story = $storyBody;
 
-      return redirect('/forum')->with('stories', $stories);
+        $story->save();
+
+        $stories = Getuigenis::all();
+
+        $request->session()->forget('storyTitle');
+        $request->session()->forget('storyBody');
+
+        return redirect('/forum')->with('stories', $stories);
+      }
+      else {
+        $request->session()->put('storyTitle', $title);
+        $request->session()->put('storyBody', $storyBody);
+
+        return redirect()->route('addStory')->with('status', 'Vul elk veld in aub');
+
+      }
+
   }
 
   public function storeComment(Request $request, $id) {

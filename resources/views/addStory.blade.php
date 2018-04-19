@@ -3,15 +3,20 @@
 @section('content')
 <div>
   <h1>GETUIGENIS TOEVOEGEN</h1>
+  @if (session('status'))
+      <div class="alert alert-danger">
+          {{ session('status') }}
+      </div>
+  @endif
   <form action="{{ url('storeStory') }}" method="post">
       <label for="title">Titel: </label>
-      <input type="text" name="title"><br>
+      <input type="text" name="title" maxlength="20" value="{{ Session::get('storyTitle') }}" placeholder="Voeg hier de titel in"><br>
+      <p class="smallTextInput">Max. 20 karakters</p>
 
       <p class="storyField">
         <label for="story">Verhaal</label>
-        <textarea name="story" rows="8" cols="80"></textarea> <br>
+        <textarea name="story" rows="8" cols="80" placeholder="Vertel hier uw verhaal">{{ Session::get('storyBody') }}</textarea> <br>
       </p>
-
       <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <input type="submit" name="submit" value="Verhaal toevoegen">
     </form>
