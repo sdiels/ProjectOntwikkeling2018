@@ -164,6 +164,33 @@ FORUM------DETAIL-------------------------------------------
   width: 15%;
   font-size: 0.7em;
 }
+/*
+GAME--------------------------------------------------------
+*/
+.gameInfoAndScreenshots {
+  border: 5px solid grey;
+  padding: 1%;
+  display: flex;
+  justify-content:space-between;
+  margin-bottom: 50px;
+  min-height: 400px;
+}
+.gameInformation {
+  border: 5px solid green;
+  width: 35%;
+}
+.screenshots {
+  border: 5px solid red;
+  width: 60%;
+
+}
+.gameSpace {
+  border: 5px solid aqua;
+  width: 100%;
+  min-height: 200px;
+}
+
+
 
 
 
