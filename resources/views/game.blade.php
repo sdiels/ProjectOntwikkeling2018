@@ -16,13 +16,21 @@
           <h2>foto 2</h2>
         </div>
       </div>
-      <div class="photo3 longphoto">
-        <h2>foto 3 (lange foto)</h2>
+      <div class="photo345">
+        <div class="photo3 smallphoto">
+          <h2>foto 3 (kleine foto)</h2>
+        </div>
+        <div class="photo4 smallphoto">
+          <h2>foto 4 (kleine foto)</h2>
+        </div>
+        <div class="photo5 smallphoto">
+          <h2>foto 5 (kleine foto)</h2>
+        </div>
       </div>
     </main>
     <aside>
-      <div class="photo4 longphoto">
-        <h2>foto 4 (lange foto)</h2>
+      <div class="photo6 longphoto">
+        <h2>foto 6 (lange foto)</h2>
       </div>
       <div class="playAndScore">
         <div class="playGame">
