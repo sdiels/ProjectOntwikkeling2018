@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Getuigenis;
 use App\Comment;
+use App\Gamecomment;
 use DB;
 
 class PagesController extends Controller
@@ -26,16 +27,18 @@ class PagesController extends Controller
     public function forum() {
       $stories = Getuigenis::orderby('id', 'desc')->get();
 
-      $storyHighestId = Getuigenis::orderby('id', 'desc')->select('getuigenis.id')->first();
-      $number = $storyHighestId->id;
+      if ($stories->count() > 0) {
+        $storyHighestId = Getuigenis::orderby('id', 'desc')->select('getuigenis.id')->first();
+        $number = $storyHighestId->id;
 
-      $countComArray = array();
-      for ($a=1; $a <= $number ; $a++) {
-        if (Getuigenis::where('id', $a)->exists()) {
-          $c = Comment::where('comments.storyId', $a)->get();
-          $count = count($c);
+        $countComArray = array();
+        for ($a=1; $a <= $number ; $a++) {
+          if (Getuigenis::where('id', $a)->exists()) {
+            $c = Comment::where('comments.storyId', $a)->get();
+            $count = count($c);
 
-          $countComArray[$a] = $count;
+            $countComArray[$a] = $count;
+          }
         }
       }
 
@@ -43,7 +46,15 @@ class PagesController extends Controller
     }
 
     public function game() {
-      return view('game');
+      $commentOnGame = Gamecomment::orderby('id', 'desc')->take(3)->get();
+
+      return view('game', compact('commentOnGame'));
+    }
+
+    public function gamecomments() {
+      $commentOnGame = Gamecomment::orderby('id', 'desc')->get();
+
+      return view('gamereactions', compact('commentOnGame'));
     }
 
     public function addStory() {
