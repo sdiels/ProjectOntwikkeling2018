@@ -196,19 +196,31 @@ GAME--------------------------------------------------------
 .gamepage main .photo1,
 .gamepage main .photo2 {
   width: 50%;
-  height: 200px;
+  height: 250px;
   border: 5px solid aqua;
 }
 .gamepage main .photo1 {
   margin-right: 5%;
 }
-.gamepage main .photo3 {
+.gamepage main .photo345 {
+  display: flex;
   width: 100%;
+  padding: 0.5%;
+}
+.gamepage main .photo3,
+.gamepage main .photo4,
+.gamepage main .photo5 {
+  width: 30%;
   height: 200px;
   margin: 0;
   border: 5px solid aqua;
 }
-.gamepage aside .photo4 {
+.gamepage main .photo3,
+.gamepage main .photo4 {
+  margin-right: 5%;
+}
+
+.gamepage aside .photo6 {
   width: 100%;
   height: 200px;
   margin-bottom: 10px;
@@ -231,7 +243,7 @@ GAME--------------------------------------------------------
 }
 .gamepage aside .reactions {
   width: 100%;
-  height: 200px;
+  height: 300px;
   border: 5px solid orange;
 }
 
