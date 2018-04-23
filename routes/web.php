@@ -19,6 +19,7 @@ Route::get('/home', 'PagesController@home')->name('home');
 Route::get('/info', 'PagesController@info')->name('info');
 Route::get('/forum', 'PagesController@forum')->name('forum');
 Route::get('/game', 'PagesController@game')->name('game');
+Route::get('/game/reacties', 'PagesController@gamecomments')->name('GameComment');
 Route::get('/contact', 'PagesController@contact')->name('contact');
 Route::get('/addStory', 'PagesController@addStory')->name('addStory');
 Route::get('/forum/{id}', 'PagesController@show')->name('forumShowOne');
@@ -32,3 +33,5 @@ Route::get('/deleteStory/{id}/sure', 'StoryController@deleteSure')->name('delete
 
 Route::get('/forum/{id}/deleteComment/{comId}', 'StoryController@deleteComment')->name('deleteComment');
 Route::get('/forum/{id}/deleteComment/{comId}/sure', 'StoryController@deleteCommentSure')->name('deleteCommentSure');
+
+Route::post('/game/storeComment', 'GameController@store')->name('storeGameComment');
