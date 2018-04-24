@@ -17,7 +17,7 @@ class CreateCommentTable extends Migration
             $table->increments('id');
             $table->integer('storyId')->unsigned();
             $table->foreign('storyId')->references('id')->on('getuigenis')->onDelete('cascade');
-            $table->string('body');
+            $table->text('body');
             $table->timestamps();
         });
     }

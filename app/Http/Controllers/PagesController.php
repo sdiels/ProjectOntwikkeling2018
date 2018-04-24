@@ -51,8 +51,10 @@ class PagesController extends Controller
       return view('game', compact('commentOnGame'));
     }
 
-    public function gamecomments() {
+    public function gamecomments(Request $request) {
       $commentOnGame = Gamecomment::orderby('id', 'desc')->get();
+
+      $request->session()->forget('askSureDeleteGameComment');
 
       return view('gamereactions', compact('commentOnGame'));
     }

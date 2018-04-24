@@ -9,31 +9,23 @@
         <h2>Informatie</h2>
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
       </div>
-      <div class="photo12">
-        <div class="photo1">
-            <img src="{{ asset('images/gamepagefoto1.jpg') }}" alt="">
+      <div class="photo123">
+        <div class="photo1 bigPhoto">
+          <a href="{{ asset('images/gamepageFoto1.png') }}"><img src="{{ asset('images/gamepageFoto1.png') }}" alt=""></a>
         </div>
-        <div class="photo2">
-          <img src="{{ asset('images/gamepagefoto2.jpg') }}" alt="">
-        </div>
-      </div>
-      <div class="photo345">
-        <div class="photo3 smallphoto">
-          <img src="{{ asset('images/gamepagefoto3.jpg') }}" alt="">
-        </div>
-        <div class="photo4 smallphoto">
-          <img src="{{ asset('images/gamepagefoto4.jpg') }}" alt="">
-        </div>
-        <div class="photo5 smallphoto">
-          <img src="{{ asset('images/gamepagefoto5.jpg') }}" alt="">
+        <div class="photo23">
+          <div class="photo2 smallPhoto">
+            <a href="{{ asset('images/gamepageFoto2.png') }}"><img src="{{ asset('images/gamepageFoto2.png') }}" alt=""></a>
+          </div>
+          <div class="photo3 smallPhoto">
+            <a href="{{ asset('images/gamepageFoto3.png') }}"><img src="{{ asset('images/gamepageFoto3.png') }}" alt=""></a>
+          </div>
         </div>
       </div>
     </main>
     <aside>
-      <div class="photo6 longphoto">
-        <img src="{{ asset('images/gamepagefoto6.jpg') }}" alt="">
-      </div>
-      <div class="playGameBackground">
+      <div class="photo4 longphoto">
+        <h2>Foto</h2>
       </div>
       <div class="playGame">
         <h2>Speel het spel</h2>

@@ -15,7 +15,7 @@ class CreateGamecommentTable extends Migration
     {
         Schema::create('gamecomment', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('body');
+            $table->text('body');
             $table->timestamps();
         });
     }

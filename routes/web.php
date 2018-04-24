@@ -35,3 +35,6 @@ Route::get('/forum/{id}/deleteComment/{comId}', 'StoryController@deleteComment')
 Route::get('/forum/{id}/deleteComment/{comId}/sure', 'StoryController@deleteCommentSure')->name('deleteCommentSure');
 
 Route::post('/game/storeComment', 'GameController@store')->name('storeGameComment');
+
+Route::get('/game/deleteComment/{comId}', 'GameController@deleteGameComment')->name('deleteGameComment');
+Route::get('/game/deleteComment/{comId}/sure', 'GameController@deleteGameCommentSure')->name('deleteGameCommentSure');
