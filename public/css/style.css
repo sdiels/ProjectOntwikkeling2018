@@ -167,27 +167,128 @@ FORUM------DETAIL-------------------------------------------
 /*
 GAME--------------------------------------------------------
 */
-.gameInfoAndScreenshots {
-  border: 5px solid grey;
-  padding: 1%;
+.gamepageWithoutTitle {
   display: flex;
-  justify-content:space-between;
-  margin-bottom: 50px;
-  min-height: 400px;
 }
-.gameInformation {
-  border: 5px solid green;
-  width: 35%;
+.gamepageWithoutTitle main,
+.gamepageWithoutTitle aside {
+  width: 50%;
+  padding: 2%;
 }
-.screenshots {
-  border: 5px solid red;
-  width: 60%;
-
+.gamepageWithoutTitle main {
+  margin-left: 0;
+  margin-top: 0;
 }
-.gameSpace {
-  border: 5px solid aqua;
+.gamepage main .gameInformation {
   width: 100%;
-  min-height: 200px;
+  height: 200px;
+  margin-right: 0;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #999;
+}
+/*-------------------FOTO'S-------------------*/
+.gamepage img {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+.gamepage main .photo123 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 300px;
+}
+.gamepage main .photo1 {
+  width: 70%;
+  height: 100%;
+  padding: 0;
+  margin-right: 2%;
+}
+.gamepage main .photo23 {
+  width: 28%;
+  height: 100%;
+  padding: 0;
+}
+.gamepage main .photo2 {
+  margin-bottom: 7%;
+}
+.gamepage main .photo2,
+.gamepage main .photo3 {
+  width: 95%;
+  height: 48%;
+}
+
+.gamepage aside .photo4 {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 10px;
+  text-align: center;
+  border: 2px solid grey;
+}
+/*-------------------EIND--FOTO'S-------------------*/
+.gamepage aside .playGame {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 20px;
+  border: 2px solid grey;
+  text-align: center;
+}
+.gamepage aside .reactions {
+  width: 100%;
+  border-top: 1px solid #999;
+}
+.gameractionspage .oneGameComment button {
+  border: none;
+  background-color: #cf0039;
+}
+.gameractionspage .oneGameComment button:hover {
+  background-color: #8d0027;
+}
+.gamepage aside .reactions .seeMoreReacties {
+  width: 15%;
+  margin-left: 85%;
+  margin-bottom: 30px;
+}
+.gamepage aside form {
+  margin-left: 5%;
+}
+.gamepage aside form textarea {
+  width: 80%;
+}
+.gamepage aside .gameComments .oneGameComment,
+.gameractionspage .oneGameComment {
+  width: 100%;
+  border-bottom: 1px solid #ddd;
+  margin-left: 2%;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.gamepage aside .gameComments .oneGameComment p:first-child {
+  width: 100%;
+  overflow: hidden;
+}
+.gameractionspage .oneGameComment p {
+  width: 85%;
+  overflow: hidden;
+}
+.gameractionspage .oneGameComment a {
+  width: 15%;
+  overflow: hidden;
+}
+.gamepage aside .gameComments .oneGameComment:last-child,
+.gameractionspage .oneGameComment:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.gameractionspage .oneGameComment:last-child {
+  border-bottom: none;
+}
+.gamepage aside .gameComments .oneGameComment p,
+.gameractionspage .oneGameComment p  {
+  margin-bottom: 0;
 }
 /*
 contact*********************************************************************************************************************

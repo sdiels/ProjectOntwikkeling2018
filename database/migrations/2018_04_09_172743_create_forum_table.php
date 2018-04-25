@@ -16,7 +16,7 @@ class CreateForumTable extends Migration
         Schema::create('getuigenis', function (Blueprint $table) {
             $table->increments('id');
             $table->string('title');
-            $table->string('story');
+            $table->text('story');
             $table->timestamps();
         });
     }
