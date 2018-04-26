@@ -1,0 +1,260 @@
+@font-face {
+    font-family: antwerpen;
+    src: url(AntwerpenRegular.otf);
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    background-color: white;
+}
+p {
+    font-family: antwerpen;
+    font-size: 3em;
+    position: absolute;
+}
+
+#bg1 {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#tram {
+    position: absolute;
+    width: 50%;
+    top: 41%;
+    left: 55%;
+}
+
+#text1 {
+    left: 60%;
+    top: 120%;
+    opacity: 0;
+}
+
+
+#fdiv1 {
+    position: absolute;
+    height: 650px;
+    width: 50%;
+    border: red solid 2px;
+    overflow: hidden;
+    opacity: 0;
+
+    left: 0;
+    top: 170%
+}
+
+#buildings1,
+#buildings2 {
+    width: 85%;
+    position: absolute;
+    top: 30px;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+#buildings1 {
+    animation-name: buildings1-move;
+}
+
+#buildings2 {
+    animation-name: buildings2-move;
+}
+
+@keyframes buildings1-move {
+    0% {
+        transform: translatex(-95%);
+    }
+    50% {
+        transform: translatex(0);
+    }
+    100% {
+        transform: translatex(85%);
+    }
+}
+
+@keyframes buildings2-move {
+    0% {
+        transform: translatex(0);
+    }
+    50% {
+        transform: translatex(85%);
+    }
+    51% {
+        transform: translatex(-95%);
+    }
+    100% {
+        transform: translatex(0);
+    }
+}
+
+#frame1 {
+    width: 120%;
+    position: absolute;
+}
+
+#text2 {
+    left: 65%;
+    top: 190%;
+    opacity: 0;
+}
+
+
+#fdiv2 {
+    position: absolute;
+    height: 650px;
+    width: 50%;
+    overflow: hidden;
+    opacity: 0;
+
+    left: 55%;
+    top: 270%
+}
+#frame2 {
+    width: 120%;
+    position: absolute;
+
+    right: 1%
+}
+#man {
+    width: 120%;
+    position: absolute;
+
+    right: 50%
+}
+#text3 {
+    left: 0%;
+    top: 290%;
+    width: 50%;
+    opacity: 0;
+}
+
+#face {
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    top: 250%
+}
+
+#drop1,
+#drop2,
+#drop3{
+    width: 2%;
+    position: absolute;
+    top: 70%;
+    animation-timing-function: linear;
+
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+#drop1 {
+    animation-name: drop1-move;
+    left: 50%;
+    animation-duration: 4s;
+}
+#drop2 {
+    animation-name: drop2-move;
+    left: 35%;
+    animation-duration: 3s;
+}
+#drop3 {
+    animation-name: drop3-move;
+    left: 60%;
+    animation-duration: 5s;
+}
+
+@keyframes drop2-move {
+    0% {
+        transform: translatey(0);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translatey(170px);
+        opacity: 0;
+    }
+}@keyframes drop1-move {
+    0% {
+        opacity: 0.5;
+        transform: translateY(210px);
+    }
+    29%{
+        opacity: 0;
+        transform: translateY(300px);
+    }
+    30% {
+        transform: translatey(0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+        transform: translateY(210px);
+    }
+}@keyframes drop3-move {
+    0% {
+        transform: translatey(80px);
+        opacity: 1;
+    }
+    40% {
+        opacity: 1;
+    }
+    59% {
+        opacity: 0;
+        transform: translateY(150px);
+    }
+    60% {
+        transform: translatey(0);
+        opacity: 0;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translatey(80px);
+        opacity: 1;
+    }
+}
+
+#text4 {
+    left: 12%;
+    top: 360%;
+    opacity: 0;
+    color: white;
+}
+#text5 {
+    left: 30%;
+    top: 470%;
+    opacity: 1;
+    color: white;
+}
+
+#text5 {
+    left: 30%;
+    top: 470%;
+    opacity: 1;
+    color: white;
+}
+#text6 {
+    opacity: 0;
+}
+#text7 {
+    opacity: 0;
+    left: 15%;
+}
