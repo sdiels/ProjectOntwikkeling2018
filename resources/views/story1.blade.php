@@ -294,8 +294,8 @@
     <div class="spacer s5"></div>
     <div id="trigger1"></div>
 
-    <img id="bg1" src="img/story1/stad.jpg" alt="stad achtergrond">
-    <img id="tram" src="img/story1/tram.png" alt="tram">
+    <img id="bg1" src="{{ asset('images/story1/stad.jpg') }}" alt="stad achtergrond">
+    <img id="tram" src="{{ asset('images/story1/tram.png') }}" alt="tram">
     <p id="text1">Ik was onderweg met de tram naar school</p>
 
     <div class="spacer s3"></div>
@@ -306,9 +306,9 @@
     <div id="trigger4"></div>
 
     <div id="fdiv1">
-        <img id="buildings2" src="img/story1/buildings.png" alt="buildings 2">
-        <img id="buildings1" src="img/story1/buildings.png" alt="buildings 1">
-        <img id="frame1" src="img/story1/frame1.png" alt="frame 1">
+        <img id="buildings2" src="{{ asset('images/story1/buildings.png') }}" alt="buildings 2">
+        <img id="buildings1" src="{{ asset('images/story1/buildings.png') }}" alt="buildings 1">
+        <img id="frame1" src="{{ asset('images/story1/frame1.png') }}" alt="frame 1">
     </div>
     <p id="text2">Rustig op een enkel zitje naast het raam</p>
 
@@ -318,8 +318,8 @@
     <div id="trigger6"></div>
 
     <div id="fdiv2">
-        <img id="man" src="img/story1/man.png" alt="man">
-        <img id="frame2" src="img/story1/frame2.png" alt="frame 2">
+        <img id="man" src="{{ asset('images/story1/man.png') }}" alt="man">
+        <img id="frame2" src="{{ asset('images/story1/frame2.png') }}" alt="frame 2">
     </div>
     <p id="text3">Opeens kwam er een man met zijn geslachtsdeel tegen mij aan staan</p>
 
@@ -329,10 +329,10 @@
     <div id="trigger8"></div>
 
     <div id="face">
-        <img src="img/story1/face.jpg" alt="face">
-        <img id="drop1" src="img/story1/drop.png" alt="drop1">
-        <img id="drop2" src="img/story1/drop.png" alt="drop2">
-        <img id="drop3" src="img/story1/drop.png" alt="drop3">
+        <img src="{{ asset('images/story1/face.jpg') }}" alt="face">
+        <img id="drop1" src="{{ asset('images/story1/drop.png') }}" alt="drop1">
+        <img id="drop2" src="{{ asset('images/story1/drop.png') }}" alt="drop2">
+        <img id="drop3" src="{{ asset('images/story1/drop.png') }}" alt="drop3">
     </div>
     <p id="text4">Ik wist niet wat er gebeurde, het leek alsof ik niet kon bewegen</p>
     <p id="text5">Die vijf minuten leken uren te duren</p>
@@ -344,10 +344,24 @@
     <div id="trigger10"></div>
     <p id="text6">Info</p>
 
-    <div class="spacer s5"></div>
+    <div class="spacer s3"></div>
     <div id="trigger11"></div>
     <p id="text7">Lees verhalen/getuigenissen</p>
-
+    <div class="forum">
+      @if (count($stories) > 0)
+        @foreach($stories as $story)
+          <div class="storyForum">
+            <div class="commentAndTitle">
+              <h4>{{$story->title}}</h4>
+              <a href="{{ url('forum', [$story->id]) }}"><p class="commentCount">{{ $countComArray[$story->id] }} reacties</p></a>
+            </div>
+            <p class="storyBody">{{$story->story}}</p><br>
+          </div>
+        @endforeach
+      @else
+        <p>Er zijn geen getuigenissen</p>
+      @endif
+    </div>
 
     <div class="spacer s10"></div>
 

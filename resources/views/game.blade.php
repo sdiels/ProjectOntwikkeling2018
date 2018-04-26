@@ -11,7 +11,7 @@
       </div>
       <div class="photo123">
         <div class="photo1 bigPhoto">
-          <a href="{{ asset('images/gamepageFoto1.png') }}"><img src="{{ asset('images/gamepageFoto1.png') }}" alt=""></a>
+          <a href="{{ asset('images/gamepageFoto1.png') }}"><img src="v" alt=""></a>
         </div>
         <div class="photo23">
           <div class="photo2 smallPhoto">

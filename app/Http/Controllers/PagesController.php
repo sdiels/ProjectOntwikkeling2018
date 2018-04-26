@@ -21,7 +21,24 @@ class PagesController extends Controller
       return view('info');
     }
     public function story1() {
-      return view('story1');
+      $stories = Getuigenis::orderby('id', 'desc')->get();
+
+      if ($stories->count() > 0) {
+        $storyHighestId = Getuigenis::orderby('id', 'desc')->select('getuigenis.id')->first();
+        $number = $storyHighestId->id;
+
+        $countComArray = array();
+        for ($a=1; $a <= $number ; $a++) {
+          if (Getuigenis::where('id', $a)->exists()) {
+            $c = Comment::where('comments.storyId', $a)->get();
+            $count = count($c);
+
+            $countComArray[$a] = $count;
+          }
+        }
+      }
+
+      return view('story1', compact('stories', 'countComArray'));
     }
     public function contact() {
       return view('contact');
