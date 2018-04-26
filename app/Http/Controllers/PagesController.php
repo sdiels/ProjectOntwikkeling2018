@@ -21,7 +21,7 @@ class PagesController extends Controller
       return view('info');
     }
     public function story1() {
-      $stories = Getuigenis::orderby('id', 'desc')->get();
+      $stories = Getuigenis::orderby('id', 'desc')->take(6)->get();
 
       if ($stories->count() > 0) {
         $storyHighestId = Getuigenis::orderby('id', 'desc')->select('getuigenis.id')->first();

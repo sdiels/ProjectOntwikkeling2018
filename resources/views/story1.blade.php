@@ -76,29 +76,39 @@
     <p id="text5">Die vijf minuten leken uren te duren</p>
 
     <div class="spacer s5"></div>
-    <div id="trigger9"></div>
+    <div id="triggers1"></div>
 
     <div class="spacer s2"></div>
-    <div id="trigger10"></div>
+    <div id="triggers2"></div>
     <p id="text6">Info</p>
 
     <div class="spacer s3"></div>
-    <div id="trigger11"></div>
+    <div id="triggers3"></div>
     <p id="text7">Lees verhalen/getuigenissen</p>
-    <div class="forum">
+
+    <div class="spacer s2"></div>
+    <div class="forumInStory">
+
+    <div id="triggers4"></div>
       @if (count($stories) > 0)
         @foreach($stories as $story)
-          <div class="storyForum">
-            <div class="commentAndTitle">
-              <h4>{{$story->title}}</h4>
-              <a href="{{ url('forum', [$story->id]) }}"><p class="commentCount">{{ $countComArray[$story->id] }} reacties</p></a>
+          <a href="#">
+            <div class="storyForum">
+              <div class="commentAndTitle">
+                <h4>{{$story->title}}</h4>
+                <p class="commentCount">{{ $countComArray[$story->id] }} reacties</p>
+              </div>
+              <p class="storyBody">{{$story->story}}</p><br>
             </div>
-            <p class="storyBody">{{$story->story}}</p><br>
-          </div>
+          </a>
         @endforeach
-      @else
-        <p>Er zijn geen getuigenissen</p>
-      @endif
+    <div class="zieMeer">
+      <a href="#"><p>Zie meer &rarr;</p></a>
+    </div>
+
+    @else
+      <p>Er zijn geen getuigenissen</p>
+    @endif
     </div>
 
     <div class="spacer s10"></div>
@@ -241,7 +251,7 @@
             }) // add indicators (requires plugin)
             .addTo(controller);
         var body = new ScrollMagic.Scene({
-                triggerElement: "#trigger9",
+                triggerElement: "#triggers1",
                 duration: 100
             })
             .setTween("body", {
@@ -252,7 +262,7 @@
             }) // add indicators (requires plugin)
             .addTo(controller);
         var text6 = new ScrollMagic.Scene({
-                triggerElement: "#trigger10",
+                triggerElement: "#triggers2",
                 duration: 200
             })
             .setTween("#text6", {
@@ -263,15 +273,24 @@
             }) // add indicators (requires plugin)
             .addTo(controller);
         var text7 = new ScrollMagic.Scene({
-                triggerElement: "#trigger11",
+                triggerElement: "#triggers3",
                 duration: 200
             })
             .setTween("#text7", {
                 opacity: 1,
                 left: "25%"
             }) // the tween durtion can be omitted and defaults to 1
+            .addTo(controller);
+        var forum = new ScrollMagic.Scene({
+                triggerElement: "#triggers4",
+                duration: 200
+            })
+            .setTween(".forumInStory", {
+                opacity: 1,
+                left: "0%"
+            }) // the tween durtion can be omitted and defaults to 1
             .addIndicators({
-                name: "text7 (opacity: 1)"
+                name: "div 1 forum (opacity: 1)"
             }) // add indicators (requires plugin)
             .addTo(controller);
 
