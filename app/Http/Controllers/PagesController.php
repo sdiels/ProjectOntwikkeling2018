@@ -20,6 +20,9 @@ class PagesController extends Controller
     public function info() {
       return view('info');
     }
+    public function story1() {
+      return view('story1');
+    }
     public function contact() {
       return view('contact');
     }
