@@ -29,119 +29,151 @@
         var controller = new ScrollMagic.Controller();
 
     </script>
-    <div class="spacer s5"></div>
-    <div id="trigger1"></div>
+    <main>
+      <div class="spacer s5"></div>
+      <div id="trigger1"></div>
 
-    <img id="bg1" src="{{asset('images/story1/stad.jpg')}}" alt="stad achtergrond">
-    <img id="alogo" src="{{asset('images/story1/a-logo.svg')}}" alt="a logo">
-    <img id="tram" src="{{asset('images/story1/tram.png')}}" alt="tram">
-    <p id="text1">Ik was onderweg met de tram naar school</p>
+      <img id="bg1" src="{{asset('images/story1/stad.jpg')}}" alt="stad achtergrond">
+      <img id="alogo" src="{{asset('images/story1/a-logo.svg')}}" alt="a logo">
+      <img id="tram" src="{{asset('images/story1/tram.png')}}" alt="tram">
+      <p id="text1">Ik was onderweg met de tram naar school</p>
 
-    <div class="spacer s3"></div>
-    <div id="trigger2"></div>
-    <div class="spacer s6"></div>
-    <div id="trigger3"></div>
-    <div class="spacer s3"></div>
-    <div id="trigger4"></div>
+      <div class="spacer s3"></div>
+      <div id="trigger2"></div>
+      <div class="spacer s6"></div>
+      <div id="trigger3"></div>
+      <div class="spacer s3"></div>
+      <div id="trigger4"></div>
 
-    <div id="fdiv1">
-        <img id="buildings2" src="{{asset('images/story1/buildings.png')}}" alt="buildings 2">
-        <img id="buildings1" src="{{asset('images/story1/buildings.png')}}" alt="buildings 1">
-        <img id="frame1" src="{{asset('images/story1/frame1.png')}}" alt="frame 1">
-    </div>
-    <p id="text2">Rustig op een enkel zitje naast het raam</p>
+      <div id="fdiv1">
+          <img id="buildings2" src="{{asset('images/story1/buildings.png')}}" alt="buildings 2">
+          <img id="buildings1" src="{{asset('images/story1/buildings.png')}}" alt="buildings 1">
+          <img id="frame1" src="{{asset('images/story1/frame1.png')}}" alt="frame 1">
+      </div>
+      <p id="text2">Rustig op een enkel zitje naast het raam</p>
 
-    <div class="spacer s6"></div>
-    <div id="trigger5"></div>
-    <div class="spacer s3"></div>
-    <div id="trigger6"></div>
+      <div class="spacer s6"></div>
+      <div id="trigger5"></div>
+      <div class="spacer s3"></div>
+      <div id="trigger6"></div>
 
-    <div id="fdiv2">
-        <img id="man" src="{{asset('images/story1/man.png')}}" alt="man">
-        <img id="frame2" src="{{asset('images/story1/frame2.png')}}" alt="frame 2">
-    </div>
-    <p id="text3">Opeens kwam er een man met zijn geslachtsdeel tegen mij aan staan</p>
+      <div id="fdiv2">
+          <img id="man" src="{{asset('images/story1/man.png')}}" alt="man">
+          <img id="frame2" src="{{asset('images/story1/frame2.png')}}" alt="frame 2">
+      </div>
+      <p id="text3">Opeens kwam er een man met zijn geslachtsdeel tegen mij aan staan</p>
 
-    <div class="spacer s6"></div>
-    <div id="trigger7"></div>
-    <div class="spacer s3"></div>
-    <div id="trigger8"></div>
+      <div class="spacer s6"></div>
+      <div id="trigger7"></div>
+      <div class="spacer s3"></div>
+      <div id="trigger8"></div>
 
-    <div id="face">
-        <img id="faceimg" src="{{asset('images/story1/face.jpg')}}" alt="face">
-        <img id="drop1" src="{{asset('images/story1/drop.png')}}" alt="drop1">
-        <img id="drop2" src="{{asset('images/story1/drop.png')}}" alt="drop2">
-        <img id="drop3" src="{{asset('images/story1/drop.png')}}" alt="drop3">
-    </div>
-    <p id="text4">Ik wist niet wat er gebeurde, het leek alsof ik niet kon bewegen</p>
-    <p id="text5">Die vijf minuten leken uren te duren</p>
+      <div id="face">
+          <img id="faceimg" src="{{asset('images/story1/face.jpg')}}" alt="face">
+          <img id="drop1" src="{{asset('images/story1/drop.png')}}" alt="drop1">
+          <img id="drop2" src="{{asset('images/story1/drop.png')}}" alt="drop2">
+          <img id="drop3" src="{{asset('images/story1/drop.png')}}" alt="drop3">
+      </div>
+      <p id="text4">Ik wist niet wat er gebeurde, het leek alsof ik niet kon bewegen</p>
+      <p id="text5">Die vijf minuten leken uren te duren</p>
 
-    <div class="spacer s6"></div>
-    <div id="trigger9"></div>
-    <div class="spacer s5"></div>
-    <div id="trigger10"></div>
-    <div class="spacer s3"></div>
-    <div id="trigger11"></div>
+      <div class="spacer s6"></div>
+      <div id="trigger9"></div>
+      <div class="spacer s5"></div>
+      <div id="trigger10"></div>
+      <div class="spacer s3"></div>
+      <div id="trigger11"></div>
 
-    <div id="fdiv3">
-        <img id="bg3" src="{{asset('images/story1/bg3.png')}}" alt="bg3">
-        <img id="man2" src="{{asset('images/story1/man2.png')}}" alt="man">
-        <img id="frame3" src="{{asset('images/story1/frame3.png')}}" alt="frame 3">
-    </div>
-    <p id="text6">Toen hij stopte zag ik hem direct naar een ander meisje lopen</p>
+      <div id="fdiv3">
+          <img id="bg3" src="{{asset('images/story1/bg3.png')}}" alt="bg3">
+          <img id="man2" src="{{asset('images/story1/man2.png')}}" alt="man">
+          <img id="frame3" src="{{asset('images/story1/frame3.png')}}" alt="frame 3">
+      </div>
+      <p id="text6">Toen hij stopte zag ik hem direct naar een ander meisje lopen</p>
 
-    <div class="spacer s5"></div>
-    <div id="trigger12"></div>
-    <div class="spacer s3"></div>
-    <div id="trigger13"></div>
+      <div class="spacer s5"></div>
+      <div id="trigger12"></div>
+      <div class="spacer s3"></div>
+      <div id="trigger13"></div>
 
-    <div id="fdiv4">
-        <img id="bg4" src="{{asset('images/story1/bg4.png')}}" alt="bg 4">
-        <img id="frame4" src="{{asset('images/story1/frame4.png')}}" alt="frame 4">
-    </div>
-    <p id="text7">Ik maakte dat ik weg kwam zodra ik de kans kreeg</p>
+      <div id="fdiv4">
+          <img id="bg4" src="{{asset('images/story1/bg4.png')}}" alt="bg 4">
+          <img id="frame4" src="{{asset('images/story1/frame4.png')}}" alt="frame 4">
+      </div>
+      <div id="trigger14"></div>
+      <div id="whiteScreenEnd"></div>
+      <p id="text7">Ik maakte dat ik weg kwam zodra ik de kans kreeg</p>
 
-    <div class="spacer s5"></div>
-    <div id="triggers1"></div>
+      <div id="trigger15"></div>
+      <div id="trigger16"></div>
+      <p id="text8">Eva is niet de enige die het slachtoffer werd van soort gelijke gebeurtenissen</p>
 
-    <div class="spacer s2"></div>
-    <div id="triggers2"></div>
-    <p id="texts1">Info</p>
+    </main>
+    <div class="OtherContent">
+      <div class="spacer s1"></div>
+      <div id="triggeri1"></div>
+      <p id="texti1">Info</p>
+      <p>Dit is de info</p>
+      <p>nog info</p>
+      <p>grafiekske dabij</p>
+      <p>nog info om af te sluiten</p>
 
-    <div class="spacer s3"></div>
-    <div id="triggers3"></div>
-    <p id="texts2">Lees verhalen/getuigenissen</p>
+      <p id="texts1">Lees verhalen/getuigenissen</p>
 
-    <div class="spacer s2"></div>
-    <div class="forumInStory">
-
-      @if (count($stories) > 0)
-      <?php $a = 0; ?>
-        @foreach($stories as $story)
-        <?php $a++; ?>
-        <?php $b=$a+3; ?>
-        <div id="triggers{{$b}}"></div>
-          <a href="#" class="storyNumber storyNumber{{$a}}">
-            <div class="storyForum">
-              <div class="commentAndTitle">
-                <h4>{{$story->title}}</h4>
-                <p class="commentCount">{{ $countComArray[$story->id] }} reacties</p>
+      <div class="forumInStory">
+        @if (count($stories) > 0)
+        <?php $a = 0; ?>
+          @foreach($stories as $story)
+          <?php $a++; ?>
+          <div id="triggers{{$a}}"></div>
+            <a href="#" class="storyNumber{{$a}}">
+              <div class="storyForum">
+                <div class="commentAndTitle">
+                  <h4>{{$story->title}}</h4>
+                  <p class="commentCount">{{ $countComArray[$story->id] }} reacties</p>
+                </div>
+                <p class="storyBody">{{$story->story}}</p><br>
               </div>
-              <p class="storyBody">{{$story->story}}</p><br>
-            </div>
-          </a>
-        @endforeach
-    <div id="triggers8"></div>
-    <div class="zieMeer">
-      <a href="#"><p>Zie meer &rarr;</p></a>
-    </div>
+            </a>
+          @endforeach
+      <div id="triggers6"></div>
+      <div class="zieMeer">
+        <a href="#"><p>Zie meer &rarr;</p></a>
+      </div>
 
-    @else
-      <p>Er zijn geen getuigenissen</p>
-    @endif
-    </div>
+      @else
+        <p>Er zijn geen getuigenissen</p>
+      @endif
+      </div>
 
-    <div class="spacer s10"></div>
+      <p id="textg1">Speel het spel</p>
+      <div class="gamepageWithoutTitle">
+        <div class="gameInfoAndPhotos">
+          <div class="GameInfo">
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+          </div>
+          <div class="GameSmallPhotos">
+            <p>Photos</p>
+          </div>
+        </div>
+        <div class="gamePhotosAndPlayGame">
+          <div class="gameLongPhoto">
+            <p>long photo</p>
+          </div>
+          <div class="gamePlay">
+            <p>Play</p>
+          </div>
+          <div class="gameReactions">
+            <p>reactions</p>
+          </div>
+        </div>
+      </div>
+
+
+
+
+      <div class="spacer s4"></div>
+    </div>
 
     <script>
         var bg1 = new ScrollMagic.Scene({
@@ -282,7 +314,7 @@
             .addTo(controller);
         var text5 = new ScrollMagic.Scene({
                 triggerElement: "#trigger9",
-                duration: "20%"
+                duration: "30%"
             })
             .setTween("#text5", {
                 top: "470%",
@@ -319,7 +351,7 @@
             .addTo(controller);
         var text6 = new ScrollMagic.Scene({
                 triggerElement: "#trigger11",
-                duration: "10%"
+                duration: "20%"
             })
             .setTween("#text6", {
                 left: "55%",
@@ -363,13 +395,22 @@
                 opacity: 1
             }) // the tween durtion can be omitted and defaults to 1
             .addIndicators({
-                name: "text7 (duration: 100)"
+                name: "text7 (duration: 50)"
             }) // add indicators (requires plugin)
             .addTo(controller);
-
-
+        var frame4WhiteScreen = new ScrollMagic.Scene({
+                triggerElement: "#trigger14",
+                duration: "20%"
+            })
+            .setTween("#whiteScreenEnd", {
+                opacity: 1
+            }) // the tween durtion can be omitted and defaults to 1
+            .addIndicators({
+                name: "frame 4 white screen (duration: 200)"
+            }) // add indicators (requires plugin)
+            .addTo(controller);
         var body = new ScrollMagic.Scene({
-                triggerElement: "#triggers1",
+                triggerElement: "#trigger15",
                 duration: "10%"
             })
             .setTween("body", {
@@ -379,32 +420,21 @@
                 name: "body (duration: 100)"
             }) // add indicators (requires plugin)
             .addTo(controller);
-        var texts1 = new ScrollMagic.Scene({
-                triggerElement: "#triggers2",
-                duration: "20%"
+        var text8 = new ScrollMagic.Scene({
+                triggerElement: "#trigger16",
+                duration: "70%"
             })
-            .setTween("#texts1", {
-                opacity: 1
-            }) // the tween durtion can be omitted and defaults to 1
-            .addIndicators({
-                name: "texts1 (opacity: 1)"
-            }) // add indicators (requires plugin)
-            .addTo(controller);
-        var texts2 = new ScrollMagic.Scene({
-                triggerElement: "#triggers3",
-                duration: "20%"
-            })
-            .setTween("#texts2", {
+            .setTween("#text8", {
                 opacity: 1,
-                left: "25%"
+                top: "760%"
             }) // the tween durtion can be omitted and defaults to 1
             .addIndicators({
-                name: "texts2 (opacity: 1)"
+                name: "text8 (duration: 700)"
             }) // add indicators (requires plugin)
             .addTo(controller);
 
         var forum = new ScrollMagic.Scene({
-                triggerElement: "#triggers4",
+                triggerElement: "#triggers1",
                 duration: "20%"
             })
             .setTween(".storyNumber1", {
@@ -416,7 +446,7 @@
             }) // add indicators (requires plugin)
             .addTo(controller);
         var forum = new ScrollMagic.Scene({
-                triggerElement: "#triggers5",
+                triggerElement: "#triggers2",
                 duration: "20%"
             })
             .setTween(".storyNumber2", {
@@ -428,7 +458,7 @@
             }) // add indicators (requires plugin)
             .addTo(controller);
         var forum = new ScrollMagic.Scene({
-                    triggerElement: "#triggers6",
+                    triggerElement: "#triggers3",
                     duration: "20%"
                 })
                 .setTween(".storyNumber3", {
@@ -440,7 +470,7 @@
                 }) // add indicators (requires plugin)
                 .addTo(controller);
         var forum = new ScrollMagic.Scene({
-                triggerElement: "#triggers7",
+                triggerElement: "#triggers4",
                 duration: "20%"
             })
             .setTween(".storyNumber4", {
