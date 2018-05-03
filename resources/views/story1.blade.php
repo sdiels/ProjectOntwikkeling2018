@@ -50,23 +50,23 @@
         <img id="frame1" src="{{asset('images/story1/frame1.png')}}" alt="frame 1">
     </div>
     <p id="text2">Rustig op een enkel zitje naast het raam</p>
-    
+
     <div class="spacer s6"></div>
     <div id="trigger5"></div>
     <div class="spacer s3"></div>
     <div id="trigger6"></div>
-    
+
     <div id="fdiv2">
         <img id="man" src="{{asset('images/story1/man.png')}}" alt="man">
         <img id="frame2" src="{{asset('images/story1/frame2.png')}}" alt="frame 2">
     </div>
     <p id="text3">Opeens kwam er een man met zijn geslachtsdeel tegen mij aan staan</p>
-    
+
     <div class="spacer s6"></div>
     <div id="trigger7"></div>
     <div class="spacer s3"></div>
     <div id="trigger8"></div>
-    
+
     <div id="face">
         <img id="faceimg" src="{{asset('images/story1/face.jpg')}}" alt="face">
         <img id="drop1" src="{{asset('images/story1/drop.png')}}" alt="drop1">
@@ -75,32 +75,32 @@
     </div>
     <p id="text4">Ik wist niet wat er gebeurde, het leek alsof ik niet kon bewegen</p>
     <p id="text5">Die vijf minuten leken uren te duren</p>
-    
+
     <div class="spacer s6"></div>
     <div id="trigger9"></div>
     <div class="spacer s5"></div>
     <div id="trigger10"></div>
     <div class="spacer s3"></div>
     <div id="trigger11"></div>
-    
+
     <div id="fdiv3">
         <img id="bg3" src="{{asset('images/story1/bg3.png')}}" alt="bg3">
         <img id="man2" src="{{asset('images/story1/man2.png')}}" alt="man">
         <img id="frame3" src="{{asset('images/story1/frame3.png')}}" alt="frame 3">
     </div>
     <p id="text6">Toen hij stopte zag ik hem direct naar een ander meisje lopen</p>
-    
+
     <div class="spacer s5"></div>
     <div id="trigger12"></div>
     <div class="spacer s3"></div>
     <div id="trigger13"></div>
-    
+
     <div id="fdiv4">
         <img id="bg4" src="{{asset('images/story1/bg4.png')}}" alt="bg 4">
         <img id="frame4" src="{{asset('images/story1/frame4.png')}}" alt="frame 4">
     </div>
     <p id="text7">Ik maakte dat ik weg kwam zodra ik de kans kreeg</p>
-    
+
     <div class="spacer s5"></div>
     <div id="triggers1"></div>
 
@@ -157,7 +157,7 @@
             .addTo(controller);
         var tram = new ScrollMagic.Scene({
                 triggerElement: "#trigger1",
-                duration: 500
+                duration: "50%"
             })
             .setTween("#tram", {
                 left: "10%",
@@ -171,7 +171,7 @@
 
         var text1 = new ScrollMagic.Scene({
                 triggerElement: "#trigger2",
-                duration: 200
+                duration: "20%"
             })
             .setTween("#text1", {
                 opacity: 1
@@ -180,12 +180,12 @@
                 name: "text1 (duration: 100)"
             }) // add indicators (requires plugin)
             .addTo(controller);
-        
-        
-        
+
+
+
         var frame1 = new ScrollMagic.Scene({
                 triggerElement: "#trigger3",
-                duration: 500
+                duration: "50%"
             })
             .setTween("#fdiv1", {
                 left: "5%",
@@ -195,10 +195,10 @@
                 name: "frame 1 (duration: 500)"
             }) // add indicators (requires plugin)
             .addTo(controller);
-        
+
         var text2 = new ScrollMagic.Scene({
                 triggerElement: "#trigger4",
-                duration: 200
+                duration: "20%"
             })
             .setTween("#text2", {
                 left:"60%",
@@ -208,11 +208,11 @@
                 name: "text2 (duration: 100)"
             }) // add indicators (requires plugin)
             .addTo(controller);
-        
-        
+
+
         var frame2 = new ScrollMagic.Scene({
                 triggerElement: "#trigger5",
-                duration: 500
+                duration: "50%"
             })
             .setTween("#fdiv2", {
                 left: "50%",
@@ -224,7 +224,7 @@
             .addTo(controller);
         var man = new ScrollMagic.Scene({
                 triggerElement: "#trigger5",
-                duration: 600
+                duration: "60%"
             })
             .setTween("#man", {
                 right: "1%"
@@ -235,7 +235,7 @@
             .addTo(controller);
         var text3 = new ScrollMagic.Scene({
                 triggerElement: "#trigger6",
-                duration: 200
+                duration: "20%"
             })
             .setTween("#text3", {
                 left:"5%",
@@ -245,10 +245,10 @@
                 name: "text3 (duration: 100)"
             }) // add indicators (requires plugin)
             .addTo(controller);
-        
+
         var face = new ScrollMagic.Scene({
                 triggerElement: "#trigger7",
-                duration: 300
+                duration: "30%"
             })
             .setTween("#face", {
                 opacity: 1
@@ -259,7 +259,7 @@
             .addTo(controller);
         var text4 = new ScrollMagic.Scene({
                 triggerElement: "#trigger8",
-                duration: 200
+                duration: "20%"
             })
             .setTween("#text4", {
                 top: "365%",
@@ -271,7 +271,7 @@
             .addTo(controller);
         var body = new ScrollMagic.Scene({
                 triggerElement: "#trigger8",
-                duration: 100
+                duration: "10%;"
             })
             .setTween("body", {
                 backgroundColor: "black"
@@ -282,7 +282,7 @@
             .addTo(controller);
         var text5 = new ScrollMagic.Scene({
                 triggerElement: "#trigger9",
-                duration: 200
+                duration: "20%"
             })
             .setTween("#text5", {
                 top: "470%",
@@ -292,11 +292,11 @@
                 name: "text5 (duration: 200)"
             }) // add indicators (requires plugin)
             .addTo(controller);
-        
-        
+
+
         var frame3 = new ScrollMagic.Scene({
                 triggerElement: "#trigger10",
-                duration: 500
+                duration: "50%"
             })
             .setTween("#fdiv3", {
                 left: "5%",
@@ -308,7 +308,7 @@
             .addTo(controller);
         var man2 = new ScrollMagic.Scene({
                 triggerElement: "#trigger10",
-                duration: 500
+                duration: "50%"
             })
             .setTween("#man2", {
                 left: "0%"
@@ -319,7 +319,7 @@
             .addTo(controller);
         var text6 = new ScrollMagic.Scene({
                 triggerElement: "#trigger11",
-                duration: 100
+                duration: "10%"
             })
             .setTween("#text6", {
                 left: "55%",
@@ -329,11 +329,11 @@
                 name: "text 6 (duration: 100)"
             }) // add indicators (requires plugin)
             .addTo(controller);
-        
-        
+
+
         var frame4 = new ScrollMagic.Scene({
                 triggerElement: "#trigger12",
-                duration: 500
+                duration: "50%"
             })
             .setTween("#fdiv4", {
                 left: "50%",
@@ -345,7 +345,7 @@
             .addTo(controller);
         var bg4 = new ScrollMagic.Scene({
                 triggerElement: "#trigger12",
-                duration: 500
+                duration: "50%"
             })
             .setTween("#bg4", {
                 right: "-15%"
@@ -356,7 +356,7 @@
             .addTo(controller);
         var text7 = new ScrollMagic.Scene({
                 triggerElement: "#trigger13",
-                duration: 200
+                duration: "20%"
             })
             .setTween("#text7", {
                 left:"5%",
@@ -366,11 +366,11 @@
                 name: "text7 (duration: 100)"
             }) // add indicators (requires plugin)
             .addTo(controller);
-        
-        
+
+
         var body = new ScrollMagic.Scene({
                 triggerElement: "#triggers1",
-                duration: 100
+                duration: "10%"
             })
             .setTween("body", {
                 backgroundColor: "white"
@@ -381,28 +381,31 @@
             .addTo(controller);
         var texts1 = new ScrollMagic.Scene({
                 triggerElement: "#triggers2",
-                duration: 200
+                duration: "20%"
             })
             .setTween("#texts1", {
                 opacity: 1
             }) // the tween durtion can be omitted and defaults to 1
             .addIndicators({
-                name: "text6 (opacity: 1)"
+                name: "texts1 (opacity: 1)"
             }) // add indicators (requires plugin)
             .addTo(controller);
         var texts2 = new ScrollMagic.Scene({
                 triggerElement: "#triggers3",
-                duration: 200
+                duration: "20%"
             })
             .setTween("#texts2", {
                 opacity: 1,
                 left: "25%"
             }) // the tween durtion can be omitted and defaults to 1
+            .addIndicators({
+                name: "texts2 (opacity: 1)"
+            }) // add indicators (requires plugin)
             .addTo(controller);
 
         var forum = new ScrollMagic.Scene({
                 triggerElement: "#triggers4",
-                duration: 200
+                duration: "20%"
             })
             .setTween(".storyNumber1", {
                 opacity: 1,
@@ -414,7 +417,7 @@
             .addTo(controller);
         var forum = new ScrollMagic.Scene({
                 triggerElement: "#triggers5",
-                duration: 200
+                duration: "20%"
             })
             .setTween(".storyNumber2", {
                 opacity: 1,
@@ -426,7 +429,7 @@
             .addTo(controller);
         var forum = new ScrollMagic.Scene({
                     triggerElement: "#triggers6",
-                    duration: 200
+                    duration: "20%"
                 })
                 .setTween(".storyNumber3", {
                     opacity: 1,
@@ -438,7 +441,7 @@
                 .addTo(controller);
         var forum = new ScrollMagic.Scene({
                 triggerElement: "#triggers7",
-                duration: 200
+                duration: "20%"
             })
             .setTween(".storyNumber4", {
                 opacity: 1,
@@ -450,7 +453,7 @@
             .addTo(controller);
         var forumMore = new ScrollMagic.Scene({
                 triggerElement: "#triggers8",
-                duration: 200
+                duration: "20%"
             })
             .setTween(".zieMeer", {
                 opacity: 1

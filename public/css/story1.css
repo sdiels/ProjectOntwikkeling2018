@@ -9,7 +9,7 @@ body {
 }
 p {
     font-family: antwerpen;
-    font-size: 3em;
+    font-size: 2.5em;
     position: absolute;
 }
 #alogo {
@@ -38,7 +38,6 @@ p {
     position: absolute;
     height: 650px;
     width: 50%;
-    border: red solid 2px;
     overflow: hidden;
     opacity: 0;
     left: 0;
@@ -369,6 +368,45 @@ p {
     font-weight: bold;
     position: relative;
 }
+/*****************************
+            TRIGUURS
+******************************/
+#trigger1,
+#trigger2,
+#trigger3,
+#trigger4,
+#trigger5,
+#trigger6,
+#trigger7,
+#trigger8,
+#trigger9,
+#trigger10,
+#trigger11,
+#trigger12,
+#trigger13 {
+  position: absolute;
+}
+
+#trigger1 {
+  top: 55%;
+}
+#trigger2 {
+  top: 90%;
+}
+#trigger3 {
+  top: 150%;
+}
+#trigger4 {
+  top: 185%;
+}
+#trigger5 {
+  top: 240%;
+}
+#trigger6 {
+  top: 260%;
+}
+
+
 
 /*****************************
             CLEARFIX
