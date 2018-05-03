@@ -2,7 +2,6 @@
     font-family: antwerpen;
     src: url(AntwerpenRegular.otf);
 }
-
 body {
     width: 100%;
     margin: 0;
@@ -13,28 +12,28 @@ p {
     font-size: 3em;
     position: absolute;
 }
-
+#alogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 #bg1 {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
 }
-
 #tram {
     position: absolute;
     width: 50%;
     top: 41%;
     left: 55%;
 }
-
 #text1 {
     left: 60%;
     top: 120%;
     opacity: 0;
 }
-
-
 #fdiv1 {
     position: absolute;
     height: 650px;
@@ -42,11 +41,9 @@ p {
     border: red solid 2px;
     overflow: hidden;
     opacity: 0;
-
     left: 0;
     top: 170%
 }
-
 #buildings1,
 #buildings2 {
     width: 85%;
@@ -57,15 +54,12 @@ p {
     animation-iteration-count: infinite;
     animation-fill-mode: both;
 }
-
 #buildings1 {
     animation-name: buildings1-move;
 }
-
 #buildings2 {
     animation-name: buildings2-move;
 }
-
 @keyframes buildings1-move {
     0% {
         transform: translatex(-95%);
@@ -77,7 +71,6 @@ p {
         transform: translatex(85%);
     }
 }
-
 @keyframes buildings2-move {
     0% {
         transform: translatex(0);
@@ -92,39 +85,32 @@ p {
         transform: translatex(0);
     }
 }
-
 #frame1 {
     width: 120%;
     position: absolute;
 }
-
 #text2 {
     left: 65%;
     top: 190%;
     opacity: 0;
 }
-
-
 #fdiv2 {
     position: absolute;
     height: 650px;
     width: 50%;
     overflow: hidden;
     opacity: 0;
-
     left: 55%;
     top: 270%
 }
 #frame2 {
     width: 120%;
     position: absolute;
-
     right: 1%
 }
 #man {
     width: 120%;
     position: absolute;
-
     right: 50%
 }
 #text3 {
@@ -133,26 +119,22 @@ p {
     width: 50%;
     opacity: 0;
 }
-
 #face {
     position: absolute;
     width: 100%;
     opacity: 0;
     top: 250%
 }
-
 #drop1,
 #drop2,
-#drop3{
+#drop3 {
     width: 2%;
     position: absolute;
     top: 70%;
     animation-timing-function: linear;
-
     animation-iteration-count: infinite;
     animation-fill-mode: both;
 }
-
 #drop1 {
     animation-name: drop1-move;
     left: 50%;
@@ -168,7 +150,6 @@ p {
     left: 60%;
     animation-duration: 5s;
 }
-
 @keyframes drop2-move {
     0% {
         transform: translatey(0);
@@ -184,12 +165,13 @@ p {
         transform: translatey(170px);
         opacity: 0;
     }
-}@keyframes drop1-move {
+}
+@keyframes drop1-move {
     0% {
         opacity: 0.5;
         transform: translateY(210px);
     }
-    29%{
+    29% {
         opacity: 0;
         transform: translateY(300px);
     }
@@ -207,7 +189,8 @@ p {
         opacity: 0.5;
         transform: translateY(210px);
     }
-}@keyframes drop3-move {
+}
+@keyframes drop3-move {
     0% {
         transform: translatey(80px);
         opacity: 1;
@@ -231,7 +214,6 @@ p {
         opacity: 1;
     }
 }
-
 #text4 {
     left: 12%;
     top: 360%;
@@ -240,119 +222,153 @@ p {
 }
 #text5 {
     left: 30%;
-    top: 470%;
-    opacity: 1;
+    top: 475%;
+    opacity: 0;
     color: white;
 }
-
-#text5 {
-    left: 30%;
-    top: 470%;
-    opacity: 1;
-    color: white;
+#fdiv3 {
+    position: absolute;
+    height: 650px;
+    width: 50%;
+    overflow: hidden;
+    opacity: 0;
+    left: 0%;
+    top: 510%
+}
+#frame3 {
+    width: 120%;
+    position: absolute;
+    left: 0%
+}
+#man2 {
+    width: 120%;
+    position: absolute;
+    left: 30%
+}
+#bg3 {
+    width: 120%;
+    position: absolute;
+    left: 0%
 }
 #text6 {
+    left: 60%;
+    top: 530%;
+    width: 40%;
     opacity: 0;
+    color: white;
+}
+#fdiv4 {
+    position: absolute;
+    height: 650px;
+    width: 50%;
+    overflow: hidden;
+    opacity: 0;
+    left: 55%;
+    top: 610%
+}
+#bg4 {
+    width: 120%;
+    position: absolute;
+    right: 10%
+}
+#frame4 {
+    width: 120%;
+    position: absolute;
+    right: 0%
 }
 #text7 {
+    left: 0%;
+    top: 630%;
+    width: 50%;
+    opacity: 0;
+    color: white;
+}
+#texts1 {
+    opacity: 0;
+}
+#texts2 {
     opacity: 0;
     left: 15%;
 }
 .forumInStory {
-  padding: 2%;
-  position: relative;
-  opacity: 1;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+    padding: 2%;
+    position: relative;
+    opacity: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 .storyNumber1,
 .storyNumber3 {
-  opacity: 0;
-  left: -50%;
-  position: absolute;
+    opacity: 0;
+    left: -50%;
+    position: absolute;
 }
 .storyNumber2,
 .storyNumber4 {
-  opacity: 0;
-  left: 100%;
-  position: absolute;
+    opacity: 0;
+    left: 100%;
+    position: absolute;
 }
 .storyNumber3,
 .storyNumber4 {
-  top: 500%;
+    top: 500%;
 }
 .forumInStory .storyForum {
-   border-radius: 5px;
-   background-color: #000;
-   color: #fff;
-   padding: 2%;
-   margin-right: 0;
-   margin-bottom: 0;
-   width: 100%;
-   height: 100%;
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    padding: 2%;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
 }
 .forumInStory a {
-  width: 40%;
-  margin-right: 5%;
-  margin-bottom: 5%;
-  height: 200px;
-  text-decoration: inherit;
-  float: left;
+    width: 40%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    height: 200px;
+    text-decoration: inherit;
+    float: left;
 }
 .forumInStory .storyForum .commentAndTitle {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px solid #fff;
-  margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 30px;
 }
 .forumInStory .storyForum h4 {
-   font-size: 2em;
-   margin-top: 0px;
-   color: #ff5757;
+    font-size: 2em;
+    margin-top: 0px;
+    color: #ff5757;
 }
 .forumInStory .storyForum a > p {
-   margin-top: 0px;
-   color: #fff;
-   border: none;
+    margin-top: 0px;
+    color: #fff;
+    border: none;
 }
 .forumInStory .storyForum a {
-  text-decoration: inherit;
+    text-decoration: inherit;
 }
 .forumInStory .zieMeer {
-  width: 100%;
-  position: absolute;
-  top: 870%;
-  opacity: 0;
-  text-align: right;
+    width: 100%;
+    position: absolute;
+    top: 870%;
+    opacity: 0;
+    text-align: right;
 }
 .forumInStory .zieMeer a {
-  width: 100%;
-  text-align: right;
-  text-decoration: inherit;
+    width: 100%;
+    text-align: right;
+    text-decoration: inherit;
 }
 .forumInStory p {
-   font-size: 1em;
-   margin-right: 5%;
-   font-weight: bold;
-   position: relative;
+    font-size: 1em;
+    margin-right: 5%;
+    font-weight: bold;
+    position: relative;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*****************************
             CLEARFIX
@@ -367,6 +383,5 @@ p {
 .clearfix::after {
     clear: both;
 }
-
 
 /**/
