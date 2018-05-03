@@ -11,8 +11,6 @@
     <link rel="stylesheet" href="scrollmagic/css/normalize.css" type="text/css">
     <link rel="stylesheet" href="scrollmagic/css/examples.css" type="text/css">
 
-    <link rel="stylesheet" href="/css/story1.css">
-
     <script type="text/javascript" src="scrollmagic/js/lib/jquery.min.js"></script>
     <script type="text/javascript" src="scrollmagic/js/lib/highlight.pack.js"></script>
     <script type="text/javascript" src="scrollmagic/js/lib/modernizr.custom.min.js"></script>
@@ -22,6 +20,8 @@
     <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
     <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
+    <link rel="stylesheet" href="/css/story1.css">
 </head>
 <body>
 
@@ -89,10 +89,13 @@
     <div class="spacer s2"></div>
     <div class="forumInStory">
 
-    <div id="triggers4"></div>
       @if (count($stories) > 0)
+      <?php $a = 0; ?>
         @foreach($stories as $story)
-          <a href="#">
+        <?php $a++; ?>
+        <?php $b=$a+3; ?>
+        <div id="triggers{{$b}}"></div>
+          <a href="#" class="storyNumber storyNumber{{$a}}">
             <div class="storyForum">
               <div class="commentAndTitle">
                 <h4>{{$story->title}}</h4>
@@ -102,6 +105,7 @@
             </div>
           </a>
         @endforeach
+    <div id="triggers8"></div>
     <div class="zieMeer">
       <a href="#"><p>Zie meer &rarr;</p></a>
     </div>
@@ -281,19 +285,66 @@
                 left: "25%"
             }) // the tween durtion can be omitted and defaults to 1
             .addTo(controller);
+
         var forum = new ScrollMagic.Scene({
                 triggerElement: "#triggers4",
                 duration: 200
             })
-            .setTween(".forumInStory", {
+            .setTween(".storyNumber1", {
                 opacity: 1,
-                left: "0%"
+                left: "5%"
             }) // the tween durtion can be omitted and defaults to 1
             .addIndicators({
                 name: "div 1 forum (opacity: 1)"
             }) // add indicators (requires plugin)
             .addTo(controller);
-
+        var forum = new ScrollMagic.Scene({
+                triggerElement: "#triggers5",
+                duration: 200
+            })
+            .setTween(".storyNumber2", {
+                opacity: 1,
+                left: "55%"
+            }) // the tween durtion can be omitted and defaults to 1
+            .addIndicators({
+                name: "div 1 forum (opacity: 1)"
+            }) // add indicators (requires plugin)
+            .addTo(controller);
+        var forum = new ScrollMagic.Scene({
+                    triggerElement: "#triggers6",
+                    duration: 200
+                })
+                .setTween(".storyNumber3", {
+                    opacity: 1,
+                    left: "5%"
+                }) // the tween durtion can be omitted and defaults to 1
+                .addIndicators({
+                    name: "div 1 forum (opacity: 1)"
+                }) // add indicators (requires plugin)
+                .addTo(controller);
+        var forum = new ScrollMagic.Scene({
+                triggerElement: "#triggers7",
+                duration: 200
+            })
+            .setTween(".storyNumber4", {
+                opacity: 1,
+                left: "55%"
+            }) // the tween durtion can be omitted and defaults to 1
+            .addIndicators({
+                name: "div 1 forum (opacity: 1)"
+            }) // add indicators (requires plugin)
+            .addTo(controller);
+        var forumMore = new ScrollMagic.Scene({
+                triggerElement: "#triggers8",
+                duration: 200
+            })
+            .setTween(".zieMeer", {
+                opacity: 1
+            }) // the tween durtion can be omitted and defaults to 1
+            .addIndicators({
+                name: "div 1 forum (opacity: 1)"
+            }) // add indicators (requires plugin)
+            .addTo(controller);
 
     </script>
 </body>

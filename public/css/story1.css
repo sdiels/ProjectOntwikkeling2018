@@ -260,26 +260,45 @@ p {
 }
 .forumInStory {
   padding: 2%;
-  position: absolute;
-  left: 50%;
-  opacity: 0;
-  /* display: flex;
+  position: relative;
+  opacity: 1;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: center; */
+  justify-content: center;
+}
+.storyNumber1,
+.storyNumber3 {
+  opacity: 0;
+  left: -50%;
+  position: absolute;
+}
+.storyNumber2,
+.storyNumber4 {
+  opacity: 0;
+  left: 100%;
+  position: absolute;
+}
+.storyNumber3,
+.storyNumber4 {
+  top: 500%;
 }
 .forumInStory .storyForum {
-   border: 3px solid #000;
    border-radius: 5px;
    background-color: #000;
    color: #fff;
    padding: 2%;
    margin-right: 0;
    margin-bottom: 0;
-   width: 40%;
+   width: 100%;
+   height: 100%;
 }
-.forumInStory > a {
-  width: 100%;
+.forumInStory a {
+  width: 40%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+  height: 200px;
   text-decoration: inherit;
+  float: left;
 }
 .forumInStory .storyForum .commentAndTitle {
   display: flex;
@@ -302,6 +321,9 @@ p {
 }
 .forumInStory .zieMeer {
   width: 100%;
+  position: absolute;
+  top: 870%;
+  opacity: 0;
   text-align: right;
 }
 .forumInStory .zieMeer a {
