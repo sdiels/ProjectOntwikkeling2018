@@ -73,7 +73,7 @@
               @endforeach
           <div id="triggers6"></div>
           <div class="zieMeer">
-            <a href="#"><p>Zie meer &rarr;</p></a>
+            <a href="{{ route('forum')}}"><p>Zie meer &rarr;</p></a>
           </div>
 
           @else
@@ -149,5 +149,6 @@
     </div>
 
     <script type="text/javascript" src="js/story1Script.js"></script>
+    <script type="text/javascript" src="js/layoutScript.js"></script>
 </body>
 </html>
