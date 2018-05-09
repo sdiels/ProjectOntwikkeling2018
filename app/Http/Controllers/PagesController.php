@@ -10,17 +10,10 @@ use DB;
 
 class PagesController extends Controller
 {
-    public function index() {
-      return view('home');
-    }
-
-    public function home() {
-      return view('home');
-    }
-    public function info() {
-      return view('info');
-    }
-    public function story1() {
+    public function index(Request $request) {
+      /*********************************************
+      //Getuigenissen
+      *********************************************/
       $stories = Getuigenis::orderby('id', 'desc')->take(4)->get();
 
       if ($stories->count() > 0) {
@@ -37,9 +30,37 @@ class PagesController extends Controller
           }
         }
       }
+      /*********************************************
+      //GameComments
+      *********************************************/
+      $commentOnGame = Gamecomment::orderby('id', 'desc')->take(3)->get();
+      /*********************************************
+      //Sessions
+      *********************************************/
+      $request->session()->forget('scrollToGameReactions');
 
-      return view('story1', compact('stories', 'countComArray'));
+      if ($request->session()->has('checkIfSubmitted')) {
+        $request->session()->forget('checkIfSubmitted');
+        $request->session()->put('scrollToGameReactions', true);
+      }
+
+      $request->session()->forget('checkIfSubmitted');
+
+      return view('story1', compact('stories', 'countComArray', 'commentOnGame'));
     }
+
+
+
+
+
+
+    public function home() {
+      return view('home');
+    }
+    public function info() {
+      return view('info');
+    }
+
     public function contact() {
       return view('contact');
     }

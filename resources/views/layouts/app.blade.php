@@ -12,72 +12,142 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
+    <!-- Styles en scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+    <link rel="stylesheet" href="scrollmagic/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="scrollmagic/css/examples.css" type="text/css">
+
+    <script type="text/javascript" src="scrollmagic/js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="scrollmagic/js/lib/highlight.pack.js"></script>
+    <script type="text/javascript" src="scrollmagic/js/lib/modernizr.custom.min.js"></script>
+    <script type="text/javascript" src="scrollmagic/js/examples.js"></script>
+
+    <script type="text/javascript" src="scrollmagic/js/lib/greensock/TweenMax.min.js"></script>
+    <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
+    <link rel="stylesheet" href="/css/story1.css">
 </head>
 <body>
+  <script>
+      var controller = new ScrollMagic.Controller();
+
+  </script>
+
+
     <div id="app">
-      <header>
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-            <div class="container">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+      <header></header>
+        <div class="storyView">
+          @yield('content')
+        </div>
+        <div class="OtherContent">
+          <div class="spacer s1"></div>
+          <div id="triggeri1"></div>
+          <p id="texti1">Info</p>
+          <p>Dit is de info</p>
+          <p>nog info</p>
+          <p>grafiekske dabij</p>
+          <p>nog info om af te sluiten</p>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
-                      <li><a class="nav-link" href="#">Zoeken</a></li>
-                      <li><a class="nav-link" href="#">Overzicht</a></li>
-                        <!-- Authentication Links -->
-                        @guest
-                            <li><a class="nav-link" href="{{ route('login') }}">Login</a></li>
-                            <li><a class="nav-link" href="{{ route('register') }}">Register</a></li>
-                        @else
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    {{ Auth::user()->name }} <span class="caret"></span>
-                                </a>
-                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        Logout
-                                    </a>
+          <p id="texts1">Lees verhalen/getuigenissen</p>
 
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
+          <div class="forumInStory">
+            @if (count($stories) > 0)
+            <?php $a = 0; ?>
+              @foreach($stories as $story)
+              <?php $a++; ?>
+              <div id="triggers{{$a}}"></div>
+                <a href="#" class="storyNumber{{$a}}">
+                  <div class="storyForum">
+                    <div class="commentAndTitle">
+                      <h4>{{$story->title}}</h4>
+                      <p class="commentCount">{{ $countComArray[$story->id] }} reacties</p>
+                    </div>
+                    <p class="storyBody">{{$story->story}}</p><br>
+                  </div>
+                </a>
+              @endforeach
+          <div id="triggers6"></div>
+          <div class="zieMeer">
+            <a href="#"><p>Zie meer &rarr;</p></a>
+          </div>
+
+          @else
+            <p>Er zijn geen getuigenissen</p>
+          @endif
+          </div>
+
+          <p id="textg1">Speel het spel</p>
+          <div class="gamepageWithoutTitle">
+            <div class="gameInfoAndPhotos">
+              <div class="GameInfo">
+                <h2>Info</h2>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+              </div>
+              <div class="GamePhotos">
+                <div class="bigPhoto">
+                  <a href="{{asset('images/gamePage/gamepageFoto1.png')}}"><img src="{{asset('images/gamePage/gamepageFoto1.png')}}" alt=""></a>
                 </div>
+                <div class="smallPhotos">
+                  <a href="{{asset('images/gamePage/gamepageFoto2.png')}}"><img src="{{asset('images/gamePage/gamepageFoto2.png')}}" alt=""></a>
+                  <a href="{{asset('images/gamePage/gamepageFoto3.png')}}"><img src="{{asset('images/gamePage/gamepageFoto3.png')}}" alt=""></a>
+                </div>
+              </div>
             </div>
-        </nav>
-        <div class="FotoHeader">
-          <img src="{{ asset('images/aLogo.png') }}" alt="">
-          <h1>Seksuele intimidatie bij scholieren</h1>
-        </div>
+            <div class="gamereactionsAndPlayGame">
+              <div class="gamePlay">
+                <img src="{{asset('images/gamePage/playButton.png')}}" alt="">
+              </div>
+              <div class="gameReactions">
+                <h2>Reacties</h2>
+                <div id="ReactionsScroll"></div>
+                <div class="gameComments">
+                  @if (count($commentOnGame) >  0)
+                    @foreach ($commentOnGame as $comment)
+                    <div class="oneGameComment">
+                      <p>{{$comment->body}}</p>
+                    </div>
+                    @endforeach
+                    <div class="seeMoreReacties">
+                      <a href="{{ route('GameComment')}}">Zie meer &rarr;</a>
+                    </div>
+                  @else
+                    <p>Er zijn geen reacties</p>
+                  @endif
+                </div>
+                @if (session('status'))
+                    <div class="alert alert-danger">
+                        {{ session('status') }}
+                    </div>
+                @endif
+                <form id="form" action="{{ route('storeGameComment')}}" method="post">
+                  <p class="storyField">
+                  <label for="body">Reactie</label>
+                  <textarea name="body" rows="2" cols="80"></textarea><br>
+                </p>
+                  <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                  <input type="submit" name="submit" value="Reageren">
+                </form>
+              </div>
+            </div>
+          </div>
 
-        <div class="SubNav">
-          <ul>
-            <li><a class="nav-link" href="{{ route('home') }}">Home</a></li>
-            <li><a class="nav-link" href="{{ route('info') }}">Info</a></li>
-            <li><a class="nav-link" href="{{ route('forum') }}">Forum</a></li>
-            <li><a class="nav-link" href="{{ route('game') }}">Speel het spel</a></li>
-            <li><a class="nav-link" href="{{ route('contact') }}">contact</a></li>
-          </ul>
+          <div class="spacer s4"></div>
         </div>
-      </header>
-        <main class="py-4">
-            @yield('content')
-        </main>
+        @if(session()->has('scrollToGameReactions'))
+            <script>
+              function bottom() {
+                document.getElementById( 'ReactionsScroll' ).scrollIntoView();
+              };
+              bottom();
+            </script>
+          @endif
     </div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/contact.js') }}"></script>
+    <script type="text/javascript" src="js/story1Script.js"></script>
 </body>
 </html>

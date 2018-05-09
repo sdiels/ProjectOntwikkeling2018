@@ -1,6 +1,5 @@
-@font-face {
-    font-family: antwerpen;
-    src: url(AntwerpenRegular.otf);
+* {
+  font-family: "Antwerpen Regular";
 }
 body {
     width: 100%;
@@ -410,31 +409,80 @@ p {
 .gamepageWithoutTitle .gameInfoAndPhotos {
   width: 40%;
   margin-right: 5%;
+  margin-left: 5%;
   padding: 1%;
-  border: 1px solid red;
 }
-.gamepageWithoutTitle .gamePhotosAndPlayGame {
+.gamepageWithoutTitle .gamereactionsAndPlayGame {
   width: 40%;
   padding: 1%;
-  border: 1px solid red;
 }
 .gamepageWithoutTitle .gameInfoAndPhotos .GameInfo {
-  border: 1px solid green;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+}
+/*PHOTOS*/
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos {
+  display: flex;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto {
+  width: 60%;
+  height: 250px;
+  margin-right: 2%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto a,
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto img{
+  width: 100%;
+  height: 100%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos {
+  width: 38%;
+  height: 250px;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos a,
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos img{
+  width: 100%;
+  height: 49%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos a:first-child{
+  margin-bottom: 5%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos a:last-child{
+  margin-bottom: 0%;
+}
+/*PHOTOS END*/
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gamePlay {
   margin-bottom: 20px;
+
+  background-image: url("/images/gamePage/gamepageFoto1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
 }
-.gamepageWithoutTitle .gameInfoAndPhotos .GameSmallPhotos {
-  border: 1px solid green;
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gamePlay img {
+  margin: 25% 22% 1% 22%;
+  width: 56%;
+  height: 50%;
 }
-.gamepageWithoutTitle .gamePhotosAndPlayGame .gameLongPhoto {
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions {
   border: 1px solid green;
-  margin-bottom: 20px;
+  padding: 2%;
 }
-.gamepageWithoutTitle .gamePhotosAndPlayGame .gamePlay {
-  border: 1px solid green;
-  margin-bottom: 20px;
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .oneGameComment {
+  border-bottom: 1px solid #ddd;
 }
-.gamepageWithoutTitle .gamePhotosAndPlayGame .gameReactions {
-  border: 1px solid green;
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .seeMoreReacties {
+  text-align: right;
+  margin-top: 10px;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .seeMoreReacties a {
+  text-decoration: none;
+  color: #007bff;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .seeMoreReacties a:hover {
+  color: #3f6db7;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions form textarea {
+  width: 100%;
 }
 /*****************************
             TRIGUURS
@@ -509,7 +557,7 @@ p {
   top: 720%;
 }
 #trigger16 {
-  top: 720%;
+  top: 710%;
 }
 #triggeri1 {
   top: 780%;

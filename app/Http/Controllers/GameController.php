@@ -19,10 +19,12 @@ class GameController extends Controller
 
         $allComments = Gamecomment::all();
 
-        return redirect('/game')->with('allComments', $allComments);
+        $request->session()->put('checkIfSubmitted', true);
+
+        return redirect('/story1')->with('allComments', $allComments);
       }
       else {
-        return redirect()->route('game')->with('status', 'Vul het veld in als u een reactie wilt plaatsen');
+        return redirect()->route('story1')->with('status', 'Vul het veld in als u een reactie wilt plaatsen');
       }
     }
 
