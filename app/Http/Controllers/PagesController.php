@@ -7,6 +7,7 @@ use App\Getuigenis;
 use App\Comment;
 use App\Gamecomment;
 use DB;
+use Mail;
 
 class PagesController extends Controller
 {

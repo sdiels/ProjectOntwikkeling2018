@@ -90,17 +90,16 @@
               </div>
               <div class="GamePhotos">
                 <div class="bigPhoto">
-                  <a href="{{asset('images/gamePage/gamepageFoto1.png')}}"><img src="{{asset('images/gamePage/gamepageFoto1.png')}}" alt=""></a>
+                  <img src="{{asset('images/gamePage/gamepageFoto1.png')}}" alt="">
                 </div>
                 <div class="smallPhotos">
-                  <a href="{{asset('images/gamePage/gamepageFoto2.png')}}"><img src="{{asset('images/gamePage/gamepageFoto2.png')}}" alt=""></a>
-                  <a href="{{asset('images/gamePage/gamepageFoto3.png')}}"><img src="{{asset('images/gamePage/gamepageFoto3.png')}}" alt=""></a>
+                  <img src="{{asset('images/gamePage/gamepageFoto2.png')}}" alt="">
+                  <img src="{{asset('images/gamePage/gamepageFoto3.png')}}" alt="">
                 </div>
               </div>
             </div>
             <div class="gamereactionsAndPlayGame">
               <div class="gamePlay">
-                <img src="{{asset('images/gamePage/playButton.png')}}" alt="">
               </div>
               <div class="gameReactions">
                 <h2>Reacties</h2>
