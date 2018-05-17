@@ -1,15 +1,18 @@
-@font-face {
-    font-family: antwerpen;
-    src: url(AntwerpenRegular.otf);
+* {
+  font-family: "Antwerpen Regular";
 }
 body {
     width: 100%;
     margin: 0;
     background-color: white;
 }
+main {
+  width: 100%;
+  overflow: hidden;
+}
 p {
     font-family: antwerpen;
-    font-size: 3em;
+    font-size: 2.5em;
     position: absolute;
 }
 #alogo {
@@ -38,7 +41,6 @@ p {
     position: absolute;
     height: 650px;
     width: 50%;
-    border: red solid 2px;
     overflow: hidden;
     opacity: 0;
     left: 0;
@@ -93,6 +95,7 @@ p {
     left: 65%;
     top: 190%;
     opacity: 0;
+    width: 40%;
 }
 #fdiv2 {
     position: absolute;
@@ -119,11 +122,15 @@ p {
     width: 50%;
     opacity: 0;
 }
+#faceimg {
+  width: 100%;
+}
 #face {
+  -webkit-transform: translate(0, -55%);
     position: absolute;
     width: 100%;
     opacity: 0;
-    top: 250%
+    top: 370%
 }
 #drop1,
 #drop2,
@@ -276,19 +283,41 @@ p {
     position: absolute;
     right: 0%
 }
+#whiteScreenEnd {
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 600%;
+  height: 2000px;
+  background-color: white;
+}
 #text7 {
     left: 0%;
     top: 630%;
-    width: 50%;
+    width: 45%;
     opacity: 0;
     color: white;
 }
-#texts1 {
+#text8 {
+    top: 700%;
+    left: 15%;
+    width: 70%;
+    text-align: center;
     opacity: 0;
 }
-#texts2 {
-    opacity: 0;
-    left: 15%;
+#texti1 {
+    opacity: 1;
+    margin-left: 5%;
+    font-size: 2.5em;
+}
+.OtherContent p {
+  font-size: 1em;
+  position: relative;
+}
+#texts1 {
+  margin-top: 50px;
+  margin-left: 5%;
+  font-size: 2.5em;
 }
 .forumInStory {
     padding: 2%;
@@ -312,7 +341,7 @@ p {
 }
 .storyNumber3,
 .storyNumber4 {
-    top: 500%;
+    top: 570%;
 }
 .forumInStory .storyForum {
     border-radius: 5px;
@@ -354,7 +383,7 @@ p {
 .forumInStory .zieMeer {
     width: 100%;
     position: absolute;
-    top: 870%;
+    top: 950%;
     opacity: 0;
     text-align: right;
 }
@@ -369,6 +398,179 @@ p {
     font-weight: bold;
     position: relative;
 }
+#textg1 {
+  margin-top: 580px;
+  font-size: 2.5em;
+  margin-left: 5%;
+}
+.gamepageWithoutTitle {
+  display: flex;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos {
+  width: 40%;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 1%;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame {
+  width: 40%;
+  padding: 1%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GameInfo {
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+}
+/*PHOTOS*/
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos {
+  display: flex;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto {
+  width: 60%;
+  height: 250px;
+  margin-right: 2%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto a,
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto img{
+  width: 100%;
+  height: 100%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos {
+  width: 38%;
+  height: 250px;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos a,
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos img{
+  width: 100%;
+  height: 49%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos a:first-child{
+  margin-bottom: 5%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos a:last-child{
+  margin-bottom: 0%;
+}
+/*PHOTOS END*/
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gamePlay {
+  margin-bottom: 20px;
+
+  background-image: url("/images/gamePage/gamepageFoto1.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gamePlay img {
+  margin: 25% 22% 1% 22%;
+  width: 56%;
+  height: 50%;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions {
+  border: 1px solid green;
+  padding: 2%;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .oneGameComment {
+  border-bottom: 1px solid #ddd;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .seeMoreReacties {
+  text-align: right;
+  margin-top: 10px;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .seeMoreReacties a {
+  text-decoration: none;
+  color: #007bff;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .seeMoreReacties a:hover {
+  color: #3f6db7;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions form textarea {
+  width: 100%;
+}
+/*****************************
+            TRIGUURS
+******************************/
+#trigger1,
+#trigger2,
+#trigger3,
+#trigger4,
+#trigger5,
+#trigger6,
+#trigger7,
+#trigger8,
+#trigger9,
+#trigger10,
+#trigger11,
+#trigger12,
+#trigger13,
+#trigger14,
+#trigger15,
+#trigger16,
+#triggeri1,
+#triggers1,
+#triggers2,
+#triggers3,
+#triggers4 {
+  position: absolute;
+}
+
+#trigger1 {
+  top: 55%;
+}
+#trigger2 {
+  top: 90%;
+}
+#trigger3 {
+  top: 150%;
+}
+#trigger4 {
+  top: 185%;
+}
+#trigger5 {
+  top: 240%;
+}
+#trigger6 {
+  top: 260%;
+}
+#trigger7 {
+  top: 340%;
+}
+#trigger8 {
+  top: 360%;
+}
+#trigger9 {
+  top: 450%;
+}
+#trigger10 {
+  top: 495%;
+}
+#trigger11 {
+  top: 515%;
+}
+#trigger12 {
+  top: 590%;
+}
+#trigger13 {
+  top: 610%;
+}
+#trigger14 {
+  top: 700%;
+}
+#trigger15 {
+  top: 720%;
+}
+#trigger16 {
+  top: 710%;
+}
+#triggeri1 {
+  top: 780%;
+}
+#triggers1,
+#triggers2 {
+  top: 50%;
+}
+#triggers3,
+#triggers4 {
+  top: 150%;
+}
+
 
 /*****************************
             CLEARFIX
