@@ -9,37 +9,24 @@ use DB;
 
 class GameController extends Controller
 {
-    public function store (Request $request) {
-      $commentbody = $request->body;
+  public function store (Request $request) {
+    $commentbody = $request->body;
 
-      if ($commentbody != null) {
-        $gameComment = new Gamecomment;
-        $gameComment->body = $commentbody;
-        $gameComment->save();
+    if ($commentbody != null) {
+      $gameComment = new Gamecomment;
+      $gameComment->body = $commentbody;
+      $gameComment->save();
 
-        $allComments = Gamecomment::all();
+      $allComments = Gamecomment::all();
 
-        $request->session()->put('checkIfSubmitted', true);
-
-        return redirect('/story1')->with('allComments', $allComments);
-      }
-      else {
-        return redirect()->route('story1')->with('status', 'Vul het veld in als u een reactie wilt plaatsen');
-      }
+      $request->session()->put('checkIfSubmitted', true);
     }
+    else {
+      $request->session()->put('reactieFieldEmpty', true);
 
-    public function deleteGameComment (Request $request, $id) {
-      $request->session()->put('askSureDeleteGameComment', true);
-
-      $commentOnGame = Gamecomment::orderby('id', 'desc')->get();
-      $comid = $id;
-
-      return view('gamereactions', compact('commentOnGame', 'comid'));
     }
+    $request->session()->put('scrollGame', true);
 
-    public function deleteGameCommentSure (Request $request, $id) {
-      $commentOnGame = Gamecomment::where('id', $id)->delete();
-
-      return redirect()->action('PagesController@gamecomments');
-    }
+    return redirect()->action('PagesController@index');
+  }
 }

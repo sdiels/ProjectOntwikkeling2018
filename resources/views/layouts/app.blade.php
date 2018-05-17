@@ -119,9 +119,9 @@
                     <p>Er zijn geen reacties</p>
                   @endif
                 </div>
-                @if (session('status'))
+                @if(session()->has('reactieFieldWarning'))
                     <div class="alert alert-danger">
-                        {{ session('status') }}
+                        {{ Session::get('reactieFieldWarning')}}
                     </div>
                 @endif
                 <form id="form" action="{{ route('storeGameComment')}}" method="post">
@@ -138,7 +138,7 @@
 
           <div class="spacer s4"></div>
         </div>
-        @if(session()->has('scrollToGameReactions'))
+        @if(session()->has('scrollToGame'))
             <script>
               function bottom() {
                 document.getElementById( 'ReactionsScroll' ).scrollIntoView();

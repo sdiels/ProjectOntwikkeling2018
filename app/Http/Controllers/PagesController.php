@@ -35,6 +35,7 @@ class PagesController extends Controller
       *********************************************/
       $commentOnGame = Gamecomment::orderby('id', 'desc')->take(3)->get();
       /*********************************************
+      /*********************************************
       //Sessions
       *********************************************/
       $request->session()->forget('scrollToGameReactions');
@@ -44,18 +45,29 @@ class PagesController extends Controller
         $request->session()->put('scrollToGameReactions', true);
       }
 
+      $request->session()->forget('scrollToGame');
+
+      if ($request->session()->has('scrollGame')) {
+        $request->session()->forget('scrollGame');
+        $request->session()->put('scrollToGame', true);
+      }
+
+      $request->session()->forget('reactieFieldWarning');
+
+      if ($request->session()->has('reactieFieldEmpty')) {
+        $request->session()->forget('reactieFieldEmpty');
+        $request->session()->put('reactieFieldWarning', 'Vul een reactie in als u iets wilt reageren');
+      }
+
       $request->session()->forget('checkIfSubmitted');
 
       return view('story1', compact('stories', 'countComArray', 'commentOnGame'));
     }
+    
+    public function home(Request $request) {
+      $request->session()->put('scrollForum', true);
 
-
-
-
-
-
-    public function home() {
-      return view('home');
+      return redirect()->action('PagesController@index');
     }
     public function info() {
       return view('info');

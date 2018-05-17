@@ -16,12 +16,17 @@ class StoryController extends Controller
 
 
       if ($title != null && $storyBody != null) {
-        $story = new Getuigenis;
+        // $story = new Getuigenis;
+        //
+        //$story->title = $title;
+        //$story->story = $storyBody;
+        //
+        // $story->save();
+        //
 
-        $story->title = $title;
-        $story->story = $storyBody;
-
-        $story->save();
+        Mail::send('emails.mailTemplate', ['title' => $title, 'body' => $storyBody], function ($message){
+          $message->to('robin.sel@hotmail.com')->subject('Getuigenis controle');
+        });
 
         $stories = Getuigenis::all();
 
@@ -54,44 +59,5 @@ class StoryController extends Controller
       $id=$id;
 
       return redirect()->action('PagesController@show', ['id' => $id]);
-  }
-
-  public function delete(Request $request, $id) {
-    $request->session()->put('askSureDeleteStory', true);
-
-    $story = Getuigenis::where('id', $id)->get();
-
-    $comments = Comment::where('storyId', $id)->join('getuigenis', 'comments.storyId', '=', 'getuigenis.id')->select('getuigenis.*', 'comments.*')->orderby('comments.id', 'desc')->get();
-
-    $id = $id;
-
-    return view('showOne', compact('story', 'comments', 'id'));
-  }
-
-  public function deleteSure ($id) {
-
-    $comments = Comment::where('storyId', $id)->delete();
-    $story = Getuigenis::where('id', $id)->delete();
-
-    return redirect()->action('PagesController@forum');
-  }
-
-  public function deleteComment (Request $request, $id, $comid) {
-    $request->session()->put('askSureDeleteComment', true);
-
-    $story = Getuigenis::where('id', $id)->get();
-
-    $comments = Comment::where('storyId', $id)->join('getuigenis', 'comments.storyId', '=', 'getuigenis.id')->select('getuigenis.*', 'comments.*')->orderby('comments.id', 'desc')->get();
-
-    $id = $id;
-    $comid = $comid;
-
-    return view('showOne', compact('story', 'comments', 'id', 'comid'));
-  }
-
-  public function deleteCommentSure ($id, $comid) {
-    $comments = Comment::where('id', $comid)->delete();
-
-    return redirect()->action('PagesController@show', [$id]);
   }
 }
