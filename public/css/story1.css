@@ -1,18 +1,15 @@
-* {
-  font-family: "Antwerpen Regular";
+@font-face {
+    font-family: antwerpen;
+    src: url(AntwerpenRegular.otf);
 }
 body {
     width: 100%;
     margin: 0;
     background-color: white;
 }
-main {
-  width: 100%;
-  overflow: hidden;
-}
 p {
     font-family: antwerpen;
-    font-size: 2.5em;
+    font-size: 3em;
     position: absolute;
 }
 #alogo {
@@ -41,6 +38,7 @@ p {
     position: absolute;
     height: 650px;
     width: 50%;
+    border: red solid 2px;
     overflow: hidden;
     opacity: 0;
     left: 0;
@@ -95,7 +93,6 @@ p {
     left: 65%;
     top: 190%;
     opacity: 0;
-    width: 40%;
 }
 #fdiv2 {
     position: absolute;
@@ -122,15 +119,11 @@ p {
     width: 50%;
     opacity: 0;
 }
-#faceimg {
-  width: 100%;
-}
 #face {
-  -webkit-transform: translate(0, -55%);
     position: absolute;
     width: 100%;
     opacity: 0;
-    top: 370%
+    top: 250%
 }
 #drop1,
 #drop2,
@@ -283,41 +276,19 @@ p {
     position: absolute;
     right: 0%
 }
-#whiteScreenEnd {
-  width: 100%;
-  opacity: 0;
-  position: absolute;
-  top: 600%;
-  height: 2000px;
-  background-color: white;
-}
 #text7 {
     left: 0%;
     top: 630%;
-    width: 45%;
+    width: 50%;
     opacity: 0;
     color: white;
 }
-#text8 {
-    top: 700%;
-    left: 15%;
-    width: 70%;
-    text-align: center;
+#texts1 {
     opacity: 0;
 }
-#texti1 {
-    opacity: 1;
-    margin-left: 5%;
-    font-size: 2.5em;
-}
-.OtherContent p {
-  font-size: 1em;
-  position: relative;
-}
-#texts1 {
-  margin-top: 50px;
-  margin-left: 5%;
-  font-size: 2.5em;
+#texts2 {
+    opacity: 0;
+    left: 15%;
 }
 .forumInStory {
     padding: 2%;
@@ -345,7 +316,7 @@ p {
 }
 .storyNumber3,
 .storyNumber4 {
-    top: 570%;
+    top: 500%;
 }
 .forumInStory .storyForum {
     border-radius: 5px;
@@ -387,7 +358,7 @@ p {
 .forumInStory .zieMeer {
     width: 100%;
     position: absolute;
-    top: 950%;
+    top: 870%;
     opacity: 0;
     text-align: right;
 }

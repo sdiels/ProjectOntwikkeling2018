@@ -10,10 +10,17 @@ use DB;
 
 class PagesController extends Controller
 {
-    public function index(Request $request) {
-      /*********************************************
-      //Getuigenissen
-      *********************************************/
+    public function index() {
+      return view('home');
+    }
+
+    public function home() {
+      return view('home');
+    }
+    public function info() {
+      return view('info');
+    }
+    public function story1() {
       $stories = Getuigenis::orderby('id', 'desc')->take(4)->get();
 
       if ($stories->count() > 0) {
