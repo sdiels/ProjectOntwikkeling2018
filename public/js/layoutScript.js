@@ -1,3 +1,26 @@
+var stats1 = new ScrollMagic.Scene({
+        triggerElement: "#triggeri1",
+        duration: "20%"
+    })
+    .setTween("#percentage1", {
+        width: "3%"
+    }) // the tween durtion can be omitted and defaults to 1
+    .addIndicators({
+        name: "percentage 1"
+    }) // add indicators (requires plugin)
+    .addTo(controller);
+var stats2 = new ScrollMagic.Scene({
+        triggerElement: "#triggeri1",
+        duration: "20%"
+    })
+    .setTween("#percentage2", {
+        width: "15%"
+    }) // the tween durtion can be omitted and defaults to 1
+    .addIndicators({
+        name: "percentage 2"
+    }) // add indicators (requires plugin)
+    .addTo(controller);
+
 var forum = new ScrollMagic.Scene({
         triggerElement: "#triggers1",
         duration: "20%"

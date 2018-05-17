@@ -47,11 +47,30 @@
         </div>
         <div class="OtherContent">
           <div id="triggeri1"></div>
-          <p id="texti1">Info</p>
-          <p>Dit is de info</p>
-          <p>nog info</p>
-          <p>grafiekske dabij</p>
-          <p>nog info om af te sluiten</p>
+          
+          <div id="stats">
+              <div id="stats1" class="clearfix">
+              <div id="bar1">
+                  <div id="percentage1">
+                  </div>
+              </div>
+              <div id="statsinfo">
+                 <p>3% van alle jongens onder de 25 jaar en</p> 
+              </div>
+          </div>
+          <div id="stats2" class="clearfix">
+              <div id="bar2">
+                  <div id="percentage2">
+                  </div>
+              </div>
+              <div id="statsinfo">
+                 <p>15% van alle meisjes onder de 25 jaar</p> 
+              </div>
+              <div id="statsinfoafter">
+                 <p>zijn het slachtoffer geweest van seksueel overschrijdend gedrag.</p> 
+              </div>
+          </div>
+          </div>
 
           <div id="ForumScroll"></div>
           <p id="texts1">Lees verhalen/getuigenissen</p>
