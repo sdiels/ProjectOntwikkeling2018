@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Getuigenis;
 use App\Comment;
 use DB;
-use Mail;
+use Illuminate\Support\Facades\Mail;
 
 class StoryController extends Controller
 {
@@ -26,7 +26,7 @@ class StoryController extends Controller
         //
 
         Mail::send('emails.mailTemplate', ['title' => $title, 'body' => $storyBody], function ($message){
-          $message->to('robin.sel@hotmail.com')->subject('Getuigenis controle');
+          $message->to('robin.sel@hotmail.com', 'Getuigenis controler')->subject('Getuigenis controle');
         });
 
         $stories = Getuigenis::all();
