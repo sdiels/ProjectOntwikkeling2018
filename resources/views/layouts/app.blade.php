@@ -12,11 +12,33 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
+    <!-- Styles en scripts -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.min.js"></script>
+
+    <link rel="stylesheet" href="scrollmagic/css/normalize.css" type="text/css">
+    <link rel="stylesheet" href="scrollmagic/css/examples.css" type="text/css">
+
+    <script type="text/javascript" src="scrollmagic/js/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="scrollmagic/js/lib/highlight.pack.js"></script>
+    <script type="text/javascript" src="scrollmagic/js/lib/modernizr.custom.min.js"></script>
+    <script type="text/javascript" src="scrollmagic/js/examples.js"></script>
+
+    <script type="text/javascript" src="scrollmagic/js/lib/greensock/TweenMax.min.js"></script>
+    <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
+    <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+    <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+
+    <link rel="stylesheet" href="/css/story1.css">
 </head>
 <body>
+  <script>
+      var controller = new ScrollMagic.Controller();
+
+  </script>
+
+
     <div id="app">
       <header></header>
         <div class="storyView">
@@ -27,8 +49,10 @@
           <div id="triggeri1"></div>
           <p id="texti1">Info</p>
           <p>Dit is de info</p>
+          <p>nog info</p>
+          <p>grafiekske dabij</p>
+          <p>nog info om af te sluiten</p>
 
-          <div id="ForumScroll"></div>
           <p id="texts1">Lees verhalen/getuigenissen</p>
 
           <div class="forumInStory">
@@ -37,7 +61,7 @@
               @foreach($stories as $story)
               <?php $a++; ?>
               <div id="triggers{{$a}}"></div>
-                <a href="{{ url('forum', [$story->id]) }}" class="storyNumber{{$a}}">
+                <a href="#" class="storyNumber{{$a}}">
                   <div class="storyForum">
                     <div class="commentAndTitle">
                       <h4>{{$story->title}}</h4>
@@ -95,9 +119,9 @@
                     <p>Er zijn geen reacties</p>
                   @endif
                 </div>
-                @if(session()->has('reactieFieldWarning'))
+                @if (session('status'))
                     <div class="alert alert-danger">
-                        {{ Session::get('reactieFieldWarning')}}
+                        {{ session('status') }}
                     </div>
                 @endif
                 <form id="form" action="{{ route('storeGameComment')}}" method="post">
@@ -110,22 +134,11 @@
                 </form>
               </div>
             </div>
-        </nav>
-        <div class="FotoHeader">
-          <img src="{{ asset('images/aLogo.png') }}" alt="">
-          <h1>Seksuele intimidatie bij scholieren</h1>
-        </div>
+          </div>
 
-        <div class="SubNav">
-          <ul>
-            <li><a class="nav-link" href="{{ route('home') }}">Home</a></li>
-            <li><a class="nav-link" href="{{ route('info') }}">Info</a></li>
-            <li><a class="nav-link" href="{{ route('forum') }}">Forum</a></li>
-            <li><a class="nav-link" href="{{ route('game') }}">Speel het spel</a></li>
-            <li><a class="nav-link" href="{{ route('contact') }}">contact</a></li>
-          </ul>
+          <div class="spacer s4"></div>
         </div>
-        @if(session()->has('scrollToGame'))
+        @if(session()->has('scrollToGameReactions'))
             <script>
               function bottom() {
                 document.getElementById( 'ReactionsScroll' ).scrollIntoView();
@@ -133,18 +146,9 @@
               bottom();
             </script>
           @endif
-        @if(session()->has('scrollToForum'))
-          <script>
-            function bottom() {
-              document.getElementById( 'ForumScroll' ).scrollIntoView();
-            };
-            bottom();
-          </script>
-        @endif
     </div>
 
-    <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/contact.js') }}"></script>
+    <script type="text/javascript" src="js/story1Script.js"></script>
+    <script type="text/javascript" src="js/layoutScript.js"></script>
 </body>
 </html>
