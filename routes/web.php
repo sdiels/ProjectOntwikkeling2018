@@ -15,6 +15,7 @@ Auth::routes();
 
 Route::get('/', 'PagesController@index')->name('index');
 Route::get('/home', 'PagesController@home')->name('indexToForum');
+Route::get('/skip', 'PagesController@skip')->name('skipStory');
 
 Route::get('/info', 'PagesController@info')->name('info');
 Route::get('/forum', 'PagesController@forum')->name('forum');

@@ -42,6 +42,9 @@
 
     <div id="app">
       <header></header>
+      <div class="skipStory">
+        <a href="{{ roue('skipStory') }}"><p>Sla het verhaal over</p></a>
+      </div>
         <div class="storyView">
           @yield('content')
         </div>
@@ -137,6 +140,14 @@
 
           <div class="spacer s4"></div>
         </div>
+        @if(session()->has('scrollToInfo'))
+            <script>
+              function bottom() {
+                document.getElementById( 'ReactionsScroll' ).scrollIntoView();
+              };
+              bottom();
+            </script>
+          @endif
         @if(session()->has('scrollToForum'))
             <script>
               function bottom() {

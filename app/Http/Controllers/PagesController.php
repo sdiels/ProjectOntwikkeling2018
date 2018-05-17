@@ -59,6 +59,13 @@ class PagesController extends Controller
         $request->session()->put('scrollToForum', true);
       }
 
+      $request->session()->forget('scrollToInfo');
+
+      if ($request->session()->has('scrollInfo')) {
+        $request->session()->forget('scrollInfo');
+        $request->session()->put('scrollToInfo', true);
+      }
+
       $request->session()->forget('reactieFieldWarning');
 
       if ($request->session()->has('reactieFieldEmpty')) {
@@ -73,6 +80,11 @@ class PagesController extends Controller
 
     public function home(Request $request) {
       $request->session()->put('scrollForum', true);
+
+      return redirect()->action('PagesController@index');
+    }
+    public function skip(Request $request) {
+      $request->session()->put('scrollInfo', true);
 
       return redirect()->action('PagesController@index');
     }
