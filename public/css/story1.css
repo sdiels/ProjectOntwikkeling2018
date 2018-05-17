@@ -318,6 +318,7 @@ p {
 .OtherContent {
   position: absolute;
   top: 800%;
+  margin: 0 5%;
 }
 .OtherContent p {
   font-size: 1em;
@@ -363,7 +364,7 @@ p {
     height: 100%;
 }
 .forumInStory a {
-    width: 40%;
+    width: 45%;
     margin-right: 5%;
     margin-bottom: 5%;
     height: 200px;
@@ -414,6 +415,7 @@ p {
 }
 .gamepageWithoutTitle {
   display: flex;
+  justify-content: space-between;
 }
 .gamepageWithoutTitle .gameInfoAndPhotos {
   width: 40%;
@@ -423,7 +425,7 @@ p {
 }
 .gamepageWithoutTitle .gamereactionsAndPlayGame {
   width: 40%;
-  padding: 1%;
+  padding: 1% 0 1% 1%;
 }
 .gamepageWithoutTitle .gameInfoAndPhotos .GameInfo {
   padding-bottom: 20px;
