@@ -28,7 +28,7 @@
     <script type="text/javascript" src="scrollmagic/js/lib/greensock/TweenMax.min.js"></script>
     <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-    <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
+    <!-- <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script> -->
 
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/story1.css">
@@ -43,14 +43,15 @@
     <div id="app">
       <header></header>
       <div class="skipStory">
-        <a href="{{ roue('skipStory') }}"><p>Sla het verhaal over</p></a>
+        <a href="{{ route('skipStory') }}"><p>Sla het verhaal over</p></a>
       </div>
         <div class="storyView">
           @yield('content')
         </div>
         <div class="OtherContent">
+          <div id="SkipStoryScroll"></div>
           <div id="triggeri1"></div>
-          
+
           <div id="stats">
               <div id="stats1" class="clearfix">
               <div id="bar1">
@@ -58,7 +59,7 @@
                   </div>
               </div>
               <div id="statsinfo">
-                 <p>3% van alle jongens onder de 25 jaar en</p> 
+                 <p>3% van alle jongens onder de 25 jaar en</p>
               </div>
           </div>
           <div id="stats2" class="clearfix">
@@ -67,10 +68,10 @@
                   </div>
               </div>
               <div id="statsinfo">
-                 <p>15% van alle meisjes onder de 25 jaar</p> 
+                 <p>15% van alle meisjes onder de 25 jaar</p>
               </div>
               <div id="statsinfoafter">
-                 <p>zijn het slachtoffer geweest van seksueel overschrijdend gedrag.</p> 
+                 <p>zijn het slachtoffer geweest van seksueel overschrijdend gedrag.</p>
               </div>
           </div>
           </div>
@@ -122,6 +123,7 @@
             </div>
             <div class="gamereactionsAndPlayGame">
               <div class="gamePlay">
+                <h2>Speel het spel</h2>
               </div>
               <div class="gameReactions">
                 <h2>Reacties</h2>
@@ -162,7 +164,7 @@
         @if(session()->has('scrollToInfo'))
             <script>
               function bottom() {
-                document.getElementById( 'ReactionsScroll' ).scrollIntoView();
+                document.getElementById( 'SkipStoryScroll' ).scrollIntoView();
               };
               bottom();
             </script>

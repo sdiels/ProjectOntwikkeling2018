@@ -22,30 +22,31 @@ h1 {
   padding: 2%;
 }
 .storyForum {
-  border: 1px solid #999;
-  border-radius: 5px;
-  width: 28%;
+  border: 5px solid #000;
+  width: 27%;
   margin-right: 3%;
   margin-bottom: 50px;
   padding: 1%;
-  background-color: #000;
 }
 .storyForum .commentAndTitle {
   display: flex;
   justify-content: space-between;
-  border-bottom: 2px solid #fff;
+  border-bottom: 2px solid #000;
   margin-bottom: 30px;
+}
+.storyForum .commentAndTitle .commentCount {
+  color: #007bff;
 }
 .storyForum h4 {
   font-size: 2em;
-  color: #ff5757;
+  color: #000;
   margin-top: 0;
 }
 .storyForum a {
   text-decoration: none;
 }
 .storyForum p {
-  color: #fff;
+  color: #000;
 }
 form label {
   display: inline-block;
@@ -64,11 +65,15 @@ form .storyField * {
 form input,
 form textarea {
   width: 50%;
+  padding: 0.5%;
+}
+form input[type=text] {
+  height: 30px;
 }
 form input[type=submit] {
   width: 20%;
   padding: 1%;
-  margin-left: 2%;
+  margin-left: 7%;
 }
 /*-----------------------------
 -------SHOW ONE FORUM----------
@@ -112,7 +117,12 @@ form input[type=submit] {
   margin-top: 50px;
   margin-left: 5%;
 }
-
+.oneGameComment {
+  border-bottom: 1px solid #ddd;
+}
+.oneGameComment:last-child {
+  border: none;
+}
 
 
 

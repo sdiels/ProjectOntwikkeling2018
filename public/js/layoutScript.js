@@ -1,3 +1,14 @@
+var skipStory = new ScrollMagic.Scene({
+        triggerElement: "#triggeri1",
+        duration: "20%"
+    })
+    .setTween(".skipStory", {
+        left: "150%"
+    }) // the tween durtion can be omitted and defaults to 1
+    .addIndicators({
+        name: "opacity skip text"
+    }) // add indicators (requires plugin)
+    .addTo(controller);
 var stats1 = new ScrollMagic.Scene({
         triggerElement: "#triggeri1",
         duration: "20%"
