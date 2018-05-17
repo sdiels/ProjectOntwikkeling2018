@@ -339,6 +339,10 @@ p {
     left: 100%;
     position: absolute;
 }
+.storyNumber1,
+.storyNumber2 {
+  top: 100%;
+}
 .storyNumber3,
 .storyNumber4 {
     top: 570%;
@@ -564,11 +568,11 @@ p {
 }
 #triggers1,
 #triggers2 {
-  top: 50%;
+  top: 10%;
 }
 #triggers3,
 #triggers4 {
-  top: 150%;
+  top: 130%;
 }
 
 

@@ -21,25 +21,16 @@ class GameController extends Controller
 
         $request->session()->put('checkIfSubmitted', true);
 
-        return redirect('/story1')->with('allComments', $allComments);
+        $request->session()->put('scrollGame', true);
+
+        return redirect()->action('PagesController@index');
       }
       else {
-        return redirect()->route('story1')->with('status', 'Vul het veld in als u een reactie wilt plaatsen');
+        $request->session()->put('reactieFieldEmpty', true);
+
+        $request->session()->put('scrollGame', true);
+
+        return redirect()->action('PagesController@index');
       }
-    }
-
-    public function deleteGameComment (Request $request, $id) {
-      $request->session()->put('askSureDeleteGameComment', true);
-
-      $commentOnGame = Gamecomment::orderby('id', 'desc')->get();
-      $comid = $id;
-
-      return view('gamereactions', compact('commentOnGame', 'comid'));
-    }
-
-    public function deleteGameCommentSure (Request $request, $id) {
-      $commentOnGame = Gamecomment::where('id', $id)->delete();
-
-      return redirect()->action('PagesController@gamecomments');
     }
 }

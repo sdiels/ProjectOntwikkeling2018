@@ -49,10 +49,8 @@
           <div id="triggeri1"></div>
           <p id="texti1">Info</p>
           <p>Dit is de info</p>
-          <p>nog info</p>
-          <p>grafiekske dabij</p>
-          <p>nog info om af te sluiten</p>
 
+          <div id="ForumScroll"></div>
           <p id="texts1">Lees verhalen/getuigenissen</p>
 
           <div class="forumInStory">
@@ -61,7 +59,7 @@
               @foreach($stories as $story)
               <?php $a++; ?>
               <div id="triggers{{$a}}"></div>
-                <a href="#" class="storyNumber{{$a}}">
+                <a href="{{ url('forum', [$story->id]) }}" class="storyNumber{{$a}}">
                   <div class="storyForum">
                     <div class="commentAndTitle">
                       <h4>{{$story->title}}</h4>
@@ -119,9 +117,9 @@
                     <p>Er zijn geen reacties</p>
                   @endif
                 </div>
-                @if (session('status'))
+                @if(session()->has('reactieFieldWarning'))
                     <div class="alert alert-danger">
-                        {{ session('status') }}
+                        {{ Session::get('reactieFieldWarning')}}
                     </div>
                 @endif
                 <form id="form" action="{{ route('storeGameComment')}}" method="post">
@@ -138,7 +136,7 @@
 
           <div class="spacer s4"></div>
         </div>
-        @if(session()->has('scrollToGameReactions'))
+        @if(session()->has('scrollToGame'))
             <script>
               function bottom() {
                 document.getElementById( 'ReactionsScroll' ).scrollIntoView();
@@ -146,6 +144,14 @@
               bottom();
             </script>
           @endif
+        @if(session()->has('scrollToForum'))
+          <script>
+            function bottom() {
+              document.getElementById( 'ForumScroll' ).scrollIntoView();
+            };
+            bottom();
+          </script>
+        @endif
     </div>
 
     <script type="text/javascript" src="js/story1Script.js"></script>
