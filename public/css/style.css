@@ -14,6 +14,42 @@
   font-size: 1em;
   position: relative;
 }
+
+#bar1, #bar2 {
+    border: 5px black solid;
+    width: 50%;
+    margin-bottom: 5%;
+}
+#percentage1 {
+    margin: 5px;
+    width: 0%;
+    height: 30px;
+    background-color: black;
+}
+#percentage2 {
+    margin: 5px;
+    width: 0%;
+    height: 30px;
+    background-color: black;
+}
+#stats1 > div, #stats2 > div {
+    float: left;
+    font-size: 2em;
+}
+
+#statsinfo {
+    width: 50%;
+    text-align: center;
+}
+#statsinfoafter {
+    width: 100%;
+    text-align: center;
+}
+
+#stats {
+    margin-bottom: 15%;
+}
+
 #texts1 {
   margin-top: 50px;
   margin-left: 5%;
@@ -188,7 +224,7 @@
  position: absolute;
 }
 #triggeri1 {
-  top: 780%;
+  top: -10%;
 }
 #triggers1,
 #triggers2 {
