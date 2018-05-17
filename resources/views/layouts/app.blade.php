@@ -61,7 +61,7 @@
               @foreach($stories as $story)
               <?php $a++; ?>
               <div id="triggers{{$a}}"></div>
-                <a href="#" class="storyNumber{{$a}}">
+                <a href="{{ url('forum', [$story->id]) }}" class="storyNumber{{$a}}">
                   <div class="storyForum">
                     <div class="commentAndTitle">
                       <h4>{{$story->title}}</h4>
