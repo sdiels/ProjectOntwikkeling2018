@@ -107,10 +107,7 @@
 
     <div class="spacer s2"></div>
     <div id="triggers2"></div>
-
     <p id="texts1">Info</p>
-
-    <div class="triggeri1"></div>
 
     <div class="spacer s3"></div>
     <div id="triggers3"></div>
