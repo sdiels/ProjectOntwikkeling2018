@@ -77,5 +77,5 @@
 
   <div id="trigger15"></div>
   <div id="trigger16"></div>
-  <p id="text8">Eva is niet de enige die het slachtoffer werd van soort gelijke gebeurtenissen</p>
+  <p id="text8">Eva is niet de enige die het slachtoffer werd van soortgelijke gebeurtenissen</p>
 @endsection
