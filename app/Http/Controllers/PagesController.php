@@ -11,7 +11,7 @@ use Mail;
 
 class PagesController extends Controller
 {
-    public function index(Request $request) {
+    public function index(Request $request, Mail $mail) {
       /*********************************************
       //Getuigenissen
       *********************************************/

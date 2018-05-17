@@ -6,10 +6,11 @@ use Illuminate\Http\Request;
 use App\Getuigenis;
 use App\Comment;
 use DB;
+use Mail;
 
 class StoryController extends Controller
 {
-  public function store(Request $request) {
+  public function store(Request $request, Mail $mail) {
 
       $title = $request->title;
       $storyBody = $request->story;

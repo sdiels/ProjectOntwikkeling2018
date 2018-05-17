@@ -1,326 +1,197 @@
-* {
-  font-family: "Antwerpen Regular";
+.OtherContent {
+  position: absolute;
+  top: 800%;
+  margin: 0 5%;
 }
-header {
-  border-bottom: 1px solid #aaa;
+.OtherContent p {
+  font-size: 1em;
+  position: relative;
 }
-.FotoHeader {
-  width: 100%;
-  height: 300px;
-  background-color: aqua;
+#texts1 {
+  margin-top: 50px;
+  margin-left: 5%;
+  font-size: 2.5em;
 }
-.FotoHeader img {
-  width: 7%;
+.forumInStory {
+    padding: 2%;
+    position: relative;
+    opacity: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-.FotoHeader h1 {
-  margin-left: 10%;
-  margin-top: 30px;
+.storyNumber1,
+.storyNumber3 {
+    opacity: 0;
+    left: -50%;
+    position: absolute;
 }
-.SubNav {
-  width: 100%;
-  height: 84.4px;
+.storyNumber2,
+.storyNumber4 {
+    opacity: 0;
+    left: 100%;
+    position: absolute;
 }
-.SubNav ul {
-  display: flex;
-  justify-content: center;
+.storyNumber3,
+.storyNumber4 {
+    top: 570%;
 }
-.SubNav ul li {
-  list-style: none;
-  padding: 15px;
+.forumInStory .storyForum {
+    border-radius: 5px;
+    background-color: #000;
+    color: #fff;
+    padding: 2%;
+    margin-right: 0;
+    margin-bottom: 0;
+    width: 100%;
+    height: 100%;
 }
-.SubNav ul li a {
-  color: #000;
+.forumInStory a {
+    width: 45%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+    height: 200px;
+    text-decoration: inherit;
+    float: left;
 }
-.SubNav ul li:hover {
-  border-bottom: 3px solid #0049bf;
+.forumInStory .storyForum .commentAndTitle {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid #fff;
+    margin-bottom: 30px;
 }
-main {
-  margin: 0.5% 5% 0 5%;
+.forumInStory .storyForum h4 {
+    font-size: 2em;
+    margin-top: 0px;
+    color: #ff5757;
 }
-main h1 {
-  color: #CF0039;
+.forumInStory .storyForum a > p {
+    margin-top: 0px;
+    color: #fff;
+    border: none;
 }
-/*
-FORUM-------------------------------------------------------
-*/
-.forumPage button {
-  margin-bottom: 1%;
-  width: 20%;
-  margin-left: 80%;
-  padding: 1%;
-  color: #fff;
-  border: none;
+.forumInStory .storyForum a {
+    text-decoration: inherit;
 }
-.addButton {
-  background-color: #0064B4;
+.forumInStory .zieMeer {
+    width: 100%;
+    position: absolute;
+    top: 950%;
+    opacity: 0;
+    text-align: right;
 }
-.forumPage .addButton:hover {
-  background-color: #003f72;
+.forumInStory .zieMeer a {
+    width: 100%;
+    text-align: right;
+    text-decoration: inherit;
 }
-.AllStories {
-  display: flex;
-  flex-wrap: wrap;
+.forumInStory p {
+    font-size: 1em;
+    margin-right: 5%;
+    font-weight: bold;
+    position: relative;
 }
-.storyForum {
-  border: 1px solid #aaa;
-  border-radius: 20px;
-  padding: 2%;
-  min-width: 30%;
-  max-width: 30%;
-  margin-right: 3%;
-  margin-bottom: 3%;
-  min-height: 200px;
-  max-height: 200px;
-  overflow: hidden;
-}
-.commentAndTitle {
-  display: flex;
-}
-.forumPage .AllStories .storyForum .commentAndTitle a {
-  width: 50%;
-}
-.forumPage .AllStories .storyForum .commentAndTitle a .commentCount {
-  margin-left: 30%;
-}
-/*
-FORUM------ADD----------------------------------------------
-*/
-form label {
-  min-width: 10%;
-  margin-bottom: 0%;
-}
-.storyField * {
-  vertical-align: top;
-}
-form input,
-form textarea {
-  min-width: 50%;
-}
-form input[type=submit] {
-  margin-bottom: 1%;
-  max-width: 20%;
-  min-width: 20%;
-  padding: 1%;
-  background-color: #0064B4;
-  color: #fff;
-  border: none;
-}
-form input[type=submit]:hover {
-  background-color: #003f72;
-}
-.smallTextInput {
-  font-size: 0.7em;
-  color: #999;
-  margin-left: 10.5%;
-
-}
-/*
-FORUM------DETAIL-------------------------------------------
-*/
-.StoryBody {
-  display: flex;
-  flex-wrap: wrap;
-}
-.StoryBody p,
-.StoryBody > div {
-  width: 45%;
-}
-.StoryBody > p {
-  border-right: 1px solid #aaa;
-  margin-right: 5%;
-  padding-right: 5%;
-}
-.oneComment {
-  border-bottom: 1px solid #ddd;
-  padding-bottom: 5%;
-  width: 100%;
-  margin: 0;
-}
-.oneComment p {
-  margin-right: 0;
-  width: 100%;
-}
-.StoryBody .comments p:last-child {
-  border-bottom: none;
-}
-.deleteButton {
-  background-color: #cf0039;
-}
-.forumPage .deleteButton:hover {
-  background-color: #8d0027;
-}
-.deleteSure {
-  border: 1px solid #aaa;
-  padding: 10px;
-  max-width: 20%;
-}
-.deleteSure button {
-  width: 30%;
-  padding: 10px;
-  margin-left: 0;
-}
-.comments .deleteButton {
-  margin-left: 0;
-  width: 15%;
-  font-size: 0.7em;
-}
-/*
-GAME--------------------------------------------------------
-*/
-.gamepageWithoutTitle {
-  display: flex;
-}
-.gamepageWithoutTitle main,
-.gamepageWithoutTitle aside {
-  width: 50%;
-  padding: 2%;
-}
-.gamepageWithoutTitle main {
-  margin-left: 0;
-  margin-top: 0;
-}
-.gamepage main .gameInformation {
-  width: 100%;
-  height: 200px;
-  margin-right: 0;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #999;
-}
-/*-------------------FOTO'S-------------------*/
-.gamepage img {
-  height: 100%;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-}
-.gamepage main .photo123 {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 300px;
-}
-.gamepage main .photo1 {
-  width: 70%;
-  height: 100%;
-  padding: 0;
-  margin-right: 2%;
-}
-.gamepage main .photo23 {
-  width: 28%;
-  height: 100%;
-  padding: 0;
-}
-.gamepage main .photo2 {
-  margin-bottom: 7%;
-}
-.gamepage main .photo2,
-.gamepage main .photo3 {
-  width: 95%;
-  height: 48%;
-}
-
-.gamepage aside .photo4 {
-  width: 100%;
-  height: 200px;
-  margin-bottom: 10px;
-  text-align: center;
-  border: 2px solid grey;
-}
-/*-------------------EIND--FOTO'S-------------------*/
-.gamepage aside .playGame {
-  width: 100%;
-  height: 200px;
-  margin-bottom: 20px;
-  border: 2px solid grey;
-  text-align: center;
-}
-.gamepage aside .reactions {
-  width: 100%;
-  border-top: 1px solid #999;
-}
-.gameractionspage .oneGameComment button {
-  border: none;
-  background-color: #cf0039;
-}
-.gameractionspage .oneGameComment button:hover {
-  background-color: #8d0027;
-}
-.gamepage aside .reactions .seeMoreReacties {
-  width: 15%;
-  margin-left: 85%;
-  margin-bottom: 30px;
-}
-.gamepage aside form {
+#textg1 {
+  margin-top: 580px;
+  font-size: 2.5em;
   margin-left: 5%;
 }
-.gamepage aside form textarea {
-  width: 80%;
-}
-.gamepage aside .gameComments .oneGameComment,
-.gameractionspage .oneGameComment {
-  width: 100%;
-  border-bottom: 1px solid #ddd;
-  margin-left: 2%;
-  margin-bottom: 10px;
-  padding-bottom: 10px;
+.gamepageWithoutTitle {
   display: flex;
   justify-content: space-between;
 }
-.gamepage aside .gameComments .oneGameComment p:first-child {
+.gamepageWithoutTitle .gameInfoAndPhotos {
+  width: 40%;
+  margin-right: 5%;
+  margin-left: 5%;
+  padding: 1%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos {
+  width: 40%;
+  padding: 1% 0 1% 0;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GameInfo {
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #ddd;
+}
+/*PHOTOS*/
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos {
+  display: flex;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto {
+  width: 60%;
+  height: 250px;
+  margin-right: 2%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto img{
   width: 100%;
-  overflow: hidden;
+  height: 100%;
 }
-.gameractionspage .oneGameComment p {
-  width: 85%;
-  overflow: hidden;
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos {
+  width: 38%;
+  height: 250px;
 }
-.gameractionspage .oneGameComment a {
-  width: 15%;
-  overflow: hidden;
-}
-.gamepage aside .gameComments .oneGameComment:last-child,
-.gameractionspage .oneGameComment:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-}
-.gameractionspage .oneGameComment:last-child {
-  border-bottom: none;
-}
-.gamepage aside .gameComments .oneGameComment p,
-.gameractionspage .oneGameComment p  {
-  margin-bottom: 0;
-}
-/*
-contact*********************************************************************************************************************
-*/
-.contact {
-  align-content: center;
-}
-/* Style the button that is used to open and close the collapsible content */
-.collapsible {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos img{
   width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
+  height: 49%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos img:first-child{
+  margin-bottom: 2.5%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos img:last-child{
+  margin-bottom: 0%;
+}
+/*PHOTOS END*/
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gamePlay {
+  margin-bottom: 20px;
+  border: 2px solid red;
+  height: 130px;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions {
+  border: 1px solid green;
+  padding: 2%;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .oneGameComment {
+  border-bottom: 1px solid #ddd;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .seeMoreReacties {
+  text-align: right;
+  margin-top: 10px;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .seeMoreReacties a {
+  text-decoration: none;
+  color: #007bff;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .seeMoreReacties a:hover {
+  color: #3f6db7;
+}
+.gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions form textarea {
+  width: 100%;
+}
+/*****************************
+            TRIGUURS
+******************************/
+#triggeri1,
+#triggers1,
+#triggers2,
+#triggers3,
+#triggers4
+{
+ position: absolute;
+}
+#triggeri1 {
+  top: 780%;
+}
+#triggers1,
+#triggers2 {
+  top: 50%;
+}
+#triggers3,
+#triggers4 {
+  top: 150%;
 }
 
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .collapsible:hover {
-  background-color: #ccc;
-}
-
-/* Style the collapsible content. Note: hidden by default */
-.content {
-  padding: 0 18px;
-  display: none;
-  overflow: hidden;
-  background-color: #f1f1f1;
-}
 
 
 

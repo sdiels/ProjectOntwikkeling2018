@@ -30,6 +30,7 @@
     <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
     <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
 
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/story1.css">
 </head>
 <body>
@@ -45,7 +46,6 @@
           @yield('content')
         </div>
         <div class="OtherContent">
-          <div class="spacer s1"></div>
           <div id="triggeri1"></div>
           <p id="texti1">Info</p>
           <p>Dit is de info</p>
