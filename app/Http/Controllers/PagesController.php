@@ -38,7 +38,6 @@ class PagesController extends Controller
       /*********************************************
       //Sessions
       *********************************************/
-      $request->session()->forget('scrollToGameReactions');
 
       if ($request->session()->has('checkIfSubmitted')) {
         $request->session()->forget('checkIfSubmitted');
@@ -52,6 +51,13 @@ class PagesController extends Controller
         $request->session()->put('scrollToGame', true);
       }
 
+      $request->session()->forget('scrollToForum');
+
+      if ($request->session()->has('scrollForum')) {
+        $request->session()->forget('scrollForum');
+        $request->session()->put('scrollToForum', true);
+      }
+
       $request->session()->forget('reactieFieldWarning');
 
       if ($request->session()->has('reactieFieldEmpty')) {
@@ -63,7 +69,7 @@ class PagesController extends Controller
 
       return view('story1', compact('stories', 'countComArray', 'commentOnGame'));
     }
-    
+
     public function home(Request $request) {
       $request->session()->put('scrollForum', true);
 

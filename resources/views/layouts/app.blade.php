@@ -53,6 +53,7 @@
           <p>grafiekske dabij</p>
           <p>nog info om af te sluiten</p>
 
+          <div id="ForumScroll"></div>
           <p id="texts1">Lees verhalen/getuigenissen</p>
 
           <div class="forumInStory">
@@ -85,7 +86,6 @@
           <div class="gamepageWithoutTitle">
             <div class="gameInfoAndPhotos">
               <div class="GameInfo">
-                <h2>Info</h2>
                 <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
               </div>
               <div class="GamePhotos">
@@ -138,6 +138,14 @@
 
           <div class="spacer s4"></div>
         </div>
+        @if(session()->has('scrollToForum'))
+            <script>
+              function bottom() {
+                document.getElementById( 'ForumScroll' ).scrollIntoView();
+              };
+              bottom();
+            </script>
+          @endif
         @if(session()->has('scrollToGame'))
             <script>
               function bottom() {
