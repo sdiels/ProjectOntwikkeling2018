@@ -159,7 +159,7 @@
               </div>
             </div>
           </div>
-          <div >
+          <div class="ContactDiv">
 
               <button class="collapsible contact">
                   <h1>slachtoffer van seksuele intimidatie?</h1>

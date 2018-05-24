@@ -265,28 +265,34 @@ input[type=submit]:hover {
   display: none;
 
 }
-
+.ContactDiv{
+  align-content: center;
+  width: 100%;
+  margin: 50px;
+}
 .contact{
 
-  background-color: white;
+  background-color: black;
   border: solid;
   border-color: black;
-  color: black;
-  padding: 10px 25px;
+  color: white;
+  padding: 5px 10px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 0.75em;
-  width: 100%;
+  width: 80%;
   border-width: 4px;
-  margin: 20px;
+  margin:  20px 10%;
+  
   
 }
 
 .contact:hover{
 
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
+  
 }
 
 
