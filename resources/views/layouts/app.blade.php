@@ -104,7 +104,6 @@
             <p>Er zijn geen getuigenissen</p>
           @endif
           </div>
-
           <p id="textg1">Speel het spel</p>
           <div class="gamepageWithoutTitle">
             <div class="gameInfoAndPhotos">
@@ -122,9 +121,11 @@
               </div>
             </div>
             <div class="gamereactionsAndPlayGame">
-              <div class="gamePlay">
-                <h2>Speel het spel</h2>
-              </div>
+              <a href="{{ route('playGame')}}" class="gamePlayA">
+                <div class="gamePlay">
+                  <h2>Speel het spel</h2>
+                </div>
+              </a>
               <div class="gameReactions">
                 <h2>Reacties</h2>
                 <div id="ReactionsScroll"></div>
@@ -170,21 +171,21 @@
             </script>
           @endif
         @if(session()->has('scrollToForum'))
+          <script>
+            function bottom() {
+              document.getElementById( 'ForumScroll' ).scrollIntoView();
+            };
+            bottom();
+          </script>
+        @endif
+          @if(session()->has('scrollToGamePage'))
             <script>
               function bottom() {
-                document.getElementById( 'ForumScroll' ).scrollIntoView();
+                document.getElementById( 'textg1' ).scrollIntoView();
               };
               bottom();
             </script>
-          @endif
-        @if(session()->has('scrollToGame'))
-            <script>
-              function bottom() {
-                document.getElementById( 'ReactionsScroll' ).scrollIntoView();
-              };
-              bottom();
-            </script>
-          @endif
+        @endif
     </div>
 
     <script type="text/javascript" src="js/story1Script.js"></script>

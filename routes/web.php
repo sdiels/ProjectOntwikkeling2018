@@ -14,13 +14,15 @@
 Auth::routes();
 
 Route::get('/', 'PagesController@index')->name('index');
-Route::get('/home', 'PagesController@home')->name('indexToForum');
+Route::get('/homeForum', 'PagesController@homeToForum')->name('indexToForum');
+Route::get('/homeGame', 'PagesController@homeToGame')->name('indexToGame');
 Route::get('/skip', 'PagesController@skip')->name('skipStory');
 
 Route::get('/info', 'PagesController@info')->name('info');
 Route::get('/forum', 'PagesController@forum')->name('forum');
 Route::get('/game', 'PagesController@game')->name('game');
 Route::get('/game/reacties', 'PagesController@gamecomments')->name('GameComment');
+Route::get('/playGame', 'PagesController@playGame')->name('playGame');
 Route::get('/contact', 'PagesController@contact')->name('contact');
 Route::get('/addStory', 'PagesController@addStory')->name('addStory');
 Route::get('/forum/{id}', 'PagesController@show')->name('forumShowOne');
