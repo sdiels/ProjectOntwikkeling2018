@@ -89,7 +89,7 @@ form input[type=submit] {
 }
 .tittleAndBody h4 {
   font-size: 1.5em;
-  color: #ff5757;
+  color: black;
 }
 .comments {
   width: 40%;
@@ -126,6 +126,10 @@ form input[type=submit] {
 
 .lowerButton {
   margin-top: 1%;
+  margin-left: 1%;
+}
+#blackPage {
+  background-color: black;
 }
 
 input[type=submit],
