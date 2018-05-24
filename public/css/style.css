@@ -242,6 +242,36 @@
   top: 150%;
 }
 
+/*contact ******************/
+
+.content{
+  display: none;
+
+}
+
+.contact{
+
+  background-color: white;
+  border: solid;
+  border-color: black;
+  color: black;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 0.75em;
+  width: 100%;
+  border-width: 4px;
+  margin: 20px;
+  
+}
+
+.contact:hover{
+
+  background-color: black;
+  color: white;
+}
+
 
 
 
