@@ -14,13 +14,8 @@
     <script>
       var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Builds.json", {onProgress: UnityProgress});
     </script>
-    <style media="screen">
-      body {
-        background-color: black;
-      }
-    </style>
   </head>
-  <body>
+  <body id="blackPage">
     <a href="{{ route('indexToGame') }}"><button class="lowerButton">Terug naar homepage</button></a>
     <div class="webgl-content">
       <div id="gameContainer" style="width: 950px; height: 650px"></div>

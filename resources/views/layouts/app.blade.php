@@ -32,6 +32,7 @@
 
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/story1.css">
+    <link rel="stylesheet" href="/css/responsive.css">
 </head>
 <body>
   <script>
@@ -39,11 +40,13 @@
 
   </script>
 
-
     <div id="app">
       <header></header>
-      <div class="skipStory">
-        <a href="{{ route('skipStory') }}"><p>Sla het verhaal over</p></a>
+      <div onclick="automaticScrollFast()" class="skipStory">
+        <p>Sla het verhaal over</p>
+      </div>
+      <div class="scrollStory">
+        <button id="scrollStoryButton" onclick="automaticScroll()"> Scroll automatisch door het verhaal</button>
       </div>
         <div class="storyView">
           @yield('content')

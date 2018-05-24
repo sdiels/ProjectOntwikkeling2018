@@ -3,8 +3,49 @@
   z-index: 5;
   width: 100%;
   left: 80%;
+  top: 2%;
   font-size: 0.5em;
+  color: #4286f4;
 }
+.skipStory:hover {
+  color: #2163ce;
+}
+.scrollStory {
+  position: absolute;
+  z-index: 5;
+  font-size: 1em;
+  width: 20%;
+  top: 90%;
+  left: 40%;
+}
+.scrollStory button {
+  width: 100%;
+  height: 50px;
+}
+.scrollStory button:not(:hover){
+  animation-name: flikkerBackColorBttn;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes flikkerBackColorBttn {
+    0% {
+      border: 3px solid black;
+      background-color: white;
+      color: black;
+    }
+    50% {
+      border: none;
+      background-color: black;
+      color: white;
+    }
+    100% {
+      border: 3px solid black;
+      background-color: white;
+      color: black;
+    }
+}
+
 .OtherContent {
   position: absolute;
   top: 800%;
@@ -123,7 +164,6 @@
     width: 100%;
     position: absolute;
     top: 950%;
-    opacity: 0;
     text-align: right;
 }
 .forumInStory .zieMeer a {
@@ -225,15 +265,17 @@
 .gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions form textarea {
   width: 100%;
 }
-input[type=submit] {
+input[type=submit],
+button {
   background-color: black;
   border: none;
   color: white;
   padding: 0.5%;
 }
-input[type=submit]:hover {
+input[type=submit]:hover,
+button:hover {
   background-color: white;
-  border: 1px solid black;
+  border: 3px solid black;
   color: black;
 }
 /*****************************
