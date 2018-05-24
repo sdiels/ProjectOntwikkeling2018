@@ -8,7 +8,7 @@
     <h1>FORUM</h1>
     <a href="{{ route('indexToForum') }}"><p>Terug naar homepage</p></a>
     <div class="addStoryButton">
-      <a href="{{ route('addStory') }}"><button type="button" name="button" class="addButton">Ik wil mijn verhaal delen</button></a>
+      <a href="{{ route('addStory') }}"><button type="button" name="button" class="addButton righterButton">Ik wil mijn verhaal delen</button></a>
     </div>
     <div class="AllStories">
       @if (count($stories) > 0)

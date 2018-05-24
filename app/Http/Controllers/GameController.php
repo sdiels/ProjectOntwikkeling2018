@@ -18,14 +18,12 @@ class GameController extends Controller
       $gameComment->save();
 
       $allComments = Gamecomment::all();
-
-      $request->session()->put('checkIfSubmitted', true);
     }
     else {
       $request->session()->put('reactieFieldEmpty', true);
 
     }
-    $request->session()->put('scrollGame', true);
+    $request->session()->put('scrollGamePage', true);
 
     return redirect()->action('PagesController@index');
   }

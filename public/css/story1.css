@@ -38,9 +38,11 @@ p {
     left: 55%;
 }
 #text1 {
-    left: 60%;
-    top: 120%;
+    left: 55%;
+    top: 125%;
     opacity: 0;
+    width: 35%;
+    text-align: right;
 }
 #fdiv1 {
     position: absolute;
@@ -97,10 +99,10 @@ p {
     position: absolute;
 }
 #text2 {
-    left: 65%;
+    left: 60%;
     top: 190%;
     opacity: 0;
-    width: 40%;
+    width: 35%;
 }
 #fdiv2 {
     position: absolute;
@@ -124,7 +126,7 @@ p {
 #text3 {
     left: 0%;
     top: 290%;
-    width: 50%;
+    width: 45%;
     opacity: 0;
 }
 #faceimg {
@@ -227,7 +229,7 @@ p {
     }
 }
 #text4 {
-    left: 12%;
+    left: 15%;
     top: 360%;
     opacity: 0;
     color: white;
@@ -299,7 +301,7 @@ p {
 #text7 {
     left: 0%;
     top: 630%;
-    width: 45%;
+    width: 40%;
     opacity: 0;
     color: white;
 }
@@ -342,7 +344,7 @@ p {
   top: 55%;
 }
 #trigger2 {
-  top: 90%;
+  top: 95%;
 }
 #trigger3 {
   top: 150%;

@@ -40,16 +40,11 @@ class PagesController extends Controller
       //Sessions
       *********************************************/
 
-      if ($request->session()->has('checkIfSubmitted')) {
-        $request->session()->forget('checkIfSubmitted');
-        $request->session()->put('scrollToGameReactions', true);
-      }
+      $request->session()->forget('scrollToInfo');
 
-      $request->session()->forget('scrollToGame');
-
-      if ($request->session()->has('scrollGame')) {
-        $request->session()->forget('scrollGame');
-        $request->session()->put('scrollToGame', true);
+      if ($request->session()->has('scrollInfo')) {
+        $request->session()->forget('scrollInfo');
+        $request->session()->put('scrollToInfo', true);
       }
 
       $request->session()->forget('scrollToForum');
@@ -59,11 +54,11 @@ class PagesController extends Controller
         $request->session()->put('scrollToForum', true);
       }
 
-      $request->session()->forget('scrollToInfo');
+      $request->session()->forget('scrollToGamePage');
 
-      if ($request->session()->has('scrollInfo')) {
-        $request->session()->forget('scrollInfo');
-        $request->session()->put('scrollToInfo', true);
+      if ($request->session()->has('scrollGamePage')) {
+        $request->session()->forget('scrollGamePage');
+        $request->session()->put('scrollToGamePage', true);
       }
 
       $request->session()->forget('reactieFieldWarning');
@@ -78,8 +73,13 @@ class PagesController extends Controller
       return view('story1', compact('stories', 'countComArray', 'commentOnGame'));
     }
 
-    public function home(Request $request) {
+    public function homeToForum(Request $request) {
       $request->session()->put('scrollForum', true);
+
+      return redirect()->action('PagesController@index');
+    }
+    public function homeToGame(Request $request) {
+      $request->session()->put('scrollGamePage', true);
 
       return redirect()->action('PagesController@index');
     }
@@ -148,5 +148,8 @@ class PagesController extends Controller
         $request->session()->forget('askSureDeleteComment');
 
         return view('showOne', compact('story', 'comments', 'id'));
+    }
+    public function playGame() {
+      return view('playGame');
     }
 }

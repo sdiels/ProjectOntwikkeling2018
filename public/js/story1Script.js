@@ -28,6 +28,7 @@
             duration: "20%"
         })
         .setTween("#text1", {
+            top: "130%",
             opacity: 1
         }) // the tween durtion can be omitted and defaults to 1
         .addIndicators({
@@ -55,7 +56,7 @@
             duration: "20%"
         })
         .setTween("#text2", {
-            left:"60%",
+            left:"55%",
             opacity: 1
         }) // the tween durtion can be omitted and defaults to 1
         .addIndicators({
@@ -92,7 +93,7 @@
             duration: "20%"
         })
         .setTween("#text3", {
-            left:"5%",
+            left:"10%",
             opacity: 1
         }) // the tween durtion can be omitted and defaults to 1
         .addIndicators({
@@ -213,7 +214,7 @@
             duration: "20%"
         })
         .setTween("#text7", {
-            left:"5%",
+            left:"7%",
             opacity: 1
         }) // the tween durtion can be omitted and defaults to 1
         .addIndicators({
