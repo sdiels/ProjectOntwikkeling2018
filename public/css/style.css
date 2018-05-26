@@ -1,3 +1,10 @@
+@font-face {
+    font-family: AntwerpFont;
+    src: url('/fonts/AntwerpenRegular.otf');
+}
+* {
+  font-family: AntwerpFont;
+}
 .skipStory {
   position: fixed;
   z-index: 5;
@@ -326,15 +333,15 @@ button:hover {
   width: 80%;
   border-width: 4px;
   margin:  20px 10%;
-  
-  
+
+
 }
 
 .contact:hover{
 
   background-color: white;
   color: black;
-  
+
 }
 
 

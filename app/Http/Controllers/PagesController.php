@@ -70,7 +70,14 @@ class PagesController extends Controller
 
       $request->session()->forget('checkIfSubmitted');
 
-      return view('story1', compact('stories', 'countComArray', 'commentOnGame'));
+      $randomStory = rand(1, 2);
+
+      if ($randomStory == 1) {
+        return view('story1', compact('stories', 'countComArray', 'commentOnGame', 'randomStory'));
+      }
+      else if ($randomStory == 2) {
+        return view('story2', compact('stories', 'countComArray', 'commentOnGame', 'randomStory'));
+      }
     }
 
     public function homeToForum(Request $request) {

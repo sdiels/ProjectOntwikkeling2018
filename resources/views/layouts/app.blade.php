@@ -31,15 +31,14 @@
     <!-- <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script> -->
 
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/story1.css">
+    @yield('styles')
     <link rel="stylesheet" href="/css/responsive.css">
 </head>
 <body>
   <script>
       var controller = new ScrollMagic.Controller();
 
-      var randomStory = Math.floor( Math.random() * 2 );
-      alert(randomStory);
+
 
   </script>
 
@@ -221,7 +220,7 @@
         @endif
     </div>
 
-    <script type="text/javascript" src="js/story1Script.js"></script>
+@yield('scripts')
     <script type="text/javascript" src="js/layoutScript.js"></script>
 </body>
 </html>

@@ -1,0 +1,301 @@
+body {
+    width: 100%;
+    margin: 0;
+    background-color: white;
+    overflow-x: hidden;
+}
+p {
+    font-family: antwerpen;
+    font-size: 3em;
+    position: absolute;
+}
+
+#bg1 {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#alogo {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#serveerster {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+}
+
+#text1 {
+    left: 0%;
+    top: 110%;
+    opacity: 0;
+    width: 50%;
+}
+
+#fdiv1 {
+    position: absolute;
+    height: 650px;
+    width: 50%;
+    overflow: hidden;
+    opacity: 0;
+
+    left: 0;
+    top: 220%
+}
+
+#frame1 {
+    width: 120%;
+    position: absolute;
+}
+
+#text2 {
+    left: 65%;
+    top: 240%;
+    opacity: 0;
+    width: 40%;
+}
+
+#mannen{
+    width: 111%;
+    position: absolute;
+    top: 100%;
+    left: 15px;
+    animation-timing-function: linear;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+}
+
+#fdiv2 {
+    position: absolute;
+    height: 650px;
+    width: 50%;
+    overflow: hidden;
+    opacity: 0;
+
+    left: 55%;
+    top: 320%
+}
+#frame2 {
+    width: 120%;
+    position: absolute;
+
+    right: 1%
+}
+#man {
+    width: 120%;
+    position: absolute;
+
+    left: 90%
+}
+#text3 {
+    left: 0%;
+    top: 340%;
+    width: 45%;
+    opacity: 0;
+}
+
+#bigMan {
+    -webkit-transform: translate(0, -55%);
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    top: 410%;
+}
+
+#text4 {
+    position: absolute;
+    top: 400%;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+#text5 {
+    position: absolute;
+    top: 500%;
+    opacity: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+}
+
+#fdiv3 {
+    position: absolute;
+    height: 650px;
+    width: 50%;
+    overflow: hidden;
+    opacity: 0;
+
+    left: 0%;
+    top: 550%
+}
+#frame3 {
+    width: 120%;
+    position: absolute;
+
+    left: 0%
+}
+#man3 {
+    width: 120%;
+    position: absolute;
+
+    left: 30%
+}
+#whitebg {
+    width: 100%;
+    height: 77%;
+    background-color: white;
+    position: absolute;
+}
+#text6 {
+    left: 60%;
+    top: 570%;
+    width: 40%;
+    opacity: 0;
+    color: white;
+}
+
+#fdiv4 {
+    position: absolute;
+    height: 650px;
+    width: 50%;
+    overflow: hidden;
+    opacity: 0;
+
+    left: 55%;
+    top: 650%
+}
+#bg4 {
+    width: 120%;
+    position: absolute;
+
+    right: 10%
+}
+#frame4 {
+    width: 120%;
+    position: absolute;
+
+    right: 0%
+}
+#text7 {
+    left: 0%;
+    top: 670%;
+    width: 50%;
+    opacity: 0;
+    color: white;
+}
+#text8 {
+    top: 700%;
+    left: 15%;
+    width: 70%;
+    text-align: center;
+    opacity: 0;
+}
+#whiteScreenEnd {
+  width: 100%;
+  opacity: 0;
+  position: absolute;
+  top: 650%;
+  height: 2000px;
+  background-color: white;
+}
+/*****************************
+            TRIGUURS
+******************************/
+#trigger1,
+#trigger2,
+#trigger3,
+#trigger4,
+#trigger5,
+#trigger6,
+#trigger7,
+#triggertext4,
+#trigger8,
+#trigger9,
+#trigger10,
+#trigger11,
+#trigger12,
+#trigger13,
+#trigger15,
+#trigger16
+ {
+  position: absolute;
+}
+
+#trigger1 {
+  top: 55%;
+}
+#trigger2 {
+  top: 95%;
+}
+#trigger3 {
+  top: 180%;
+}
+#trigger4 {
+  top: 210%;
+}
+#trigger5 {
+  top: 290%;
+}
+#trigger6 {
+  top: 320%;
+}
+#trigger7 {
+  top: 350%;
+}
+#triggertext4 {
+  top: 420%;
+}
+#trigger8 {
+  top: 430%;
+}
+#trigger9 {
+  top: 470%;
+}
+#trigger10 {
+  top: 510%;
+}
+#trigger11 {
+  top: 550%;
+}
+#trigger12 {
+  top: 620%;
+}
+#trigger13 {
+  top: 650%;
+}
+#trigger15 {
+  top: 710%;
+}
+
+#trigger16 {
+  top: 730%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/

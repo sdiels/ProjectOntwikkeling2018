@@ -1,5 +1,9 @@
 @extends('layouts.app')
 
+@section('styles')
+<link rel="stylesheet" href="/css/story1.css">
+@endsection
+
 @section('content')
   <div class="spacer s5"></div>
   <div id="trigger1"></div>
@@ -78,4 +82,8 @@
   <div id="trigger15"></div>
   <div id="trigger16"></div>
   <p id="text8">Eva is niet de enige die het slachtoffer werd van soortgelijke gebeurtenissen</p>
+@endsection
+
+@section('scripts')
+<script type="text/javascript" src="js/story1Script.js"></script>
 @endsection
