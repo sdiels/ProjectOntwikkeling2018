@@ -18,16 +18,15 @@ Route::get('/homeForum', 'PagesController@homeToForum')->name('indexToForum');
 Route::get('/homeGame', 'PagesController@homeToGame')->name('indexToGame');
 Route::get('/skip', 'PagesController@skip')->name('skipStory');
 
-Route::get('/info', 'PagesController@info')->name('info');
 Route::get('/forum', 'PagesController@forum')->name('forum');
-Route::get('/game', 'PagesController@game')->name('game');
 Route::get('/game/reacties', 'PagesController@gamecomments')->name('GameComment');
 Route::get('/playGame', 'PagesController@playGame')->name('playGame');
 Route::get('/contact', 'PagesController@contact')->name('contact');
 Route::get('/addStory', 'PagesController@addStory')->name('addStory');
 Route::get('/forum/{id}', 'PagesController@show')->name('forumShowOne');
 
-Route::get('/story1', 'PagesController@story1')->name('story1');
+Route::post('/adminLogin', 'PagesController@adminLogin')->name('adminLogin');
+Route::get('/adminLogout', 'PagesController@adminLogout')->name('adminLogout');
 
 
 Route::post('/storeStory', 'StoryController@store')->name('storeStory');

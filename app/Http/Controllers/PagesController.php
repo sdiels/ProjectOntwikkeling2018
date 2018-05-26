@@ -95,8 +95,21 @@ class PagesController extends Controller
 
       return redirect()->action('PagesController@index');
     }
-    public function info() {
-      return view('info');
+
+    public function adminLogin (Request $request) {
+      $naam = $request->name;
+      $wachtwoord = $request->password;
+
+      if ($naam == 'admin' && $wachtwoord == 'test') {
+          $request->session()->put('adminLoggedIn', true);
+      }
+
+      return back();
+    }
+    public function adminLogout (Request $request) {
+      $request->session()->forget('adminLoggedIn', true);
+
+      return back();
     }
 
     public function contact() {
@@ -122,12 +135,6 @@ class PagesController extends Controller
       }
 
       return view('forum', compact('stories', 'countComArray'));
-    }
-
-    public function game() {
-      $commentOnGame = Gamecomment::orderby('id', 'desc')->take(3)->get();
-
-      return view('game', compact('commentOnGame'));
     }
 
     public function gamecomments(Request $request) {

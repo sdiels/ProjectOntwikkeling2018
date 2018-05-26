@@ -3,9 +3,83 @@
 }
 h1 {
   margin-left: 2%;
-  margin-bottom: 30px;
-  border-bottom: 1px solid #aaa;
 }
+.h1AndButton {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #aaa;
+  margin-bottom: 30px;
+}
+.h1AndButton .adminLogin {
+  height: 70%;
+  margin-top: 1%;
+  display: flex;
+}
+.h1AndButton .adminLogin button {
+  margin-right: 5%;
+  width: 10%;
+  height: 5%;
+  position: absolute;
+  left: 87%;
+}
+.adminForm {
+  transform: scaleX(0);
+}
+.adminForm form {
+  display: flex;
+}
+.adminForm form input {
+  margin-right: 2%;
+}
+.isRight {
+  animation-name: buttonMoveRight;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+.isLeft {
+  animation-name: buttonMoveLeft;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  animation-timing-function: linear;
+}
+.hiddenForm {
+  animation-name: hideAdminForm;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transform-origin: right;
+  animation-timing-function: linear;
+}
+.showForm {
+  animation-name: showAdminForm;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  transform-origin: right;
+  animation-timing-function: linear;
+}
+@keyframes buttonMoveLeft {
+  0%   {left: 87%;}
+  100% {left: 64%;}
+}
+@keyframes buttonMoveRight {
+  0%   {left: 64%;}
+  100% {left: 87%;}
+}
+@keyframes showAdminForm {
+  0%   {display: none;
+        transform: scaleX(0);}
+  1% {display: inline;}
+  100% {transform: scaleX(1);}
+}
+@keyframes hideAdminForm {
+  0%   {display: inline;
+        transform: scaleX(1);}
+  99% {display: none;}
+  100% {transform: scaleX(0);}
+}
+
+
+
 .addStoryButton {
   width: 100%;
   text-align: right;
