@@ -38,6 +38,9 @@
   <script>
       var controller = new ScrollMagic.Controller();
 
+      var randomStory = Math.floor( Math.random() * 2 );
+      alert(randomStory);
+
   </script>
 
     <div id="app">
