@@ -33,3 +33,11 @@ Route::post('/storeStory', 'StoryController@store')->name('storeStory');
 Route::post('/storeComment/{id}', 'StoryController@storeComment')->name('storeComment');
 
 Route::post('/game/storeComment', 'GameController@store')->name('storeGameComment');
+
+Route::get('/deleteStory/{id}', 'StoryController@deleteStory')->name('deleteStory');
+Route::get('/deleteStoryDel/{id}', 'StoryController@deleteStoryDel')->name('deleteStoryDel');
+Route::get('/dontDelete', 'StoryController@dontDelete')->name('dontDelete');
+
+Route::get('/validate/{id}', 'StoryController@validateStory')->name('validate');
+Route::get('/validateCheck/{id}', 'StoryController@validateCheck')->name('validateCheck');
+Route::get('/dontValidate', 'StoryController@dontValidate')->name('dontValidate');

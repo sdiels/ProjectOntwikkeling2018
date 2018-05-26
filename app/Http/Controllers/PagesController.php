@@ -15,7 +15,7 @@ class PagesController extends Controller
       /*********************************************
       //Getuigenissen
       *********************************************/
-      $stories = Getuigenis::orderby('id', 'desc')->take(4)->get();
+      $stories = Getuigenis::orderby('id', 'desc')->where('validated', 1)->take(4)->get();
 
       if ($stories->count() > 0) {
         $storyHighestId = Getuigenis::orderby('id', 'desc')->select('getuigenis.id')->first();
@@ -82,6 +82,9 @@ class PagesController extends Controller
 
     public function homeToForum(Request $request) {
       $request->session()->put('scrollForum', true);
+      $request->session()->forget('deleteStorySure');
+      $request->session()->forget('validateStory');
+      $request->session()->forget('adminLoggedIn', true);
 
       return redirect()->action('PagesController@index');
     }
@@ -108,6 +111,8 @@ class PagesController extends Controller
     }
     public function adminLogout (Request $request) {
       $request->session()->forget('adminLoggedIn', true);
+      $request->session()->forget('deleteStorySure');
+      $request->session()->forget('validateStory');
 
       return back();
     }
@@ -117,7 +122,7 @@ class PagesController extends Controller
     }
 
     public function forum() {
-      $stories = Getuigenis::orderby('id', 'desc')->get();
+      $stories = Getuigenis::orderby('id', 'desc')->where('validated', 1)->get();
 
       if ($stories->count() > 0) {
         $storyHighestId = Getuigenis::orderby('id', 'desc')->select('getuigenis.id')->first();
@@ -134,7 +139,9 @@ class PagesController extends Controller
         }
       }
 
-      return view('forum', compact('stories', 'countComArray'));
+      $storiesNonvalidated = Getuigenis::orderby('id', 'desc')->where('validated', 0)->get();
+
+      return view('forum', compact('stories', 'countComArray', 'storiesNonvalidated'));
     }
 
     public function gamecomments(Request $request) {
@@ -145,7 +152,9 @@ class PagesController extends Controller
       return view('gamereactions', compact('commentOnGame'));
     }
 
-    public function addStory() {
+    public function addStory(Request $request) {
+      $request->session()->forget('deleteStorySure');
+      $request->session()->forget('validateStory');
 
       return view('addStory');
     }

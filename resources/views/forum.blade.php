@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="/css/forumstyle.css">
 </head>
 <body>
@@ -15,7 +16,7 @@
         <div class="adminForm" id="adminForm">
           <form action="{{ url('adminLogin') }}" method="post">
               <input type="text" name="name" placeholder="Naam"><br>
-              <input type="text" name="password" placeholder="wachtwoord"><br>
+              <input type="password" name="password" placeholder="wachtwoord"><br>
 
               <input type="hidden" name="_token" value="{{ csrf_token() }}">
               <input type="submit" name="submit" value="Inloggen">
@@ -28,6 +29,51 @@
     <div class="addStoryButton">
       <a href="{{ route('addStory') }}"><button type="button" name="button" class="addButton righterButton">Ik wil mijn verhaal delen</button></a>
     </div>
+
+    @if(session()->has('deleteStorySure'))
+    <div class="hide">
+      {{ $sureId = Session::get('deleteStorySure') }}
+    </div>
+    <div class="AreYouSure">
+      <p>Bent u zeker dat u dit verhaal wilt verwijderen</p>
+      <a href="{{ url('deleteStoryDel', [$sureId]) }}"><button type="button" name="button">Ja</button></a>
+      <a href="{{ route('dontDelete') }}"><button type="button" name="button">Nee</button></a>
+    </div>
+    @endif
+
+    @if(session()->has('validateStory'))
+    <div class="hide">
+      {{ $sureId = Session::get('validateStory') }}
+    </div>
+    <div class="AreYouSure">
+      <p>Bent u zeker dat u dit verhaal wilt valideren</p>
+      <a href="{{ url('validateCheck', [$sureId]) }}"><button type="button" name="button">Ja</button></a>
+      <a href="{{ route('dontValidate') }}"><button type="button" name="button">Nee</button></a>
+    </div>
+    @endif
+
+    @if(session()->has('StoryAdded'))
+      <p class="alert-success">{{ Session::get('StoryAdded') }}</p>
+    @endif
+
+    @if(session()->has('adminLoggedIn'))
+    <div class="AllStories">
+      @if (count($storiesNonvalidated) > 0)
+        @foreach($storiesNonvalidated as $storyNV)
+          <div class="storyForum NVStory">
+            <div class="commentAndTitle">
+              <h4>{{$storyNV->title}}</h4>
+            </div>
+            <p class="storyBody">{{$storyNV->story}}</p><br>
+            <a href="{{ url('validate', [$storyNV->id]) }}"><button type="button" name="button">Goedkeuren</button></a>
+            <a href="{{ url('deleteStory', [$storyNV->id]) }}"><button type="button" name="button">Niet goedkeuren</button></a>
+          </div>
+        @endforeach
+      @else
+        <p>Er zijn geen ongevalideerde getuigenissen</p>
+      @endif
+    </div>
+    @else
     <div class="AllStories">
       @if (count($stories) > 0)
         @foreach($stories as $story)
@@ -45,6 +91,7 @@
         <p>Er zijn geen getuigenissen</p>
       @endif
     </div>
+    @endif
   </div>
 
   <script type="text/javascript">
