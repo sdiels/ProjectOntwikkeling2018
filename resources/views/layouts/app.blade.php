@@ -54,7 +54,6 @@
           @yield('content')
         </div>
         <div class="OtherContent">
-          <div id="SkipStoryScroll"></div>
           <div id="triggeri1"></div>
 
           <div id="stats">
@@ -194,14 +193,6 @@
 
           <div class="spacer s4"></div>
         </div>
-        @if(session()->has('scrollToInfo'))
-            <script>
-              function bottom() {
-                document.getElementById( 'SkipStoryScroll' ).scrollIntoView();
-              };
-              bottom();
-            </script>
-          @endif
         @if(session()->has('scrollToForum'))
           <script>
             function bottom() {

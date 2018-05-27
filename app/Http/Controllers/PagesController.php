@@ -42,11 +42,6 @@ class PagesController extends Controller
 
       $request->session()->forget('scrollToInfo');
 
-      if ($request->session()->has('scrollInfo')) {
-        $request->session()->forget('scrollInfo');
-        $request->session()->put('scrollToInfo', true);
-      }
-
       $request->session()->forget('scrollToForum');
 
       if ($request->session()->has('scrollForum')) {
@@ -90,11 +85,6 @@ class PagesController extends Controller
     }
     public function homeToGame(Request $request) {
       $request->session()->put('scrollGamePage', true);
-
-      return redirect()->action('PagesController@index');
-    }
-    public function skip(Request $request) {
-      $request->session()->put('scrollInfo', true);
 
       return redirect()->action('PagesController@index');
     }
