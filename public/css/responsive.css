@@ -1,12 +1,27 @@
-@media (max-width:520px) {
-.skipStory {
-  left: 60%;
+@media (max-width:1000px) {
+body {
+  background-color: white;
 }
-#tram {
-  top: 20%;
+.skipStory,
+.scrollStory,
+.storyView,
+#triggers1,
+#triggers2,
+#triggers3,
+#triggers4,
+#triggers5,
+#triggers6 {
+  display: none;
 }
-#trigger1 {
-  top: 50%;
+.OtherContent {
+  top: 0;
 }
-
+.OtherContent,
+.storyNumber1,
+.storyNumber2,
+.storyNumber3,
+.storyNumber4,
+.zieMeer {
+  position: static;
+}
 }
