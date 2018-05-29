@@ -1,6 +1,6 @@
 var bg1 = new ScrollMagic.Scene({
         triggerElement: "#trigger1",
-        duration: 500
+        duration: "50%"
     })
     .setTween("#bg1", {
         opacity: 0
@@ -8,7 +8,7 @@ var bg1 = new ScrollMagic.Scene({
     .addTo(controller);
 var serveerster = new ScrollMagic.Scene({
         triggerElement: "#trigger1",
-        duration: 500
+        duration: "50%"
     })
     .setTween("#serveerster", {
         left: "55%",
@@ -19,7 +19,7 @@ var serveerster = new ScrollMagic.Scene({
 
 var text1 = new ScrollMagic.Scene({
         triggerElement: "#trigger2",
-        duration: 200
+        duration: "20%"
     })
     .setTween("#text1", {
         left: "5%",
@@ -29,7 +29,7 @@ var text1 = new ScrollMagic.Scene({
 
 var serveerster2 = new ScrollMagic.Scene({
         triggerElement: "#trigger3",
-        duration: 500
+        duration: "50%"
     })
     .setTween("#serveerster", {
         opacity: 0
@@ -37,7 +37,7 @@ var serveerster2 = new ScrollMagic.Scene({
     .addTo(controller);
 var frame1 = new ScrollMagic.Scene({
         triggerElement: "#trigger3",
-        duration: 500
+        duration: "50%"
     })
     .setTween("#fdiv1", {
         left: "5%",
@@ -46,7 +46,7 @@ var frame1 = new ScrollMagic.Scene({
     .addTo(controller);
 var mannen = new ScrollMagic.Scene({
         triggerElement: "#trigger3",
-        duration: 500
+        duration: "50%"
     })
     .setTween("#mannen", {
         top: "6%"
@@ -55,7 +55,7 @@ var mannen = new ScrollMagic.Scene({
 
 var text2 = new ScrollMagic.Scene({
         triggerElement: "#trigger4",
-        duration: 200
+        duration: "20%"
     })
     .setTween("#text2", {
         left:"60%",
@@ -65,7 +65,7 @@ var text2 = new ScrollMagic.Scene({
 
 var frame2 = new ScrollMagic.Scene({
         triggerElement: "#trigger5",
-        duration: 500
+        duration: "50%"
     })
     .setTween("#fdiv2", {
         left: "50%",
@@ -74,7 +74,7 @@ var frame2 = new ScrollMagic.Scene({
     .addTo(controller);
 var man = new ScrollMagic.Scene({
         triggerElement: "#trigger5",
-        duration: 600
+        duration: "60%"
     })
     .setTween("#man", {
         left: "-20%"
@@ -82,7 +82,7 @@ var man = new ScrollMagic.Scene({
     .addTo(controller);
 var text3 = new ScrollMagic.Scene({
         triggerElement: "#trigger6",
-        duration: 200
+        duration: "20%"
     })
     .setTween("#text3", {
         left:"5%",
@@ -92,7 +92,7 @@ var text3 = new ScrollMagic.Scene({
 
 var bigMan = new ScrollMagic.Scene({
         triggerElement: "#trigger7",
-        duration: 400
+        duration: "40%"
     })
     .setTween("#bigMan", {
         opacity: 1
@@ -101,7 +101,7 @@ var bigMan = new ScrollMagic.Scene({
 
 var text4 = new ScrollMagic.Scene({
         triggerElement: "#triggertext4",
-        duration: 200
+        duration: "20%"
     })
     .setTween("#text4", {
         opacity: 1,
@@ -110,7 +110,7 @@ var text4 = new ScrollMagic.Scene({
     .addTo(controller);
 var bg = new ScrollMagic.Scene({
         triggerElement: "#trigger8",
-        duration: 100
+        duration: "10%"
     })
     .setTween("body", {
         backgroundColor: "black"
@@ -118,7 +118,7 @@ var bg = new ScrollMagic.Scene({
     .addTo(controller);
 var text5 = new ScrollMagic.Scene({
         triggerElement: "#trigger9",
-        duration: 200
+        duration: "20%"
     })
     .setTween("#text5", {
         top: "510%",
@@ -128,7 +128,7 @@ var text5 = new ScrollMagic.Scene({
 
 var frame3 = new ScrollMagic.Scene({
         triggerElement: "#trigger10",
-        duration: 500
+        duration: "50%"
     })
     .setTween("#fdiv3", {
         left: "5%",
@@ -137,7 +137,7 @@ var frame3 = new ScrollMagic.Scene({
     .addTo(controller);
 var man3 = new ScrollMagic.Scene({
         triggerElement: "#trigger10",
-        duration: 500
+        duration: "50%"
     })
     .setTween("#man3", {
         left: "0%"
@@ -145,7 +145,7 @@ var man3 = new ScrollMagic.Scene({
     .addTo(controller);
 var text6 = new ScrollMagic.Scene({
         triggerElement: "#trigger11",
-        duration: 200
+        duration: "20%"
     })
     .setTween("#text6", {
         left: "55%",
@@ -155,7 +155,7 @@ var text6 = new ScrollMagic.Scene({
 
 var frame4 = new ScrollMagic.Scene({
         triggerElement: "#trigger12",
-        duration: 500
+        duration: "50%"
     })
     .setTween("#fdiv4", {
         left: "50%",
@@ -164,7 +164,7 @@ var frame4 = new ScrollMagic.Scene({
     .addTo(controller);
 var bg4 = new ScrollMagic.Scene({
         triggerElement: "#trigger12",
-        duration: 500
+        duration: "50%"
     })
     .setTween("#bg4", {
         right: "-15%"
@@ -172,7 +172,7 @@ var bg4 = new ScrollMagic.Scene({
     .addTo(controller);
 var text7 = new ScrollMagic.Scene({
         triggerElement: "#trigger13",
-        duration: 200
+        duration: "20%"
     })
     .setTween("#text7", {
         left:"5%",

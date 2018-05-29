@@ -37,9 +37,6 @@
 <body>
   <script>
       var controller = new ScrollMagic.Controller();
-
-
-
   </script>
 
     <div id="app">
@@ -54,7 +51,6 @@
           @yield('content')
         </div>
         <div class="OtherContent">
-          <div id="SkipStoryScroll"></div>
           <div id="triggeri1"></div>
 
           <div id="stats">
@@ -198,14 +194,6 @@
 
           <div class="spacer s4"></div>
         </div>
-        @if(session()->has('scrollToInfo'))
-            <script>
-              function bottom() {
-                document.getElementById( 'SkipStoryScroll' ).scrollIntoView();
-              };
-              bottom();
-            </script>
-          @endif
         @if(session()->has('scrollToForum'))
           <script>
             function bottom() {
@@ -224,7 +212,18 @@
         @endif
     </div>
 
-@yield('scripts')
-    <script type="text/javascript" src="js/layoutScript.js"></script>
+    <script type="text/javascript">
+      if (screen.width > 100) {
+         var head    = document.getElementsByTagName('head')[0];
+         var script  = document.createElement('script');
+         script.type = 'text/javascript';
+         script.src  = 'js/layoutScript.js';
+         head.appendChild(script);
+      }
+    </script>
+
+    @yield('scripts')
+
+
 </body>
 </html>

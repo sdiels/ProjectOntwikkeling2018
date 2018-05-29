@@ -15,7 +15,7 @@ class PagesController extends Controller
       /*********************************************
       //Getuigenissen
       *********************************************/
-      $stories = Getuigenis::orderby('id', 'desc')->take(4)->get();
+      $stories = Getuigenis::orderby('id', 'desc')->where('validated', 1)->take(4)->get();
 
       if ($stories->count() > 0) {
         $storyHighestId = Getuigenis::orderby('id', 'desc')->select('getuigenis.id')->first();
@@ -41,11 +41,6 @@ class PagesController extends Controller
       *********************************************/
 
       $request->session()->forget('scrollToInfo');
-
-      if ($request->session()->has('scrollInfo')) {
-        $request->session()->forget('scrollInfo');
-        $request->session()->put('scrollToInfo', true);
-      }
 
       $request->session()->forget('scrollToForum');
 
@@ -73,7 +68,7 @@ class PagesController extends Controller
       $randomStory = rand(1, 2);
 
       if ($randomStory == 1) {
-        return view('story1', compact('stories', 'countComArray', 'commentOnGame', 'randomStory'));
+        return view('story2', compact('stories', 'countComArray', 'commentOnGame', 'randomStory'));
       }
       else if ($randomStory == 2) {
         return view('story2', compact('stories', 'countComArray', 'commentOnGame', 'randomStory'));
@@ -82,6 +77,9 @@ class PagesController extends Controller
 
     public function homeToForum(Request $request) {
       $request->session()->put('scrollForum', true);
+      $request->session()->forget('deleteStorySure');
+      $request->session()->forget('validateStory');
+      $request->session()->forget('adminLoggedIn', true);
 
       return redirect()->action('PagesController@index');
     }
@@ -90,13 +88,23 @@ class PagesController extends Controller
 
       return redirect()->action('PagesController@index');
     }
-    public function skip(Request $request) {
-      $request->session()->put('scrollInfo', true);
 
-      return redirect()->action('PagesController@index');
+    public function adminLogin (Request $request) {
+      $naam = $request->name;
+      $wachtwoord = $request->password;
+
+      if ($naam == 'admin' && $wachtwoord == 'test') {
+          $request->session()->put('adminLoggedIn', true);
+      }
+
+      return back();
     }
-    public function info() {
-      return view('info');
+    public function adminLogout (Request $request) {
+      $request->session()->forget('adminLoggedIn', true);
+      $request->session()->forget('deleteStorySure');
+      $request->session()->forget('validateStory');
+
+      return back();
     }
 
     public function contact() {
@@ -104,7 +112,7 @@ class PagesController extends Controller
     }
 
     public function forum() {
-      $stories = Getuigenis::orderby('id', 'desc')->get();
+      $stories = Getuigenis::orderby('id', 'desc')->where('validated', 1)->get();
 
       if ($stories->count() > 0) {
         $storyHighestId = Getuigenis::orderby('id', 'desc')->select('getuigenis.id')->first();
@@ -121,13 +129,9 @@ class PagesController extends Controller
         }
       }
 
-      return view('forum', compact('stories', 'countComArray'));
-    }
+      $storiesNonvalidated = Getuigenis::orderby('id', 'desc')->where('validated', 0)->get();
 
-    public function game() {
-      $commentOnGame = Gamecomment::orderby('id', 'desc')->take(3)->get();
-
-      return view('game', compact('commentOnGame'));
+      return view('forum', compact('stories', 'countComArray', 'storiesNonvalidated'));
     }
 
     public function gamecomments(Request $request) {
@@ -138,7 +142,9 @@ class PagesController extends Controller
       return view('gamereactions', compact('commentOnGame'));
     }
 
-    public function addStory() {
+    public function addStory(Request $request) {
+      $request->session()->forget('deleteStorySure');
+      $request->session()->forget('validateStory');
 
       return view('addStory');
     }

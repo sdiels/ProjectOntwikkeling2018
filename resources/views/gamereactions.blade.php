@@ -6,6 +6,7 @@
 <body>
   <div class="gameractionspage">
     <h1>REACTIES OP HET SPEL</h1>
+    <a href="{{ route('indexToGame') }}"><p>Terug naar homepage</p></a>
     @if (count($commentOnGame) >  0)
     <div class="allGameComments">
       @foreach ($commentOnGame as $comment)

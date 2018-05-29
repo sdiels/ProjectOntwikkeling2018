@@ -17,6 +17,7 @@ class CreateForumTable extends Migration
             $table->increments('id');
             $table->string('title');
             $table->text('story');
+            $table->integer('validated');
             $table->timestamps();
         });
     }

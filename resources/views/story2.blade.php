@@ -80,5 +80,13 @@
 @endsection
 
 @section('scripts')
-<script type="text/javascript" src="js/story2Script.js"></script>
+<script type="text/javascript">
+  if (screen.width > 100) {
+     var head    = document.getElementsByTagName('head')[0];
+     var script  = document.createElement('script');
+     script.type = 'text/javascript';
+     script.src  = 'js/story2Script.js';
+     head.appendChild(script);
+  }
+</script>
 @endsection
