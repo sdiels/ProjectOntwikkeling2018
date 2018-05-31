@@ -355,6 +355,7 @@ button:hover {
 
   width: 80%;
   align-content: center;
+  margin: 20px 0px 50px 0px;
 }
 
 .call{
@@ -365,8 +366,8 @@ button:hover {
   color: white;
   text-decoration: none;
   font-size: 1.25em;
-  margin: 10% 35%;
-  
+  margin: 50% 35%;
+  padding: 20px;
 }
 
 
