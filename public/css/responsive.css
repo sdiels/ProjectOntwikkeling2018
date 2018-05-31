@@ -1,6 +1,8 @@
 @media (max-width:1000px) {
-body {
-  background-color: white;
+.wrapper, html, body {
+  width: 100%;
+  height: 100%;
+  overflow-x: auto;
 }
 .skipStory,
 .scrollStory,
@@ -23,5 +25,25 @@ body {
 .storyNumber4,
 .zieMeer {
   position: static;
+}
+#stats1 > div, #stats2 > div {
+    float: none;
+    font-size: 1.5em;
+}
+#statsinfoafter {
+  height: 5%;
+}
+#bar1, #bar2 {
+    margin-bottom: 0%;
+}
+.forumInStory {
+  width: 100%;
+  display: inline-block;
+}
+.forumInStory a {
+  width: 90%;
+}
+#textg1 {
+  margin-top: 5%;
 }
 }

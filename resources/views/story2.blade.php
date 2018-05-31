@@ -81,7 +81,7 @@
 
 @section('scripts')
 <script type="text/javascript">
-  if (screen.width > 100) {
+  if (screen.width > 1000) {
      var head    = document.getElementsByTagName('head')[0];
      var script  = document.createElement('script');
      script.type = 'text/javascript';

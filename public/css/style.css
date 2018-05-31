@@ -80,9 +80,14 @@
     height: 30px;
     background-color: #ea4d4d;
 }
+#stats1, #stats2 {
+  width: 100%;
+}
 #stats1 > div, #stats2 > div {
-    float: left;
-    font-size: 2em;
+  width: 50%;
+  text-align: left;
+  float: left;
+  font-size: 2em;
 }
 
 #statsinfo {
@@ -97,6 +102,7 @@
 #stats {
     margin-top: 10%;
     margin-bottom: 15%;
+    width: 100%;
 }
 
 #texts1 {
@@ -366,7 +372,7 @@ button:hover {
   text-decoration: none;
   font-size: 1.25em;
   margin: 10% 35%;
-  
+
 }
 
 
