@@ -3,67 +3,70 @@
     src: url('/fonts/AntwerpenRegular.otf');
 }
 * {
-  font-family: AntwerpFont;
+    font-family: AntwerpFont;
 }
 .skipStory {
-  position: fixed;
-  z-index: 5;
-  width: 100%;
-  left: 80%;
-  top: 2%;
-  font-size: 0.5em;
-  color: #4286f4;
+    position: absolute;
+    z-index: 5;
+    width: 100%;
+    left: 80%;
+    top: 2%;
+    font-size: 0.5em;
+    color: #4286f4;
+}
+.skipStory p{
+    background-color: white;
+    border-radius: 20px;
+    padding: 0 1% 0 1%;
 }
 .skipStory:hover {
-  color: #2163ce;
+    color: #2163ce;
 }
 .scrollStory {
-  position: absolute;
-  z-index: 5;
-  font-size: 1em;
-  width: 20%;
-  top: 90%;
-  left: 40%;
+    position: absolute;
+    z-index: 5;
+    font-size: 1em;
+    width: 30%;
+    top: 90%;
+    margin: 0 35% 0 35%;
 }
 .scrollStory button {
-  width: 100%;
-  height: 50px;
+    width: 100%;
+    height: 50px;
 }
-.scrollStory button:not(:hover){
-  animation-name: flikkerBackColorBttn;
-  animation-duration: 5s;
-  animation-iteration-count: infinite;
+.scrollStory button:not(:hover) {
+    animation-name: flikkerBackColorBttn;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
 }
-
 @keyframes flikkerBackColorBttn {
     0% {
-      border: 3px solid black;
-      background-color: white;
-      color: black;
+        border: 3px solid black;
+        background-color: white;
+        color: black;
     }
     50% {
-      border: none;
-      background-color: black;
-      color: white;
+        border: none;
+        background-color: black;
+        color: white;
     }
     100% {
-      border: 3px solid black;
-      background-color: white;
-      color: black;
+        border: 3px solid black;
+        background-color: white;
+        color: black;
     }
 }
-
 .OtherContent {
-  position: absolute;
-  top: 800%;
-  margin: 0 5%;
+    position: absolute;
+    top: 800%;
+    margin: 0 5%;
 }
 .OtherContent p {
-  font-size: 1em;
-  position: relative;
+    font-size: 1em;
+    position: relative;
 }
-
-#bar1, #bar2 {
+#bar1,
+#bar2 {
     border: 5px black solid;
     width: 50%;
     margin-bottom: 5%;
@@ -80,35 +83,31 @@
     height: 30px;
     background-color: #ea4d4d;
 }
-#stats1, #stats2 {
-  width: 100%;
-}
-#stats1 > div, #stats2 > div {
-  width: 50%;
-  text-align: left;
-  float: left;
-  font-size: 2em;
-}
-
-#statsinfo {
-    width: 50%;
-    text-align: center;
-}
-#statsinfoafter {
+#stats1,
+#stats2 {
     width: 100%;
+}
+#stats1 > div,
+#stats2 > div {
+    width: 50%;
+    text-align: left;
+    float: left;
+    font-size: 2em;
+}
+#statsinfo, #statsinfoafter {
+    width: 50%;
+    padding-left: 5%;
     text-align: center;
 }
-
 #stats {
     margin-top: 10%;
     margin-bottom: 15%;
     width: 100%;
 }
-
 #texts1 {
-  margin-top: 50px;
-  margin-left: 5%;
-  font-size: 2.5em;
+    margin-top: 50px;
+    margin-left: 5%;
+    font-size: 2.5em;
 }
 .forumInStory {
     padding: 2%;
@@ -159,7 +158,7 @@
     margin-bottom: 30px;
 }
 .forumInStory .storyForum .commentAndTitle .commentCount {
-  color: #007bff;
+    color: #007bff;
 }
 .forumInStory .storyForum h4 {
     font-size: 2em;
@@ -191,204 +190,182 @@
     position: relative;
 }
 #textg1 {
-  margin-top: 580px;
-  font-size: 2.5em;
-  margin-left: 5%;
+    font-size: 2.5em;
 }
 .gamepageWithoutTitle {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .gamepageWithoutTitle .gameInfoAndPhotos {
-  width: 40%;
-  margin-right: 5%;
-  margin-left: 5%;
-  padding: 1%;
+    width: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding: 1%;
 }
 .gamepageWithoutTitle .gameInfoAndPhotos {
-  width: 40%;
-  padding: 1% 0 1% 0;
+    width: 40%;
+    padding: 1% 0 1% 0;
 }
 .gamepageWithoutTitle .gameInfoAndPhotos .GameInfo {
-  padding-bottom: 20px;
-  margin-bottom: 40px;
-  border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
 }
+
 /*PHOTOS*/
+
 .gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos {
-  display: flex;
+    display: flex;
 }
 .gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto {
-  width: 60%;
-  height: 250px;
-  margin-right: 2%;
+    width: 60%;
+    height: 250px;
+    margin-right: 2%;
 }
-.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto img{
-  width: 100%;
-  height: 100%;
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto img {
+    width: 100%;
+    height: 100%;
 }
 .gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos {
-  width: 38%;
-  height: 250px;
+    width: 38%;
+    height: 250px;
 }
-.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos img{
-  width: 100%;
-  height: 49%;
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos img {
+    width: 100%;
+    height: 49%;
 }
-.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos img:first-child{
-  margin-bottom: 2.5%;
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos img:first-child {
+    margin-bottom: 2.5%;
 }
-.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos img:last-child{
-  margin-bottom: 0%;
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos img:last-child {
+    margin-bottom: 0%;
 }
+
 /*PHOTOS END*/
+
 .gamepageWithoutTitle .gamereactionsAndPlayGame .gamePlay {
-  margin-bottom: 20px;
-  border: 5px solid #000;
-  height: 130px;
-  text-align: center;
+    margin-bottom: 20px;
+    border: 5px solid #000;
+    height: 130px;
+    text-align: center;
 }
 .gamepageWithoutTitle .gamereactionsAndPlayGame .gamePlay h2 {
-  margin-top: 39.4px;
-  font-size: 3em;
-  color: black;
+    margin-top: 39.4px;
+    font-size: 3em;
+    color: black;
 }
 .gamePlay:hover {
-  background-color: #ddd;
+    background-color: #ddd;
 }
 .gamePlayA:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 .gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions {
-  padding: 2%;
+    padding: 2%;
 }
 .gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .oneGameComment {
-  border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
 }
 .gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .seeMoreReacties {
-  text-align: right;
-  margin-top: 10px;
+    text-align: right;
+    margin-top: 10px;
 }
 .gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .seeMoreReacties a {
-  text-decoration: none;
-  color: #007bff;
+    text-decoration: none;
+    color: #007bff;
 }
 .gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions .seeMoreReacties a:hover {
-  color: #3f6db7;
+    color: #3f6db7;
 }
 .gamepageWithoutTitle .gamereactionsAndPlayGame .gameReactions form textarea {
-  width: 100%;
+    width: 100%;
 }
 input[type=submit],
 button {
-  background-color: black;
-  border: none;
-  color: white;
-  padding: 0.5%;
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 0.5%;
 }
 input[type=submit]:hover,
 button:hover {
-  background-color: white;
-  border: 3px solid black;
-  color: black;
+    background-color: white;
+    border: 3px solid black;
+    color: black;
 }
+
 /*****************************
             TRIGUURS
 ******************************/
+
 #triggeri1,
 #triggers1,
 #triggers2,
 #triggers3,
-#triggers4
-{
- position: absolute;
+#triggers4 {
+    position: absolute;
 }
 #triggeri1 {
-  top: 0%;
+    top: 0%;
 }
 #triggers1,
 #triggers2 {
-  top: 50%;
+    top: 50%;
 }
 #triggers3,
 #triggers4 {
-  top: 150%;
+    top: 150%;
 }
 
 /*contact ******************/
 
-.content{
-  display: none;
-
+.content {
+    display: none;
 }
-.ContactDiv{
-  align-content: center;
-  width: 100%;
-  margin: 50px;
+.ContactDiv {
+    align-content: center;
+    width: 100%;
+    margin-top: 50px;
 }
-.contact{
-
-  background-color: black;
-  border: solid;
-  border-color: black;
-  color: white;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 0.75em;
-  width: 80%;
-  border-width: 4px;
-  margin:  20px 5%;
-
-
+.contact {
+    background-color: black;
+    border: solid;
+    border-color: black;
+    color: white;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.75em;
+    width: 80%;
+    border-width: 4px;
+    margin: 20px 10% 20px 10%;
 }
-
 .call:hover,
-.contact:hover{
-
-  background-color: white;
-  color: black;
-  text-decoration-line: none;
+.contact:hover {
+    background-color: white;
+    color: black;
+    text-decoration-line: none;
 }
-.content{
-  width: 100%;
-  align-content: center;
-  margin:  20px 5%;
-
+.content {
+    width: 100%;
+    align-content: center;
+    margin: 20px 5%;
 }
 .content>p {
-
-  width: 80%;
-  align-content: center;
+    width: 80%;
+    align-content: center;
 }
-
-.call{
-  background-color: black;
-  border-style: solid ;
-  border-width: 4px;
-  border-color: black;
-  color: white;
-  text-decoration: none;
-  font-size: 1.25em;
-  margin: 10% 1%;
-  padding: 0 1%
+.call {
+    background-color: black;
+    border-style: solid;
+    border-width: 4px;
+    border-color: black;
+    color: white;
+    text-decoration: none;
+    font-size: 1.25em;
+    margin: 10% 1%;
+    padding: 0 1%
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /**/
