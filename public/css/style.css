@@ -333,7 +333,7 @@ button:hover {
   font-size: 0.75em;
   width: 80%;
   border-width: 4px;
-  margin:  20px 10%;
+  margin:  20px 5%;
 
 
 }
@@ -348,14 +348,13 @@ button:hover {
 .content{
   width: 100%;
   align-content: center;
-  margin:  20px 10%;
+  margin:  20px 5%;
 
 }
 .content>p {
 
   width: 80%;
   align-content: center;
-  margin: 20px 0px 50px 0px;
 }
 
 .call{
@@ -366,8 +365,8 @@ button:hover {
   color: white;
   text-decoration: none;
   font-size: 1.25em;
-  margin: 50% 35%;
-  padding: 20px;
+  margin: 10% 1%;
+  padding: 0 1%
 }
 
 
