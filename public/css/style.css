@@ -176,8 +176,7 @@
 .forumInStory .zieMeer {
     width: 100%;
     position: absolute;
-    top: 950%;
-    text-align: right;
+    top: 1000%;
 }
 .forumInStory .zieMeer a {
     width: 100%;
@@ -191,6 +190,7 @@
 }
 #textg1 {
     font-size: 2.5em;
+    margin-top: 48%;
 }
 .gamepageWithoutTitle {
     display: flex;

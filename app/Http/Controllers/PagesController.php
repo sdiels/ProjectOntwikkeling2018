@@ -41,15 +41,13 @@ class PagesController extends Controller
       *********************************************/
 
       $request->session()->forget('scrollToInfo');
-
       $request->session()->forget('scrollToForum');
+      $request->session()->forget('scrollToGamePage');
 
       if ($request->session()->has('scrollForum')) {
         $request->session()->forget('scrollForum');
         $request->session()->put('scrollToForum', true);
       }
-
-      $request->session()->forget('scrollToGamePage');
 
       if ($request->session()->has('scrollGamePage')) {
         $request->session()->forget('scrollGamePage');
@@ -159,6 +157,13 @@ class PagesController extends Controller
 
         $request->session()->forget('askSureDeleteStory');
         $request->session()->forget('askSureDeleteComment');
+
+        $request->session()->forget('reactieFieldWarning');
+
+        if ($request->session()->has('reactieFieldEmpty')) {
+          $request->session()->forget('reactieFieldEmpty');
+          $request->session()->put('reactieFieldWarning', 'Vul een reactie in als u iets wilt reageren');
+        }
 
         return view('showOne', compact('story', 'comments', 'id'));
     }

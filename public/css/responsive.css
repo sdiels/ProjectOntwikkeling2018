@@ -21,13 +21,25 @@ body.modal-open {
 .storyNumber1,
 .storyNumber2,
 .storyNumber3,
-.storyNumber4,
-.zieMeer {
+.storyNumber4 {
   position: static;
+}
+.forumInStory {
+  width: 100%;
+}
+.forumInStory a {
+  margin-right: 0;
+  width: 80%;
+  margin-left: 5%;
+}
+.zieMeer {
+  top: 50%;
 }
 #stats1 > div, #stats2 > div {
     float: none;
     font-size: 1.5em;
+    width: 80%;
+    margin-left: 10%;
 }
 #statsinfoafter {
   height: 5%;
@@ -44,5 +56,11 @@ body.modal-open {
 }
 #textg1 {
   margin-top: 5%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos {
+  display: none;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto {
+  width: 100%;
 }
 }

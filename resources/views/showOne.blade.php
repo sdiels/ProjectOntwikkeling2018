@@ -25,6 +25,11 @@
           @else
             <p>Er zijn geen reacties op dit verhaal</p>
           @endif
+          @if(session()->has('reactieFieldWarning'))
+          <div class="alert alert-danger">
+              {{ Session::get('reactieFieldWarning')}}
+          </div>
+          @endif
           <form class="addReactionForm" action="{{ url('storeComment', [$id])}}" method="post">
           <p class="storyField">
             <label for="body">Reactie</label>
