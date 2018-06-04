@@ -112,6 +112,7 @@
                             @else
                             <p>Er zijn geen getuigenissen</p>
                             @endif
+<<<<<<< HEAD
                 </div>
                 <p id="textg1">Speel het spel</p>
                 <div class="gamepageWithoutTitle">
@@ -185,6 +186,81 @@
                     <a class="call" href="tel0476087719">hulplijn</a>
                 </div>
                 <button class="collapsible contact">
+=======
+                </div>
+                <p id="textg1">Speel het spel</p>
+                <div class="gamepageWithoutTitle">
+                    <div class="gameInfoAndPhotos">
+                        <div class="GameInfo">
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+                        </div>
+                        <div class="GamePhotos">
+                            <div class="bigPhoto">
+                                <img src="{{asset('images/gamePage/gamepageFoto1.png')}}" alt="">
+                            </div>
+                            <div class="smallPhotos">
+                                <img src="{{asset('images/gamePage/gamepageFoto2.png')}}" alt="">
+                                <img src="{{asset('images/gamePage/gamepageFoto3.png')}}" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gamereactionsAndPlayGame">
+                        <a href="{{ route('playGame')}}" class="gamePlayA">
+                            <div class="gamePlay">
+                                <h2>Speel het spel</h2>
+                            </div>
+                        </a>
+                        <div class="gameReactions">
+                            <h2>Reacties</h2>
+                            <div id="ReactionsScroll"></div>
+                            <div class="gameComments">
+                                @if (count($commentOnGame) > 0) @foreach ($commentOnGame as $comment)
+                                <div class="oneGameComment">
+                                    <p>{{$comment->body}}</p>
+                                </div>
+                                @endforeach
+                                <div class="seeMoreReacties">
+                                    <a href="{{ route('GameComment')}}">Zie meer &rarr;</a>
+                                </div>
+                                @else
+                                <p>Er zijn geen reacties</p>
+                                @endif
+                            </div>
+                            @if(session()->has('reactieFieldWarning'))
+                            <div class="alert alert-danger">
+                                {{ Session::get('reactieFieldWarning')}}
+                            </div>
+                            @endif
+                            <form id="form" action="{{ route('storeGameComment')}}" method="post">
+                                <p class="storyField">
+                                    <label for="body">Reactie</label>
+                                    <textarea name="body" rows="2" cols="80"></textarea>
+                                    <br>
+                                </p>
+                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                <input type="submit" name="submit" value="Reageren">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="ContactDiv">
+                <p id="textc1">Wat kan ik doen...</p>
+                <button class="collapsible contact">
+                    <h1>als slachtoffer van seksuele intimidatie?</h1>
+                </button>
+                <div class="content">
+                    <p> chaLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.t.</p>
+                    <a class="call" href="tel0476087719">hulplijn</a>
+                </div>
+                <button class="collapsible contact">
+                    <h1>als ik zit met vragen of wil even praten over seksuele intimidatie?</h1>
+                </button>
+                <div class="content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.</p>
+                    <a class="call" href="tel0476087719">hulplijn</a>
+                </div>
+                <button class="collapsible contact">
+>>>>>>> 1fa13ed82b410f17d532000150f3f4f6d80a8375
                     <h1>als dader van seksuele intimidatie</h1>
                 </button>
                 <div class="content">
@@ -198,6 +274,7 @@
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.</p>
                     <a class="call" href="tel0476087719">hulplijn</a>
                 </div>
+<<<<<<< HEAD
 <<<<<<< HEAD
               <button class="collapsible contact">
                   <h1>dader van seksuele intimidatie</h1>
@@ -222,6 +299,11 @@
             </div>
         </div>
 >>>>>>> 6162a9f48940568f427989249f70d45aed5a7df0
+=======
+            </div>
+            </div>
+        </div>
+>>>>>>> 1fa13ed82b410f17d532000150f3f4f6d80a8375
 
         @if(session()->has('scrollToForum'))
         <script>

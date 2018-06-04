@@ -191,6 +191,12 @@
 #textg1 {
     font-size: 2.5em;
     margin-top: 48%;
+<<<<<<< HEAD
+=======
+}
+#textc1 {
+    font-size: 2.5em;
+>>>>>>> 1fa13ed82b410f17d532000150f3f4f6d80a8375
 }
 .gamepageWithoutTitle {
     display: flex;
