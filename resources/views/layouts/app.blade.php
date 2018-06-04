@@ -169,7 +169,7 @@
                     </div>
                 </div>
                 <div class="ContactDiv">
-                <p id="textg1">Wat kan ik doen...</p>
+                <p id="textc1">Wat kan ik doen...</p>
                 <button class="collapsible contact">
                     <h1>als slachtoffer van seksuele intimidatie?</h1>
                 </button>

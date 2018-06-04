@@ -192,6 +192,9 @@
     font-size: 2.5em;
     margin-top: 48%;
 }
+#textc1 {
+    font-size: 2.5em;
+}
 .gamepageWithoutTitle {
     display: flex;
     justify-content: space-between;

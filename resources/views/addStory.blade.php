@@ -13,8 +13,8 @@
     @endif
     <form action="{{ url('storeStory') }}" method="post">
         <label for="title">Titel: </label>
-        <input type="text" name="title" maxlength="20" value="{{ Session::get('storyTitle') }}" placeholder="Voeg hier de titel in"><br>
-        <p class="smallTextInput">Max. 20 karakters</p>
+        <input type="text" name="title" maxlength="30" value="{{ Session::get('storyTitle') }}" placeholder="Voeg hier de titel in"><br>
+        <p class="smallTextInput">Max. 30 karakters</p>
 
         <p class="storyField">
           <label for="story">Verhaal</label>
