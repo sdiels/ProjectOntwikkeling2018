@@ -191,12 +191,9 @@
 #textg1 {
     font-size: 2.5em;
     margin-top: 48%;
-<<<<<<< HEAD
-=======
 }
 #textc1 {
     font-size: 2.5em;
->>>>>>> 1fa13ed82b410f17d532000150f3f4f6d80a8375
 }
 .gamepageWithoutTitle {
     display: flex;
@@ -361,6 +358,7 @@ button:hover {
 .content>p {
     width: 80%;
     align-content: center;
+    padding: 0% 5%;
 }
 .call {
     background-color: black;
@@ -370,8 +368,31 @@ button:hover {
     color: white;
     text-decoration: none;
     font-size: 1.25em;
-    margin: 10% 1%;
+    margin: 10% 5%;
     padding: 0 1%
 }
 
-/**/
+/*footer***********************************************************************/
+
+footer{
+    width: 100%;
+    height: 20%;
+    background-color: #000;
+    color: white;
+    padding: 2% 0 0 10%;
+    margin: 6% 0 0 0;
+}
+
+footer > a{
+    font-size: 3em;
+    display: inline;
+    margin: 2% 9%;
+    color: white;
+}
+
+
+
+small{
+    display: block;
+    margin: 0.5% 2% 1% 70%;
+}

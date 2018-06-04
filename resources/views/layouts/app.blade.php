@@ -13,6 +13,10 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    
+    <!--fontawesome stylesheet link, to use their icons use <i> tag -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css" integrity="sha384-VGCZwiSnlHXYDojsRqeMn3IVvdzTx5JEuHgqZ3bYLCLUBV8rvihHApoA1Aso2TZA" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css" integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV" crossorigin="anonymous">
 
     <!-- Styles en scripts -->
     <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.3/ScrollMagic.js"></script>
@@ -29,10 +33,12 @@
     <script type="text/javascript" src="scrollmagic/js/lib/greensock/TweenMax.min.js"></script>
     <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/ScrollMagic.js"></script>
     <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
+
     <!-- <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script> -->
 
     <link rel="stylesheet" href="/css/style.css"> @yield('styles')
     <link rel="stylesheet" href="/css/responsive.css">
+
 </head>
 
 <body>
@@ -169,44 +175,44 @@
                     </div>
                 </div>
                 <div class="ContactDiv">
-                <p id="textc1">Wat kan ik doen...</p>
-                <button class="collapsible contact">
-                    <h1>als slachtoffer van seksuele intimidatie?</h1>
-                </button>
-                <div class="content">
-                    <p> chaLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.t.</p>
+                    <p id="textc1">Wat kan ik doen...</p>
+                    <button class="collapsible contact">
+                        <h1>als slachtoffer van seksuele intimidatie?</h1>
+                    </button>
+                    <div class="content">
+                        <p> chaLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.t.</p>
+                        <a class="call" href="tel0476087719">hulplijn</a>
+                    </div>
+                    <button class="collapsible contact">
+                        <h1>als ik zit met vragen of wil even praten over seksuele intimidatie?</h1>
+                    </button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.</p>
+                        <a class="call" href="tel0476087719">hulplijn</a>
+                    </div>
+                    <button class="collapsible contact">
+                        <h1>als dader van seksuele intimidatie</h1>
+                    </button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.</p>
                     <a class="call" href="tel0476087719">hulplijn</a>
-                </div>
-                <button class="collapsible contact">
-                    <h1>als ik zit met vragen of wil even praten over seksuele intimidatie?</h1>
-                </button>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.</p>
-                    <a class="call" href="tel0476087719">hulplijn</a>
-                </div>
-                <button class="collapsible contact">
-                    <h1>als dader van seksuele intimidatie</h1>
-                </button>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.</p>
-                    <a class="call" href="tel0476087719">hulplijn</a>
-                </div>
-                <button class="collapsible contact">
-                    <h1>als ik zit met vragen of wil even praten over seksuele intimidatie?</h1>
-                </button>
-                <div class="content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.</p>
-                    <a class="call" href="tel0476087719">hulplijn</a>
-                </div>
+                    </div>
+                    <button class="collapsible contact">
+                        <h1>als ik zit met vragen of wil even praten over seksuele intimidatie?</h1>
+                    </button>
+                    <div class="content">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.</p>
+                        <a class="call" href="tel0476087719">hulplijn</a>
+                    </div>
+                    <footer>
+                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href=""><i class="fab fa-facebook-messenger"></i></a>
+                        <a href=""><i class="fab fa-twitter"></i></a>
+                        <a href=""><i class="fab fa-linkedin-in"></i></a>
+                        <small>&copy; Copyright 2018, Emovate</small>
+                    </footer>
             </div>
             </div>
-            <footer>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <a href=""><img src="" alt=""></a>
-                <p></p>
-            </footer>
         </div>
        
 
