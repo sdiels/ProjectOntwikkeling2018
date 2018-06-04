@@ -4,7 +4,7 @@
   <link rel="stylesheet" href="/css/forumstyle.css">
 </head>
 <body>
-  <div>
+  <div class="addForumPage">
     <h1>GETUIGENIS TOEVOEGEN</h1>
     @if (session('status'))
         <div class="alert alert-danger">

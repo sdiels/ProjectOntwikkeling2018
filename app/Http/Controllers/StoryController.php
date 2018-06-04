@@ -46,12 +46,20 @@ class StoryController extends Controller
   }
 
   public function storeComment(Request $request, $id) {
-      $comment = new Comment;
 
-      $comment->body = $request->body;
-      $comment->storyId = $id;
+      $commentBody = $request->body;
 
-      $comment->save();
+      if ($commentBody != null) {
+        $comment = new Comment;
+
+        $comment->body = $commentBody;
+        $comment->storyId = $id;
+
+        $comment->save();
+      }
+      else {
+        $request->session()->put('reactieFieldEmpty', true);
+      }
 
       $story = Getuigenis::where('id', $id)->get();
       $comments = Comment::all();

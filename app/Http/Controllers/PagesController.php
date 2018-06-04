@@ -41,15 +41,13 @@ class PagesController extends Controller
       *********************************************/
 
       $request->session()->forget('scrollToInfo');
-
       $request->session()->forget('scrollToForum');
+      $request->session()->forget('scrollToGamePage');
 
       if ($request->session()->has('scrollForum')) {
         $request->session()->forget('scrollForum');
         $request->session()->put('scrollToForum', true);
       }
-
-      $request->session()->forget('scrollToGamePage');
 
       if ($request->session()->has('scrollGamePage')) {
         $request->session()->forget('scrollGamePage');
@@ -68,7 +66,7 @@ class PagesController extends Controller
       $randomStory = rand(1, 2);
 
       if ($randomStory == 1) {
-        return view('story2', compact('stories', 'countComArray', 'commentOnGame', 'randomStory'));
+        return view('story1', compact('stories', 'countComArray', 'commentOnGame', 'randomStory'));
       }
       else if ($randomStory == 2) {
         return view('story2', compact('stories', 'countComArray', 'commentOnGame', 'randomStory'));
@@ -159,6 +157,13 @@ class PagesController extends Controller
 
         $request->session()->forget('askSureDeleteStory');
         $request->session()->forget('askSureDeleteComment');
+
+        $request->session()->forget('reactieFieldWarning');
+
+        if ($request->session()->has('reactieFieldEmpty')) {
+          $request->session()->forget('reactieFieldEmpty');
+          $request->session()->put('reactieFieldWarning', 'Vul een reactie in als u iets wilt reageren');
+        }
 
         return view('showOne', compact('story', 'comments', 'id'));
     }
