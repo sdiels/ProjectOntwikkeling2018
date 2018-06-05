@@ -369,7 +369,7 @@ button:hover {
     text-decoration: none;
     font-size: 1.25em;
     margin: 10% 5%;
-    padding: 0 1%
+    padding: 0 1%;
 }
 
 /*footer***********************************************************************/
@@ -390,9 +390,13 @@ footer > a{
     color: white;
 }
 
+footer > a:hover{
+    color: grey;
+}
+
 
 
 small{
     display: block;
-    margin: 0.5% 2% 1% 70%;
+    margin: 0.5% 2% 1% 65%;
 }
