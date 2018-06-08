@@ -63,156 +63,197 @@
                 @yield('content')
             </div>
             <div class="OtherContent">
-                <div id="triggeri1"></div>
+                <div class="ContentDiv">
+                    <div id="triggeri1"></div>
 
-                <div id="stats">
-                    <div id="stats1" class="clearfix">
-                        <div id="bar1">
-                            <div id="percentage1">
+                    <div id="stats">
+                        <div id="stats1" class="clearfix">
+                            <div id="bar1">
+                                <div id="percentage1">
+                                </div>
+                            </div>
+                            <div id="statsinfo">
+                                <p>3% van alle jongens onder de 25 jaar en</p>
                             </div>
                         </div>
-                        <div id="statsinfo">
-                            <p>3% van alle jongens onder de 25 jaar en</p>
-                        </div>
-                    </div>
-                    <div id="stats2" class="clearfix">
-                        <div id="bar2">
-                            <div id="percentage2">
+                        <div id="stats2" class="clearfix">
+                            <div id="bar2">
+                                <div id="percentage2">
+                                </div>
+                            </div>
+                            <div id="statsinfo">
+                                <p>15% van alle meisjes onder de 25 jaar</p>
+                            </div>
+                            <div id="statsinfoafter">
+                                <p>zijn het slachtoffer geweest van seksueel overschrijdend gedrag.</p>
                             </div>
                         </div>
-                        <div id="statsinfo">
-                            <p>15% van alle meisjes onder de 25 jaar</p>
-                        </div>
-                        <div id="statsinfoafter">
-                            <p>zijn het slachtoffer geweest van seksueel overschrijdend gedrag.</p>
-                        </div>
                     </div>
-                </div>
 
-                <div id="ForumScroll"></div>
-                <p id="texts1">Lees verhalen/getuigenissen</p>
+                    <div id="ForumScroll"></div>
+                    <p id="texts1">Lees verhalen/getuigenissen</p>
 
-                <div class="forumInStory">
-                    @if (count($stories) > 0)
-                    <?php $a = 0; ?>
-                        @foreach($stories as $story)
-                        <?php $a++; ?>
-                            <div id="triggers{{$a}}"></div>
-                            <a href="{{ url('forum', [$story->id]) }}" class="storyNumber{{$a}}">
-                                <div class="storyForum">
-                                    <div class="commentAndTitle">
-                                        <h4>{{$story->title}}</h4>
-                                        <p class="commentCount">{{ $countComArray[$story->id] }} reacties</p>
+                    <div class="forumInStory">
+                        @if (count($stories) > 0)
+                        <?php $a = 0; ?>
+                            @foreach($stories as $story)
+                            <?php $a++; ?>
+                                <div id="triggers{{$a}}"></div>
+                                <a href="{{ url('forum', [$story->id]) }}" class="storyNumber{{$a}}">
+                                    <div class="storyForum">
+                                        <div class="commentAndTitle">
+                                            <h4>{{$story->title}}</h4>
+                                            <p class="commentCount">{{ $countComArray[$story->id] }} reacties</p>
+                                        </div>
+                                        <p class="storyBody">{{$story->story}}</p>
+                                        <br>
                                     </div>
-                                    <p class="storyBody">{{$story->story}}</p>
-                                    <br>
+                                </a>
+                                @endforeach
+                                <div id="triggers6"></div>
+                                <div class="zieMeer">
+                                    <a href="{{ route('forum')}}">
+                                        <p>Zie meer &rarr;</p>
+                                    </a>
+                                </div>
+
+                                @else
+                                <p>Er zijn geen getuigenissen</p>
+                                @endif
+                    </div>
+                    <p id="textg1">Speel het spel</p>
+                    <div class="gamepageWithoutTitle">
+                        <div class="gameInfoAndPhotos">
+                            <div class="GameInfo">
+                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+                            </div>
+                            <div class="GamePhotos">
+                                <div class="bigPhoto">
+                                    <img src="{{asset('images/gamePage/gamepageFoto1.png')}}" alt="">
+                                </div>
+                                <div class="smallPhotos">
+                                    <img src="{{asset('images/gamePage/gamepageFoto2.png')}}" alt="">
+                                    <img src="{{asset('images/gamePage/gamepageFoto3.png')}}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gamereactionsAndPlayGame">
+                            <a href="{{ route('playGame')}}" class="gamePlayA">
+                                <div class="gamePlay">
+                                    <h2>Speel het spel</h2>
                                 </div>
                             </a>
-                            @endforeach
-                            <div id="triggers6"></div>
-                            <div class="zieMeer">
-                                <a href="{{ route('forum')}}">
-                                    Zie meer &rarr;
+                            <div class="gameReactions">
+                                <h2>Reacties</h2>
+                                <div id="ReactionsScroll"></div>
+                                <div class="gameComments">
+                                    @if (count($commentOnGame) > 0) @foreach ($commentOnGame as $comment)
+                                    <div class="oneGameComment">
+                                        <p>{{$comment->body}}</p>
+                                    </div>
+                                    @endforeach
+                                    <div class="seeMoreReacties">
+                                        <a href="{{ route('GameComment')}}">Zie meer &rarr;</a>
+                                    </div>
+                                    @else
+                                    <p>Er zijn geen reacties</p>
+                                    @endif
+                                </div>
+                                @if(session()->has('reactieFieldWarning'))
+                                <div class="alert alert-danger">
+                                    {{ Session::get('reactieFieldWarning')}}
+                                </div>
+                                @endif
+                                <form id="form" action="{{ route('storeGameComment')}}" method="post">
+                                    <p class="storyField">
+                                        <label for="body">Reactie</label>
+                                        <textarea name="body" rows="2" cols="80"></textarea>
+                                        <br>
+                                    </p>
+                                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                    <input type="submit" name="submit" value="Reageren">
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ContactDiv">
+                        <p id="textc1">Wat kan ik doen...</p>
+                        <button class="collapsible contact">
+                            <h1>als slachtoffer van seksuele intimidatie?</h1>
+                        </button>
+                        <div class="content">
+                            <p> Maak de dader duidelijk dat je dit niet wil, zeg expliciet wat je storend vindt. Dit is natuurlijk niet altijd even makkelijk voor iedereen. Het is belangrijk om erover te praten met iemand die je kan vertrouwen. (een vriend(in), een collega, je moeder, je vader, broer of zus,…) Je kan ook steeds contact opnemen met tele-onthaal, hier kan je anoniem je verhaal kwijt.Je kan ook contact opnemen met het CAW, hier staan ze ook klaar om je te helpen. Gebeurd dit op je werk? In dat geval kan je ook naar de preventieadviseur gaan om erover te praten. Je kan ook een klacht indienen bij de preventieadviseur of vertrouwenspersoon op je werk.
+                                <br/>
+                                <br/> Hoe wordt seksuele intimidatie op het werk bestraft?
+                                <br/>
+                                <br/> De arbeidsrechtbank kan een gevangenisstraf opleggen van 8 dagen tot 1 maand en een geldboete tot 500 euro. Wordt de zaak doorverwezen naar de correctionele rechtbank dan kan de strafrechter een zwaardere straf opleggen. De bestraffing is dan gebaseerd op de wetgeving over 'aanranding van de eerbaarheid' of 'verkrachting'.
+                            </p>
+
+                            <div class="buttons">
+                                <a class="call" href="tel:106">
+                                    <div>tel : 106 tele-onthaal</div>
+                                </a>
+                                <a class="call" href="https://www.tele-onthaal.be">
+                                    <div>website tele-onthaal</div>
+                                </a>
+                                <a class="call" href="https://www.caw.be/">
+                                    <div>website CAW</div>
                                 </a>
                             </div>
+                        </div>
+                        <button class="collapsible contact">
+                            <h1>als ik zit met vragen of wil even praten over seksuele intimidatie?</h1>
+                        </button>
+                        <div class="content">
+                            <p>Je zit met vragen rond seksuele intimidatie, er zijn heel wat aanspreekpunten die je verder kunnen helpen.</br>
+                                </br>Tele-onthaal: hier kan je telefonsich contact mee opnemen of via hun website kan je anoniem chatten </br>
+                                </br>
+                                Sensoa: hier kan je terecht met alle soorten vragen rond seksualiteit ook vragen rond seksuele intimidatie </br>
+                                </br>je kan ook terecht bij het JAC (het jongeradviescentrum) met al je vragen
+                                <p>
+                                    <div class="buttons">
+                                        <a class="call" href="https://www.sensoa.be">
+                                            <div>Sensoa</div>
+                                        </a>
+                                        <a class="call" href="https://www.tele-onthaal.be">
+                                            <div>website tele-onthaal</div>
+                                        </a>
+                                        <a class="call" href="https://www.jac.be">
+                                            <div>JAC</div>
+                                        </a>
+                                    </div>
 
-                            @else
-                            <p>Er zijn geen getuigenissen</p>
-                            @endif
-                </div>
-                <p id="textg1">Speel het spel</p>
-                <div class="gamepageWithoutTitle">
-                    <div class="gameInfoAndPhotos">
-                        <div class="GameInfo">
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
                         </div>
-                        <div class="GamePhotos">
-                            <div class="bigPhoto">
-                                <img src="{{asset('images/gamePage/gamepageFoto1.png')}}" alt="">
-                            </div>
-                            <div class="smallPhotos">
-                                <img src="{{asset('images/gamePage/gamepageFoto2.png')}}" alt="">
-                                <img src="{{asset('images/gamePage/gamepageFoto3.png')}}" alt="">
+                        <button class="collapsible contact">
+                            <h1>als dader van seksuele intimidatie</h1>
+                        </button>
+                        <div class="content">
+                            <p>Bij het CAW kan je altijd terecht met al je vragen. Tele-onthaal staat ook voor jou steeds klaar</p>
+                            <div class="buttons">
+                                <a class="call" href="tel:106">
+                                    <div>tel : 106 tele-onthaal</div>
+                                </a>
+                                <a class="call" href="https://www.tele-onthaal.be">
+                                    <div>website tele-onthaal</div>
+                                </a>
+                                <a class="call" href="https://www.caw.be/">
+                                    <div>website CAW</div>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="gamereactionsAndPlayGame">
-                        <a href="{{ route('playGame')}}" class="gamePlayA">
-                            <div class="gamePlay">
-                                <h2>Speel het spel</h2>
-                            </div>
-                        </a>
-                        <div class="gameReactions">
-                            <h2>Reacties</h2>
-                            <div id="ReactionsScroll"></div>
-                            <div class="gameComments">
-                                @if (count($commentOnGame) > 0) @foreach ($commentOnGame as $comment)
-                                <div class="oneGameComment">
-                                    <p>{{$comment->body}}</p>
-                                </div>
-                                @endforeach
-                                <div class="seeMoreReacties">
-                                    <a href="{{ route('GameComment')}}">Zie meer &rarr;</a>
-                                </div>
-                                @else
-                                <p>Er zijn geen reacties</p>
-                                @endif
-                            </div>
-                            @if(session()->has('reactieFieldWarning'))
-                            <div class="alert alert-danger">
-                                {{ Session::get('reactieFieldWarning')}}
-                            </div>
-                            @endif
-                            <form id="form" action="{{ route('storeGameComment')}}" method="post">
-                                <p class="storyField">
-                                    <label for="body">Reactie</label>
-                                    <textarea name="body" rows="2" cols="80"></textarea>
-                                    <br>
-                                </p>
-                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                                <input type="submit" name="submit" value="Reageren">
-                            </form>
-                        </div>
+
                     </div>
                 </div>
-                <div class="ContactDiv">
-                    <p id="textc1">Wat kan ik doen...</p>
-                    <button class="collapsible contact">
-                        <h1>als slachtoffer van seksuele intimidatie?</h1>
-                    </button>
-                    <div class="content">
-                        <p> chaLorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.t.</p>
-                        <a class="call" href="tel0476087719">hulplijn</a>
-                    </div>
-                    <button class="collapsible contact">
-                        <h1>als ik zit met vragen of wil even praten over seksuele intimidatie?</h1>
-                    </button>
-                    <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.</p>
-                        <a class="call" href="tel0476087719">hulplijn</a>
-                    </div>
-                    <button class="collapsible contact">
-                        <h1>als dader van seksuele intimidatie</h1>
-                    </button>
-                    <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.</p>
-                    <a class="call" href="tel0476087719">hulplijn</a>
-                    </div>
-                    <button class="collapsible contact">
-                        <h1>als ik zit met vragen of wil even praten over seksuele intimidatie?</h1>
-                    </button>
-                    <div class="content">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut ac mauris vehicula, mattis turpis in, tincidunt lorem. Nam non viverra tortor, a egestas nunc. Duis vitae dui ut magna mattis pellentesque non vel nisi. Cras erat ex, condimentum imperdiet quam sit amet, vestibulum placerat enim. Cras id consequat ipsum. In aliquet ac nunc vel commodo. Nullam ultricies, justo quis hendrerit vehicula, ipsum leo lobortis mauris, quis finibus augue lacus sit amet augue.</p>
-                        <a class="call" href="tel0476087719">hulplijn</a>
-                    </div>
-                    <footer>
+                <footer>
+                    <div class="socialLinks">
                         <a href=""><i class="fab fa-facebook-f"></i></a>
                         <a href=""><i class="fab fa-facebook-messenger"></i></a>
                         <a href=""><i class="fab fa-twitter"></i></a>
                         <a href=""><i class="fab fa-linkedin-in"></i></a>
-                        <small>&copy; Copyright 2018, Emovate</small>
-                    </footer>
-            </div>
+                    </div>
+
+                    <small>&copy; Copyright 2018, Emovate</small>
+                </footer>
             </div>
         </div>
 

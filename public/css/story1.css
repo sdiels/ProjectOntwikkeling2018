@@ -223,16 +223,18 @@ p {
     }
 }
 #text4 {
-    left: 15%;
     top: 360%;
     opacity: 0;
     color: white;
+    width: 100%;
+    text-align: center;
 }
 #text5 {
-    left: 30%;
     top: 475%;
     opacity: 0;
     color: white;
+    width: 100%;
+    text-align: center;
 }
 #fdiv3 {
     position: absolute;

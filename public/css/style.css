@@ -59,11 +59,13 @@
 .OtherContent {
     position: absolute;
     top: 800%;
-    margin: 0 5%;
 }
 .OtherContent p {
     font-size: 1em;
     position: relative;
+}
+.ContentDiv {
+    margin: 0 5%;
 }
 #bar1,
 #bar2 {
@@ -104,9 +106,8 @@
     margin-bottom: 15%;
     width: 100%;
 }
-#texts1 {
+#texts1, #textg1, #textc1 {
     margin-top: 50px;
-    margin-left: 5%;
     font-size: 2.5em;
 }
 .forumInStory {
@@ -344,32 +345,38 @@ button:hover {
     border-width: 4px;
     margin: 20px 10% 20px 10%;
 }
-.call:hover,
+.call div:hover,
 .contact:hover {
     background-color: white;
     color: black;
     text-decoration-line: none;
 }
 .content {
-    width: 100%;
+    width: 70%;
     align-content: center;
-    margin: 20px 5%;
+    margin: 20px 15%;
 }
 .content>p {
-    width: 80%;
-    align-content: center;
-    padding: 0% 5%;
+    text-align: center;
+}
+.buttons {
+    width: 30%;
+    margin: auto;
 }
 .call {
+    text-decoration: none;
+    font-size: 1.25em;
+    margin: 10% 5%;
+    padding: 0 1%;
+}
+.call div {
     background-color: black;
     border-style: solid;
     border-width: 4px;
     border-color: black;
     color: white;
-    text-decoration: none;
-    font-size: 1.25em;
-    margin: 10% 5%;
-    padding: 0 1%
+    width: auto;
+    text-align: center;
 }
 
 /*footer***********************************************************************/
@@ -379,20 +386,26 @@ footer{
     height: 20%;
     background-color: #000;
     color: white;
-    padding: 2% 0 0 10%;
-    margin: 6% 0 0 0;
+    padding: 2% 0 0 0;
+    margin-top: 100px;
+    text-align: right;
 }
 
-footer > a{
+.socialLinks {
+    text-align: center;
+}
+
+.socialLinks > a{
     font-size: 3em;
     display: inline;
     margin: 2% 9%;
     color: white;
 }
 
+footer > a:hover{
+    color: grey;
+}
 
-
-small{
-    display: block;
-    margin: 0.5% 2% 1% 70%;
+small {
+    padding: 5px;
 }
