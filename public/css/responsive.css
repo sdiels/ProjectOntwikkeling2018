@@ -1,8 +1,4 @@
 @media (max-width:1000px) {
-body.modal-open {
-  overflow-x: hidden;
-  position: fixed;
-}
 .skipStory,
 .scrollStory,
 .storyView,
@@ -21,7 +17,8 @@ body.modal-open {
 .storyNumber1,
 .storyNumber2,
 .storyNumber3,
-.storyNumber4 {
+.storyNumber4,
+.zieMeer {
   position: static;
 }
 .forumInStory {
@@ -33,7 +30,8 @@ body.modal-open {
   margin-left: 5%;
 }
 .zieMeer {
-  top: 50%;
+  position: relative;
+  top: 0%;
 }
 #stats1 > div, #stats2 > div {
     float: none;
@@ -56,6 +54,16 @@ body.modal-open {
 }
 #textg1 {
   margin-top: 5%;
+}
+.gamepageWithoutTitle {
+  display: block;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos {
+  width: 90%;
+}
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos {
+  width: 60%;
+  margin-left: 20%;
 }
 .gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos {
   display: none;

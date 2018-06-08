@@ -13,7 +13,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    
+
     <!--fontawesome stylesheet link, to use their icons use <i> tag -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/brands.css" integrity="sha384-VGCZwiSnlHXYDojsRqeMn3IVvdzTx5JEuHgqZ3bYLCLUBV8rvihHApoA1Aso2TZA" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/fontawesome.css" integrity="sha384-GVa9GOgVQgOk+TNYXu7S/InPTfSDTtBalSgkgqQ7sCik56N9ztlkoTr2f/T44oKV" crossorigin="anonymous">
@@ -36,7 +36,8 @@
 
     <!-- <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script> -->
 
-    <link rel="stylesheet" href="/css/style.css"> @yield('styles')
+    <link rel="stylesheet" href="/css/style.css">
+    @yield('styles')
     <link rel="stylesheet" href="/css/responsive.css">
 
 </head>
@@ -111,7 +112,7 @@
                             <div id="triggers6"></div>
                             <div class="zieMeer">
                                 <a href="{{ route('forum')}}">
-                                    <p>Zie meer &rarr;</p>
+                                    Zie meer &rarr;
                                 </a>
                             </div>
 
@@ -214,7 +215,7 @@
             </div>
             </div>
         </div>
-       
+
 
         @if(session()->has('scrollToForum'))
         <script>
