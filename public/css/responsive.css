@@ -10,6 +10,24 @@
 #triggers6 {
   display: none;
 }
+.mobileIntro {
+  display: block;
+  width: 100%;
+  border-bottom: 1px solid #aaa;
+  display: flex;
+}
+.mobileIntroLogo {
+  width: 22%;
+}
+.mobileIntroLogo img {
+  width: 100%;
+  height: 100%;
+}
+.mobileIntroText {
+  width: 60%;
+  margin-left: 5%;
+}
+
 .OtherContent {
   top: 0;
 }

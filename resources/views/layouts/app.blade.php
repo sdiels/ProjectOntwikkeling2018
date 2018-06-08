@@ -63,6 +63,15 @@
                 @yield('content')
             </div>
             <div class="OtherContent">
+              <div class="mobileIntro">
+                <div class="mobileIntroLogo">
+                    <img id="alogoIntro" src="{{asset('images/story1/a-logo.svg')}}" alt="a logo">
+                </div>
+                <div class="mobileIntroText">
+                  <h1>Seksuele intimidatie bij scholieren</h1>
+                  <p>Bezoek deze site op uw browser voor de volle belevenis</p>
+                </div>
+              </div>
                 <div class="ContentDiv">
                     <div id="triggeri1"></div>
 

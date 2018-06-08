@@ -67,6 +67,9 @@
 .ContentDiv {
     margin: 0 5%;
 }
+.mobileIntro {
+  display: none;
+}
 #bar1,
 #bar2 {
     border: 5px black solid;
