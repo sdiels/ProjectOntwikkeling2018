@@ -89,4 +89,10 @@
 .gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto {
   width: 100%;
 }
+.buttons{
+  width: 75%;
+}
+.content>p{
+  width: 100%;
+}
 }
