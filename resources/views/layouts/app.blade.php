@@ -100,7 +100,7 @@
                     </div>
 
                     <div id="ForumScroll"></div>
-                    <p id="texts1">Lees verhalen/getuigenissen</p>
+                    <p id="texts1">Lees verhalen/ getuigenissen</p>
 
                     <div class="forumInStory">
                         @if (count($stories) > 0)
