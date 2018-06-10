@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-  <link rel="stylesheet" href="/css/forumstyle.css">
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/forumstyle.css') }}" rel="stylesheet">
 </head>
 <body>
   <div class="gameractionspage">

@@ -36,9 +36,9 @@
 
     <!-- <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script> -->
 
-    <link rel="stylesheet" href="/css/style.css">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     @yield('styles')
-    <link rel="stylesheet" href="/css/responsive.css">
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
 </head>
 
@@ -134,7 +134,9 @@
                     <div class="gamepageWithoutTitle">
                         <div class="gameInfoAndPhotos">
                             <div class="GameInfo">
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.</p>
+                                <p>Het spel is een text-gebaseerd verhaal.Met als thema seksuele intimidatie en hoe je er mee omgaat.</p>
+                                <p>Verhaal
+                                De lengte van het verhaal is 5 dagen. In het verhaal zelf bespeel je een personage op haar nieuwe school. Tijdens de eerste schooldag krijg je de keuze om een activiteit te doen na school of te kiezen om alleen te zijn. De keuzes die je maakt op de eerste dag zullen invloed hebben op het verhaal en een aantal keuzes ontoegankelijk maken. Aan de hand van de keuzes die je maakt krijg je een ander seksuele intimidatie scene en een ander einde.</p>
                             </div>
                             <div class="GamePhotos">
                                 <div class="bigPhoto">

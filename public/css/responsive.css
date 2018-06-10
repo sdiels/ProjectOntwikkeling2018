@@ -10,6 +10,9 @@
 #triggers6 {
   display: none;
 }
+p {
+  font-size: 0.5em;
+}
 .mobileIntro {
   display: block;
   width: 100%;
@@ -92,7 +95,7 @@
 .buttons{
   width: 75%;
 }
-.content>p{
+.content > p{
   width: 100%;
 }
 }

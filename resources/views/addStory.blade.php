@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="{{ app()->getLocale() }}">
 <head>
-  <link rel="stylesheet" href="/css/forumstyle.css">
+  <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link href="{{ asset('css/forumstyle.css') }}" rel="stylesheet">
 </head>
 <body>
   <div class="addForumPage">
     <h1>GETUIGENIS TOEVOEGEN</h1>
+    <a href="{{ route('forum') }}"><p>Terug naar forum</p></a>
     @if (session('status'))
         <div class="alert alert-danger">
             {{ session('status') }}
