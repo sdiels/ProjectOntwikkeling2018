@@ -46,8 +46,7 @@ p {
 .storyNumber1,
 .storyNumber2,
 .storyNumber3,
-.storyNumber4,
-.zieMeer {
+.storyNumber4 {
   position: static;
 }
 .forumInStory {
@@ -59,8 +58,7 @@ p {
   margin-left: 5%;
 }
 .zieMeer {
-  position: relative;
-  top: 0%;
+  top: 98%;
 }
 #stats1 > div, #stats2 > div {
     float: none;

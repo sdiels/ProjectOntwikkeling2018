@@ -178,7 +178,6 @@
 .forumInStory .zieMeer {
     width: 100%;
     position: absolute;
-    top: 1000%;
 }
 .forumInStory .zieMeer a {
     width: 100%;
@@ -426,5 +425,8 @@ small {
   }
   .forumInStory .storyForum h4 {
       font-size: 2em;
+  }
+  .forumInStory .zieMeer {
+      top: 1000%;
   }
 }
