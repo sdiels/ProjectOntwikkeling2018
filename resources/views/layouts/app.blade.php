@@ -252,42 +252,7 @@
                         </div>
 
                     </div>
-                </div>
-<<<<<<< HEAD
-                <div class="ContactDiv">
-                    <p id="textc1">Wat kan ik doen...</p>
-                    <button class="collapsible contact">
-                        <h1>als slachtoffer van seksuele intimidatie?</h1>
-                    </button>
-                    <div class="content">
-                        <p> Maak de dader duidelijk dat je dit niet wil, zeg expliciet wat je storend vindt. Dit is natuurlijk niet altijd even makkelijk voor iedereen. Het is belangrijk om erover te praten met iemand die je kan vertrouwen. (een vriend(in), een collega, je moeder, je vader, broer of zus,…)
-                            Je kan ook steeds contact opnemen met tele-onthaal, hier kan je anoniem je verhaal kwijt.Je kan ook contact opnemen met het CAW, hier staan ze ook klaar om je te helpen. 
-                            Gebeurd dit op je werk? In dat geval kan je ook naar de preventieadviseur gaan om erover te praten. Je kan ook een klacht indienen bij de preventieadviseur of vertrouwenspersoon op je werk.</p><p>Hoe wordt seksuele intimidatie op het werk bestraft?</p>
-                        <p>De arbeidsrechtbank kan een gevangenisstraf opleggen van 8 dagen tot 1 maand en een geldboete tot 500 euro. Wordt de zaak doorverwezen naar de correctionele rechtbank dan kan de strafrechter een zwaardere straf opleggen. De bestraffing is dan gebaseerd op de wetgeving over 'aanranding van de eerbaarheid' of 'verkrachting'.</p>
-                        <a class="call" href="tel:106">tel : 106  tele-onthaal</a>
-                        <a class="call" href="https://www.tele-onthaal.be">website  tele-onthaal</a>
-                        <a class="call" href="https://www.caw.be/">website  CAW</a>
-                    </div>
-                    <button class="collapsible contact">
-                        <h1>als ik zit met vragen of wil even praten over seksuele intimidatie?</h1>
-                    </button>
-                    <div class="content">
-                        <p>Je zit met vragen rond seksuele intimidatie, er zijn heel wat aanspreekpunten die je verder kunnen helpen.</br></br>Tele-onthaal: hier kan je telefonsich contact mee opnemen of via hun website kan je anoniem chatten </br> </br>
-                        Sensoa: hier kan je terecht met alle soorten vragen rond seksualiteit ook vragen rond seksuele intimidatie </br></br>je kan ook terecht bij het JAC (het jongeradviescentrum) met al je vragen<p>
-                        <a class="call" href="https://www.sensoa.be">Sensoa</a>
-                        <a class="call" href="https://www.tele-onthaal.be">website  tele-onthaal</a>
-                        <a class="call" href="https://www.jac.be">JAC</a>
-                    </div>
-                    <button class="collapsible contact">
-                        <h1>als dader van seksuele intimidatie</h1>
-                    </button>
-                    <div class="content">
-                        <p>Bij het CAW kan je altijd terecht met al je vragen. Tele-onthaal staat ook voor jou steeds klaar</p>
-                        <a class="call" href="tel:106">tel : 106  tele-onthaal</a>
-                        <a class="call" href="https://www.tele-onthaal.be">website  tele-onthaal</a>
-                        <a class="call" href="https://www.caw.be/">website  CAW</a>
-                    </div>
-                    <footer>
+                </div>  
                 <footer>
                     <div class="socialLinks">
                         <a href=""><i class="fab fa-facebook-f"></i></a>
@@ -298,7 +263,6 @@
 
                     <small>&copy; Copyright 2018, Emovate</small>
                 </footer>
-            </div>
         </div>
 
 
