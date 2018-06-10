@@ -253,7 +253,6 @@
 
                     </div>
                 </div>
-<<<<<<< HEAD
                 <div class="ContactDiv">
                     <p id="textc1">Wat kan ik doen...</p>
                     <button class="collapsible contact">
