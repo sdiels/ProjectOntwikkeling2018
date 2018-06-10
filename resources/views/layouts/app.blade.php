@@ -297,7 +297,6 @@
 
                     <small>&copy; Copyright 2018, Emovate</small>
                 </footer>
-            </div>
         </div>
 
 
