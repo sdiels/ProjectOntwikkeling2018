@@ -103,6 +103,15 @@ p {
 .content > p{
   width: 100%;
 }
+    #text {
+        text-align: center;
+        width: 80%;
+        margin: auto;
+        font-size: 1em;
+        margin-top: 60px;
+        border: #000 5px solid;
+        padding: 10px;
+    }
 }
 @media only screen and (max-width:500px) {
   .gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos {
