@@ -92,12 +92,11 @@ p {
   width: 60%;
   margin-left: 20%;
 }
-.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos {
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos,
+.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto {
   display: none;
 }
-.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto {
-  width: 100%;
-}
+
 .buttons{
   width: 75%;
 }
