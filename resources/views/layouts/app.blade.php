@@ -36,8 +36,7 @@
 
     <!-- <script type="text/javascript" src="scrollmagic/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script> -->
 
-    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-    @yield('styles')
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet"> @yield('styles')
     <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
 
 </head>
@@ -63,15 +62,15 @@
                 @yield('content')
             </div>
             <div class="OtherContent">
-              <div class="mobileIntro">
-                <div class="mobileIntroLogo">
-                    <img id="alogoIntro" src="{{asset('images/story1/a-logo.svg')}}" alt="a logo">
+                <div class="mobileIntro">
+                    <div class="mobileIntroLogo">
+                        <img id="alogoIntro" src="{{asset('images/story1/a-logo.svg')}}" alt="a logo">
+                    </div>
+                    <div class="mobileIntroText">
+                        <h1>Seksuele intimidatie bij scholieren</h1>
+                        <p>Bezoek deze site op uw browser voor de volle belevenis</p>
+                    </div>
                 </div>
-                <div class="mobileIntroText">
-                  <h1>Seksuele intimidatie bij scholieren</h1>
-                  <p>Bezoek deze site op uw browser voor de volle belevenis</p>
-                </div>
-              </div>
                 <div class="ContentDiv">
                     <div id="triggeri1"></div>
 
@@ -82,7 +81,7 @@
                                 </div>
                             </div>
                             <div id="statsinfo">
-                                <p>3% van alle jongens onder de 25 jaar en</p>
+                                <p>14% van alle meisjes onder de 25 jaar zijn het slachtoffer geweest van seksueel overschrijdend gedrag</p>
                             </div>
                         </div>
                         <div id="stats2" class="clearfix">
@@ -91,11 +90,11 @@
                                 </div>
                             </div>
                             <div id="statsinfo">
-                                <p>15% van alle meisjes onder de 25 jaar</p>
+                                <p>15% van alle meldingen van kindermishandeling in 2016 ging over seksueel misbruik</p>
                             </div>
-                            <div id="statsinfoafter">
-                                <p>zijn het slachtoffer geweest van seksueel overschrijdend gedrag.</p>
-                            </div>
+                        </div>
+                        <div id="text">
+                            <p>Een groot aantal mensen komt in aanraking met seksueel grensoverschrijdend gedrag. Het is dan ook een duidelijk probleem. het is mogelijk dat dit langdurige negatieve gevolgen veroorzaakt. Kinderen en jongeren zijn extra kwetsbaar. In 2016 telde de politie <b>11.102 klachten</b> in verband met seksueel grensoverschrijdend gedrag. Een groot deel hiervan op minderjarigen. Dit komt neer op zo'n <b>30 meldingen per dag</b>.</p>
                         </div>
                     </div>
 
@@ -135,8 +134,7 @@
                         <div class="gameInfoAndPhotos">
                             <div class="GameInfo">
                                 <p>Het spel is een text-gebaseerd verhaal.Met als thema seksuele intimidatie en hoe je er mee omgaat.</p>
-                                <p>Verhaal
-                                De lengte van het verhaal is 5 dagen. In het verhaal zelf bespeel je een personage op haar nieuwe school. Tijdens de eerste schooldag krijg je de keuze om een activiteit te doen na school of te kiezen om alleen te zijn. De keuzes die je maakt op de eerste dag zullen invloed hebben op het verhaal en een aantal keuzes ontoegankelijk maken. Aan de hand van de keuzes die je maakt krijg je een ander seksuele intimidatie scene en een ander einde.</p>
+                                <p>Verhaal De lengte van het verhaal is 5 dagen. In het verhaal zelf bespeel je een personage op haar nieuwe school. Tijdens de eerste schooldag krijg je de keuze om een activiteit te doen na school of te kiezen om alleen te zijn. De keuzes die je maakt op de eerste dag zullen invloed hebben op het verhaal en een aantal keuzes ontoegankelijk maken. Aan de hand van de keuzes die je maakt krijg je een ander seksuele intimidatie scene en een ander einde.</p>
                             </div>
                             <div class="GamePhotos">
                                 <div class="bigPhoto">
@@ -260,45 +258,44 @@
                         <a href=""><i class="fab fa-facebook-f"></i></a>
                         <a href=""><i class="fab fa-facebook-messenger"></i></a>
                         <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
 
                     <small>&copy; Copyright 2018, Emovate</small>
                 </footer>
+            </div>
+
+
+            @if(session()->has('scrollToForum'))
+            <script>
+                function bottom() {
+                    document.getElementById('ForumScroll').scrollIntoView();
+                };
+                bottom();
+
+            </script>
+            @endif @if(session()->has('scrollToGamePage'))
+            <script>
+                function bottom() {
+                    document.getElementById('textg1').scrollIntoView();
+                };
+                bottom();
+
+            </script>
+            @endif
         </div>
 
-
-        @if(session()->has('scrollToForum'))
-        <script>
-            function bottom() {
-                document.getElementById('ForumScroll').scrollIntoView();
-            };
-            bottom();
-
-        </script>
-        @endif @if(session()->has('scrollToGamePage'))
-        <script>
-            function bottom() {
-                document.getElementById('textg1').scrollIntoView();
-            };
-            bottom();
+        <script type="text/javascript">
+            if (screen.width > 100) {
+                var head = document.getElementsByTagName('head')[0];
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = 'js/layoutScript.js';
+                head.appendChild(script);
+            }
 
         </script>
-        @endif
-    </div>
 
-    <script type="text/javascript">
-        if (screen.width > 100) {
-            var head = document.getElementsByTagName('head')[0];
-            var script = document.createElement('script');
-            script.type = 'text/javascript';
-            script.src = 'js/layoutScript.js';
-            head.appendChild(script);
-        }
-
-    </script>
-
-    @yield('scripts')
+        @yield('scripts')
 
 
 </body>

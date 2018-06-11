@@ -25,7 +25,7 @@
       @endif
       </div>
     </div>
-    <a href="{{ route('indexToForum') }}"><p>Terug naar homepage</p></a>
+    <a href="{{ route('indexToForum') }}" class="backbtn">Terug naar homepage</a>
     <div class="addStoryButton">
       <a href="{{ route('addStory') }}"><button type="button" name="button" class="addButton righterButton">Ik wil mijn verhaal delen</button></a>
     </div>

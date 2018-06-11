@@ -87,6 +87,13 @@
     height: 30px;
     background-color: #ea4d4d;
 }
+#text {
+    margin-top: 100px;
+    font-size: 2em;
+}
+#text b {
+    color: #ea4d4d;
+}
 #stats1,
 #stats2 {
     width: 100%;
@@ -406,7 +413,7 @@ footer{
     color: white;
 }
 
-footer > a:hover{
+footer a:hover{
     color: grey;
 }
 

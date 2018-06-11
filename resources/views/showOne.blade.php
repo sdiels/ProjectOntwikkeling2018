@@ -7,10 +7,10 @@
 <body>
   <div class="forumPage">
     <h1>FORUM</h1>
-    <a href="{{ route('forum')}}" class="backToForum"><p>Terug naar forum</p></a>
+    <a href="{{ route('forum')}}" class="backToForum">Terug naar forum</a>
       @foreach ($story as $story)
       <div class="oneStoryForum">
-        <div class="tittleAndBody">
+        <div class="titleAndBody">
           <h4>{{$story->title}}</h4>
           <div class="StoryBody">
             <p>{{$story->story}}</p>
@@ -38,7 +38,7 @@
           </p>
 
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
-            <input type="submit" name="submit" value="Reageren">
+            <input class="commentbtn" type="submit" name="submit" value="Reageren">
           </form>
         </div>
       </div>

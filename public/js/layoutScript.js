@@ -2,7 +2,7 @@
 var scroll;
 var viewportTop;
 function automaticScroll() {
-  scroll = setInterval(function(){ window.scrollBy(0,1); }, 1);
+  scroll = setInterval(function(){ window.scrollBy(0,1); }, 6);
 }
 function automaticScrollFast() {
   scroll = setInterval(function(){ window.scrollBy(0,50); }, 1);
@@ -40,7 +40,7 @@ var stats1 = new ScrollMagic.Scene({
         duration: "20%"
     })
     .setTween("#percentage1", {
-        width: "3%"
+        width: "14%"
     }) // the tween durtion can be omitted and defaults to 1
     .addTo(controller);
 var stats2 = new ScrollMagic.Scene({
