@@ -13,13 +13,13 @@
     <script src="TemplateData/UnityProgress.js"></script>
     <script src="Build/UnityLoader.js"></script>
     <script>
-      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Build3.json", {onProgress: UnityProgress});
+      var gameInstance = UnityLoader.instantiate("gameContainer", "Build/Build4.json", {onProgress: UnityProgress});
     </script>
   </head>
   <body id="blackPage">
     <a href="{{ route('indexToGame') }}"><button class="lowerButton">Terug naar homepage</button></a>
     <div class="webgl-content">
-      <div id="gameContainer" style="width: 950px; height: 650px"></div>
+      <div id="gameContainer" style="width: 1050px; height: 700px"></div>
       <div class="footer">
         <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
         <div class="title"></div>
