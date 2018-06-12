@@ -1,108 +1,113 @@
 @media only screen and (max-width:1000px) {
-.skipStory,
-.scrollStory,
-.storyView,
-#triggers1,
-#triggers2,
-#triggers3,
-#triggers4,
-#triggers5,
-#triggers6{
-  display: none;
-}
-h1, h2, h4 {
-  font-size: 1.5em;
-}
-p {
-  font-size: 0.7em;
-}
-#texts1,
-#textg1,
-#textc1 {
-  font-size: 2em;
-}
-.mobileIntro {
-  display: block;
-  width: 100%;
-  border-bottom: 1px solid #aaa;
-  display: flex;
-}
-.mobileIntroLogo {
-  width: 22%;
-}
-.mobileIntroLogo img {
-  width: 100%;
-  height: 100%;
-}
-.mobileIntroText {
-  width: 60%;
-  margin-left: 5%;
-}
-
-.OtherContent {
-  top: 0;
-}
-.OtherContent,
-.storyNumber1,
-.storyNumber2,
-.storyNumber3,
-.storyNumber4 {
-  position: static;
-}
-.forumInStory {
-  width: 100%;
-}
-.forumInStory a {
-  margin-right: 0;
-  width: 80%;
-  margin-left: 5%;
-}
-.zieMeer {
-  top: 98%;
-}
-#stats1 > div, #stats2 > div {
-    float: none;
-    font-size: 1.5em;
-    width: 80%;
-    margin-left: 10%;
-}
-#statsinfoafter {
-  height: 5%;
-}
-#bar1, #bar2 {
-    margin-bottom: 0%;
-}
-.forumInStory {
-  width: 100%;
-  display: inline-block;
-}
-.forumInStory a {
-  width: 90%;
-}
-#textg1 {
-  margin-top: 5%;
-}
-.gamepageWithoutTitle {
-  display: block;
-}
-.gamepageWithoutTitle .gameInfoAndPhotos {
-  width: 90%;
-}
-.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos {
-  width: 60%;
-  margin-left: 20%;
-}
-.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos,
-.gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto {
-  display: none;
-}
-
-.buttons{
-  width: 75%;
-}
-.content > p{
-  width: 100%;
-}
+    .skipStory,
+    .scrollStory,
+    .storyView,
+    #triggers1,
+    #triggers2,
+    #triggers3,
+    #triggers4,
+    #triggers5,
+    #triggers6 {
+        display: none;
+    }
+    * {
+        font-family: AntwerpFont;
+    }
+    h1,
+    h2,
+    h4 {
+        font-size: 1.5em;
+    }
+    p {
+        font-size: 0.7em;
+    }
+    #texts1,
+    #textg1,
+    #textc1 {
+        font-size: 2em;
+    }
+    .mobileIntro {
+        display: block;
+        width: 100%;
+        border-bottom: 1px solid #aaa;
+        display: flex;
+    }
+    .mobileIntroLogo {
+        width: 22%;
+    }
+    .mobileIntroLogo img {
+        width: 100%;
+        height: 100%;
+    }
+    .mobileIntroText {
+        width: 60%;
+        margin-left: 5%;
+    }
+    .OtherContent {
+        top: 0;
+    }
+    .OtherContent,
+    .storyNumber1,
+    .storyNumber2,
+    .storyNumber3,
+    .storyNumber4 {
+        position: static;
+    }
+    .forumInStory {
+        width: 100%;
+    }
+    .forumInStory a {
+        margin-right: 0;
+        width: 80%;
+        margin-left: 5%;
+    }
+    .zieMeer {
+        top: 98%;
+    }
+    #stats1 > div,
+    #stats2 > div {
+        float: none;
+        font-size: 1.5em;
+        width: 80%;
+        margin-left: 10%;
+    }
+    #statsinfoafter {
+        height: 5%;
+    }
+    #bar1,
+    #bar2 {
+        margin-bottom: 0%;
+    }
+    .forumInStory {
+        width: 100%;
+        display: inline-block;
+    }
+    .forumInStory a {
+        width: 90%;
+    }
+    #textg1 {
+        margin-top: 5%;
+    }
+    .gamepageWithoutTitle {
+        display: block;
+    }
+    .gamepageWithoutTitle .gameInfoAndPhotos {
+        width: 90%;
+    }
+    .gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos {
+        width: 60%;
+        margin-left: 20%;
+    }
+    .gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .smallPhotos,
+    .gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos .bigPhoto {
+        display: none;
+    }
+    .buttons {
+        width: 75%;
+    }
+    .content > p {
+        width: 100%;
+    }
     #text {
         text-align: center;
         width: 80%;
@@ -114,8 +119,8 @@ p {
     }
 }
 @media only screen and (max-width:500px) {
-  .gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos {
-    width: 100%;
-    margin-left: 0%;
-  }
+    .gamepageWithoutTitle .gameInfoAndPhotos .GamePhotos {
+        width: 100%;
+        margin-left: 0%;
+    }
 }
