@@ -255,7 +255,7 @@
                 </div>
                 <footer>
                     <div class="socialLinks">
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.stefan.diels.mtantwerp.eu/"><i class="fab fa-facebook-f"></i></a>
                         <a href=""><i class="fab fa-facebook-messenger"></i></a>
                         <a href=""><i class="fab fa-twitter"></i></a>
                     </div>
